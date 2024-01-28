@@ -21932,7 +21932,7 @@ var run6 = Effect_exports.gen(function* (_) {
 });
 var AutoLayoutLive = Effect_exports.all([
   addCommand2({
-    id: "canvas-mindmap/auto-layout",
+    id: "auto-layout",
     name: "Auto Layout",
     run: run6
   }),
@@ -21948,7 +21948,7 @@ var AutoLayoutLive = Effect_exports.all([
 // src/NewNode.ts
 var NewNodeLive = Effect_exports.all([
   addCommand2({
-    id: "canvas-mindmap/new-node",
+    id: "new-node",
     name: "New Node",
     hotkeys: [{ modifiers: ["Alt"], key: "Enter" }],
     run: Effect_exports.gen(function* (_) {
@@ -21977,7 +21977,7 @@ var NewNodeLive = Effect_exports.all([
     }).pipe(Effect_exports.catchAllCause(Effect_exports.log))
   }),
   addCommand2({
-    id: "canvas-mindmap/new-child-node",
+    id: "new-child-node",
     name: "New Child Node",
     hotkeys: [{ modifiers: ["Alt"], key: "Tab" }],
     run: Effect_exports.gen(function* (_) {
@@ -22018,7 +22018,7 @@ var NewNodeLive = Effect_exports.all([
 // src/NodeNavigation.ts
 var NodeNavigationLive = Effect_exports.all([
   addCommand2({
-    id: "canvas-mindmap/focus-down",
+    id: "focus-down",
     name: "Focus Down",
     hotkeys: [{ modifiers: ["Alt"], key: "ArrowDown" }],
     run: Effect_exports.gen(function* (_) {
@@ -22033,7 +22033,7 @@ var NodeNavigationLive = Effect_exports.all([
     })
   }),
   addCommand2({
-    id: "canvas-mindmap/focus-up",
+    id: "focus-up",
     name: "Focus Up",
     hotkeys: [{ modifiers: ["Alt"], key: "ArrowUp" }],
     run: Effect_exports.gen(function* (_) {
@@ -22048,7 +22048,7 @@ var NodeNavigationLive = Effect_exports.all([
     })
   }),
   addCommand2({
-    id: "canvas-mindmap/focus-left",
+    id: "focus-left",
     name: "Focus Left",
     hotkeys: [{ modifiers: ["Alt"], key: "ArrowLeft" }],
     run: Effect_exports.gen(function* (_) {
@@ -22060,7 +22060,7 @@ var NodeNavigationLive = Effect_exports.all([
     })
   }),
   addCommand2({
-    id: "canvas-mindmap/focus-right",
+    id: "focus-right",
     name: "Focus Right",
     hotkeys: [{ modifiers: ["Alt"], key: "ArrowRight" }],
     run: Effect_exports.gen(function* (_) {
