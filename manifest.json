@@ -1,10 +1,11 @@
 {
-  "id": "canvas-mindmap",
-  "name": "Canvas Mindmap",
-  "version": "0.1.0",
+  "id": "canvas-mindmap-helper",
+  "name": "Canvas Mindmap Helper",
+  "version": "0.1.1",
   "minAppVersion": "0.15.0",
   "description": "Make the Canvas work like a mindmap",
   "author": "Tim Smart",
   "authorUrl": "https://github.com/tim-smart",
+  "repo": "tim-smart/obsidian-canvas-mindmap",
   "isDesktopOnly": false
 }
