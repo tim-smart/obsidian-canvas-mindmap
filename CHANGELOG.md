@@ -1,5 +1,11 @@
 # obsidian-canvas-mindmap
 
+## 0.1.5
+
+### Patch Changes
+
+- [`9e0ab4d`](https://github.com/tim-smart/effect-obsidian/commit/9e0ab4d89e9ca56383cfd3b899f475b7590500ce) Thanks [@tim-smart](https://github.com/tim-smart)! - use pan for node navigation
+
 ## 0.1.4
 
 ### Patch Changes

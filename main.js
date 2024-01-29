@@ -22024,12 +22024,12 @@ var NodeNavigationLive = Effect_exports.all([
     run: Effect_exports.gen(function* (_) {
       const canvas = yield* _(Canvas);
       const node = yield* _(selectedNode, Effect_exports.flatten);
-      const siblings2 = yield* _(siblings(node));
-      const [, below] = ReadonlyArray_exports.partition(siblings2, (_2) => _2.y > node.y);
-      if (below.length > 0) {
-        canvas.selectOnly(below[0]);
-        canvas.zoomToSelection();
-      }
+      const nextNode = yield* _(
+        siblings(node),
+        Effect_exports.flatMap(ReadonlyArray_exports.findFirst((_2) => _2.y > node.y))
+      );
+      canvas.selectOnly(nextNode);
+      canvas.panIntoView(nextNode.getBBox());
     })
   }),
   addCommand2({
@@ -22039,12 +22039,12 @@ var NodeNavigationLive = Effect_exports.all([
     run: Effect_exports.gen(function* (_) {
       const canvas = yield* _(Canvas);
       const node = yield* _(selectedNode, Effect_exports.flatten);
-      const siblings2 = yield* _(siblings(node));
-      const [, above] = ReadonlyArray_exports.partition(siblings2, (_2) => _2.y < node.y);
-      if (above.length > 0) {
-        canvas.selectOnly(above[above.length - 1]);
-        canvas.zoomToSelection();
-      }
+      const nextNode = yield* _(
+        siblings(node),
+        Effect_exports.flatMap(ReadonlyArray_exports.findLast((_2) => _2.y < node.y))
+      );
+      canvas.selectOnly(nextNode);
+      canvas.panIntoView(nextNode.getBBox());
     })
   }),
   addCommand2({
@@ -22056,7 +22056,7 @@ var NodeNavigationLive = Effect_exports.all([
       const node = yield* _(selectedNode, Effect_exports.flatten);
       const parent2 = yield* _(parent(node), Effect_exports.flatten);
       canvas.selectOnly(parent2);
-      canvas.zoomToSelection();
+      canvas.panIntoView(parent2.getBBox());
     })
   }),
   addCommand2({
@@ -22071,7 +22071,7 @@ var NodeNavigationLive = Effect_exports.all([
         Effect_exports.flatMap(ReadonlyArray_exports.head)
       );
       canvas.selectOnly(child);
-      canvas.zoomToSelection();
+      canvas.panIntoView(child.getBBox());
     })
   })
 ]).pipe(Layer_exports.scopedDiscard);
