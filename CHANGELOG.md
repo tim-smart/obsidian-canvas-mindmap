@@ -1,5 +1,11 @@
 # obsidian-canvas-mindmap
 
+## 0.1.3
+
+### Patch Changes
+
+- [`212ef2a`](https://github.com/tim-smart/effect-obsidian/commit/212ef2ad7528f1f76b90077fcd533aceb930e7cf) Thanks [@tim-smart](https://github.com/tim-smart)! - use sentance casing for settings
+
 ## 0.1.2
 
 ### Patch Changes

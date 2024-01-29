@@ -21856,7 +21856,7 @@ var {
     display() {
       this.containerEl.empty();
       const current = get16();
-      new Obsidian2.Setting(this.containerEl).setName("Auto Layout on Change").setDesc("Trigger auto layout on card changes").addToggle(
+      new Obsidian2.Setting(this.containerEl).setName("Auto layout on changes").setDesc("Trigger auto layout on card changes").addToggle(
         (toggle2) => toggle2.setValue(current.autoLayoutOnChange).onChange(
           (value3) => update5((_) => ({
             ..._,
