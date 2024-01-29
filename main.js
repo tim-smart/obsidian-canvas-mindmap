@@ -21973,7 +21973,7 @@ var NewNodeLive = Effect_exports.all([
         );
       }
       canvas.requestSave();
-      canvas.zoomToSelection();
+      canvas.panIntoView(newNode.getBBox());
     }).pipe(Effect_exports.catchAllCause(Effect_exports.log))
   }),
   addCommand2({
@@ -22008,7 +22008,7 @@ var NewNodeLive = Effect_exports.all([
         })
       );
       canvas.requestSave();
-      canvas.zoomToSelection();
+      canvas.panIntoView(newNode.getBBox());
     }).pipe(Effect_exports.catchAllCause(Effect_exports.log))
   })
 ]).pipe(

@@ -1,5 +1,11 @@
 # obsidian-canvas-mindmap
 
+## 0.1.4
+
+### Patch Changes
+
+- [`6c61598`](https://github.com/tim-smart/effect-obsidian/commit/6c6159867c79c88df551d111f0431d5de54786d5) Thanks [@tim-smart](https://github.com/tim-smart)! - pan instead of zoom for new nodes
+
 ## 0.1.3
 
 ### Patch Changes
