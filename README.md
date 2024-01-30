@@ -7,6 +7,12 @@ See full source code here: https://github.com/tim-smart/effect-obsidian/tree/mai
 ## Features
 
 - Commands to add new cards quickly
-- Auto Layout command
-  - Can be set to trigger on card changes too
 - Commands to navigate cards using the keyboard
+- Auto layout command
+- Auto layout on card changes
+
+### Auto layout on changes
+
+You can find a setting in the canvas menu here:
+
+![Example](assets/auto%20layout.png)
