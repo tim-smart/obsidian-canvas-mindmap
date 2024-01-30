@@ -1,5 +1,11 @@
 # obsidian-canvas-mindmap
 
+## 0.1.9
+
+### Patch Changes
+
+- [`c22a734`](https://github.com/tim-smart/effect-obsidian/commit/c22a73463ea72a23b06ab9ada5fd10fe9443d28f) Thanks [@tim-smart](https://github.com/tim-smart)! - exclude groups from auto layout
+
 ## 0.1.8
 
 ### Patch Changes

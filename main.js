@@ -26211,19 +26211,20 @@ var run7 = Effect_exports.gen(function* (_) {
   const canvas = yield* _(Canvas);
   const roots2 = [];
   canvas.nodes.forEach((node) => {
-    const isRoot = !canvas.getEdgesForNode(node).some(
-      (_2) => _2.to.node.id === node.id
-    );
+    const isRoot = node.getData().type !== "group" && !canvas.getEdgesForNode(node).some((_2) => _2.to.node.id === node.id);
     if (isRoot) {
       roots2.push(node);
     }
   });
   roots2.sort(yOrder);
   function createBlock(node, targetWidth) {
-    const children3 = childrenFromEdges(
-      node,
-      canvas.getEdgesForNode(node),
-      true
+    const children3 = ReadonlyArray_exports.filter(
+      childrenFromEdges(
+        node,
+        canvas.getEdgesForNode(node),
+        true
+      ),
+      (_2) => _2.getData().type !== "group"
     );
     const childTargetWidth = Math.max(...children3.map((_2) => _2.width));
     const childBlocks = children3.map((_2) => createBlock(_2, childTargetWidth));
