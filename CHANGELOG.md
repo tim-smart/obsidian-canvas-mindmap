@@ -1,5 +1,11 @@
 # obsidian-canvas-mindmap
 
+## 0.1.7
+
+### Patch Changes
+
+- [`1950b4e`](https://github.com/tim-smart/effect-obsidian/commit/1950b4e12d009740f83d1f5d2bf9d0a8843006f8) Thanks [@tim-smart](https://github.com/tim-smart)! - refactor auto layout
+
 ## 0.1.6
 
 ### Patch Changes

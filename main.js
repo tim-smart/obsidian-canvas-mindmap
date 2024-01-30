@@ -12547,8 +12547,24 @@ var isContinue2 = isContinue;
 var isDone5 = isDone4;
 
 // ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Scope.js
+var Scope_exports = {};
+__export(Scope_exports, {
+  CloseableScopeTypeId: () => CloseableScopeTypeId2,
+  Scope: () => Scope,
+  ScopeTypeId: () => ScopeTypeId2,
+  addFinalizer: () => addFinalizer2,
+  addFinalizerExit: () => addFinalizerExit,
+  close: () => close,
+  extend: () => extend3,
+  fork: () => fork2,
+  make: () => make40,
+  use: () => use
+});
+var ScopeTypeId2 = ScopeTypeId;
+var CloseableScopeTypeId2 = CloseableScopeTypeId;
 var Scope = scopeTag;
 var addFinalizer2 = scopeAddFinalizer;
+var addFinalizerExit = scopeAddFinalizerExit;
 var close = scopeClose;
 var extend3 = scopeExtend;
 var fork2 = scopeFork;
@@ -26235,23 +26251,18 @@ var run7 = Effect_exports.gen(function* (_) {
   layoutBlocks(rootBlocks);
   canvas.requestSave();
 });
-var AutoLayoutLive = Effect_exports.all([
-  addCommand2({
-    id: "auto-layout",
-    name: "Auto Layout",
-    run: run7
-  }),
-  onActive(Effect_exports.gen(function* (_) {
-    const canvas = yield* _(Canvas);
-    const [get17, set10] = yield* _(autoLayout);
-    const path = canvas.view.file.path;
-    yield* _(
-      prototype(
+var PatchMenu = Effect_exports.gen(function* (_) {
+  const scope5 = yield* _(Effect_exports.scope);
+  const [get17, set10] = yield* _(autoLayout);
+  yield* _(onActive(Canvas.pipe(
+    Effect_exports.flatMap(
+      (canvas) => prototype(
         "AutoLayout",
         canvas,
         "showQuickSettingsMenu",
         (original) => function(menu) {
           original.call(this, menu);
+          const path = canvas.view.file.path;
           const enabled2 = get17(path);
           menu.addItem(
             (item) => item.setTitle("Auto layout").setChecked(enabled2).onClick(() => {
@@ -26260,38 +26271,54 @@ var AutoLayoutLive = Effect_exports.all([
           );
         }
       )
-    );
-    yield* _(
-      runWhen(
-        () => get17(path),
-        nodeChanges(canvas).pipe(
-          Stream_exports.filter(() => get17(path)),
-          Stream_exports.runForEach(() => run7)
-        )
+    ),
+    Scope_exports.extend(scope5)
+  )));
+}).pipe(Layer_exports.scopedDiscard);
+var AutoLayoutOnChange = onActive(Effect_exports.gen(function* (_) {
+  const canvas = yield* _(Canvas);
+  const [get17] = yield* _(autoLayout);
+  const path = canvas.view.file.path;
+  yield* _(
+    runWhen(
+      () => get17(path),
+      nodeChanges(canvas).pipe(
+        Stream_exports.filter(() => get17(path)),
+        Stream_exports.runForEach(() => run7)
       )
-    );
-  })),
-  Effect_exports.gen(function* (_) {
-    const plugin = yield* _(Plugin2);
-    const [, , update6] = yield* _(autoLayout);
-    plugin.registerEvent(
-      plugin.app.vault.on("rename", (file, prev) => {
-        update6(
-          (self) => Option_exports.match(ReadonlyRecord_exports.pop(self, prev), {
-            onSome: ([value3]) => ReadonlyRecord_exports.upsert(self, file.path, value3),
-            onNone: () => self
-          })
-        );
-      })
-    );
-    plugin.registerEvent(
-      plugin.app.vault.on("delete", (file) => {
-        update6(ReadonlyRecord_exports.remove(file.path));
-      })
-    );
-  })
-]).pipe(
-  Layer_exports.scopedDiscard,
+    )
+  );
+})).pipe(Layer_exports.scopedDiscard);
+var Command = addCommand2({
+  id: "auto-layout",
+  name: "Auto Layout",
+  run: run7
+}).pipe(Layer_exports.scopedDiscard);
+var UpdateSettings = Effect_exports.gen(function* (_) {
+  const plugin = yield* _(Plugin2);
+  const [, , update6] = yield* _(autoLayout);
+  plugin.registerEvent(
+    plugin.app.vault.on("rename", (file, prev) => {
+      update6(
+        (self) => Option_exports.match(ReadonlyRecord_exports.pop(self, prev), {
+          onSome: ([value3]) => ReadonlyRecord_exports.upsert(self, file.path, value3),
+          onNone: () => self
+        })
+      );
+    })
+  );
+  plugin.registerEvent(
+    plugin.app.vault.on("delete", (file) => {
+      update6(ReadonlyRecord_exports.remove(file.path));
+    })
+  );
+}).pipe(Layer_exports.effectDiscard);
+var AutoLayoutLive = Layer_exports.mergeAll(
+  Command,
+  PatchMenu,
+  AutoLayoutOnChange,
+  UpdateSettings
+).pipe(
   Layer_exports.provide(layer2)
 );
 
