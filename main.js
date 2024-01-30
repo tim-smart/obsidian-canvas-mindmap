@@ -26262,7 +26262,7 @@ var PatchMenu = Effect_exports.gen(function* (_) {
         "showQuickSettingsMenu",
         (original) => function(menu) {
           original.call(this, menu);
-          const path = canvas.view.file.path;
+          const path = this.view.file.path;
           const enabled2 = get17(path);
           menu.addItem(
             (item) => item.setTitle("Auto layout").setChecked(enabled2).onClick(() => {
