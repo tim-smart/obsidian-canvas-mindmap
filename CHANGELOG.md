@@ -1,5 +1,11 @@
 # obsidian-canvas-mindmap
 
+## 0.1.10
+
+### Patch Changes
+
+- [`d068553`](https://github.com/tim-smart/effect-obsidian/commit/d068553a0bfde9748764ce0d9ccdaf2fae63340b) Thanks [@tim-smart](https://github.com/tim-smart)! - remove hotkeys and fix casing in command names
+
 ## 0.1.9
 
 ### Patch Changes

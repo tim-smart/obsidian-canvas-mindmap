@@ -28,7 +28,7 @@ var __export = (target, all6) => {
     __defProp(target, name, { get: all6[name], enumerable: true });
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Function.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Function.js
 var isFunction = (input) => typeof input === "function";
 var dual = function(arity, body) {
   if (typeof arity === "function") {
@@ -128,10 +128,10 @@ function pipe(a, ab, bc, cd, de, ef, fg, gh, hi) {
   }
 }
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/version.js
-var moduleVersion = "2.2.2";
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/version.js
+var moduleVersion = "2.3.1";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/GlobalValue.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/GlobalValue.js
 var globalStoreId = /* @__PURE__ */ Symbol.for(`effect/GlobalValue/globalStoreId/${moduleVersion}`);
 if (!(globalStoreId in globalThis)) {
   globalThis[globalStoreId] = /* @__PURE__ */ new Map();
@@ -144,7 +144,7 @@ var globalValue = (id2, compute) => {
   return globalStore.get(id2);
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Predicate.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Predicate.js
 var isString = (input) => typeof input === "string";
 var isNumber = (input) => typeof input === "number";
 var isBoolean = (input) => typeof input === "boolean";
@@ -167,7 +167,7 @@ var isIterable = (input) => hasProperty(input, Symbol.iterator);
 var isRecord = (input) => isRecordOrArray(input) && !Array.isArray(input);
 var isPromise = (input) => hasProperty(input, "then") && "catch" in input && isFunction2(input.then) && isFunction2(input.catch);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Utils.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Utils.js
 var GenKindTypeId = /* @__PURE__ */ Symbol.for("effect/Gen/GenKind");
 var GenKindImpl = class {
   value;
@@ -387,7 +387,7 @@ function add64(out, aHi, aLo, bHi, bLo) {
   out[1] = lo;
 }
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Hash.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Hash.js
 var randomHashCache = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/Hash/randomHashCache"), () => /* @__PURE__ */ new WeakMap());
 var pcgr = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/Hash/pcgr"), () => new PCGRandom());
 var symbol = /* @__PURE__ */ Symbol.for("effect/Hash");
@@ -465,7 +465,7 @@ var array = (arr) => {
   return optimize(h);
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Equal.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Equal.js
 var symbol2 = /* @__PURE__ */ Symbol.for("effect/Equal");
 function equals() {
   if (arguments.length === 1) {
@@ -491,7 +491,7 @@ function compareBoth(self, that) {
 var isEqual = (u) => hasProperty(u, symbol2);
 var equivalence = () => (self, that) => equals(self, that);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Equivalence.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Equivalence.js
 var make = (isEquivalent) => (self, that) => self === that || isEquivalent(self, that);
 var isStrictEquivalent = (x, y) => x === y;
 var strict = () => isStrictEquivalent;
@@ -511,7 +511,7 @@ var array2 = (item) => make((self, that) => {
   return true;
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Inspectable.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Inspectable.js
 var NodeInspectSymbol = /* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom");
 var toJSON = (x) => {
   if (hasProperty(x, "toJSON") && isFunction2(x["toJSON"]) && x["toJSON"].length === 0) {
@@ -523,7 +523,7 @@ var toJSON = (x) => {
 };
 var format = (x) => JSON.stringify(x, null, 2);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Option.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Option.js
 var Option_exports = {};
 __export(Option_exports, {
   Do: () => Do,
@@ -570,6 +570,7 @@ __export(Option_exports, {
   none: () => none2,
   orElse: () => orElse,
   orElseEither: () => orElseEither,
+  orElseSome: () => orElseSome,
   partitionMap: () => partitionMap,
   product: () => product,
   productMany: () => productMany,
@@ -584,7 +585,7 @@ __export(Option_exports, {
   zipWith: () => zipWith
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Pipeable.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Pipeable.js
 var pipeArguments = (self, args) => {
   switch (args.length) {
     case 1:
@@ -615,7 +616,7 @@ var pipeArguments = (self, args) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/effect.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/effect.js
 var OP_ASYNC = "Async";
 var OP_COMMIT = "Commit";
 var OP_FAILURE = "Failure";
@@ -631,7 +632,7 @@ var OP_WITH_RUNTIME = "WithRuntime";
 var OP_YIELD = "Yield";
 var OP_REVERT_FLAGS = "RevertFlags";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/effectable.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/effectable.js
 var EffectTypeId = /* @__PURE__ */ Symbol.for("effect/Effect");
 var StreamTypeId = /* @__PURE__ */ Symbol.for("effect/Stream");
 var SinkTypeId = /* @__PURE__ */ Symbol.for("effect/Sink");
@@ -647,15 +648,15 @@ var effectVariance = {
 };
 var sinkVariance = {
   /* c8 ignore next */
-  _R: (_) => _,
-  /* c8 ignore next */
-  _E: (_) => _,
+  _A: (_) => _,
   /* c8 ignore next */
   _In: (_) => _,
   /* c8 ignore next */
   _L: (_) => _,
   /* c8 ignore next */
-  _Z: (_) => _
+  _E: (_) => _,
+  /* c8 ignore next */
+  _R: (_) => _
 };
 var channelVariance = {
   /* c8 ignore next */
@@ -715,7 +716,7 @@ var StructuralCommitPrototype = {
   ...StructuralPrototype
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/option.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/option.js
 var TypeId = /* @__PURE__ */ Symbol.for("effect/Option");
 var CommonProto = {
   ...EffectPrototype,
@@ -772,7 +773,7 @@ var some = (value3) => {
   return a;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/either.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/either.js
 var TypeId2 = /* @__PURE__ */ Symbol.for("effect/Either");
 var CommonProto2 = {
   ...EffectPrototype,
@@ -836,7 +837,7 @@ var right = (right3) => {
 var getLeft = (self) => isRight(self) ? none : some(self.left);
 var getRight = (self) => isLeft(self) ? none : some(self.right);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Order.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Order.js
 var make2 = (compare) => (self, that) => self === that ? 0 : compare(self, that);
 var number3 = /* @__PURE__ */ make2((self, that) => self < that ? -1 : 1);
 var bigint = /* @__PURE__ */ make2((self, that) => self < that ? -1 : 1);
@@ -908,7 +909,7 @@ var max = (O) => dual(2, (self, that) => self === that || O(self, that) > -1 ? s
 var clamp = (O) => dual(2, (self, options) => min(O)(options.maximum, max(O)(options.minimum, self)));
 var between = (O) => dual(2, (self, options) => !lessThan(O)(self, options.minimum) && !greaterThan(O)(self, options.maximum));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Option.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Option.js
 var TypeId3 = /* @__PURE__ */ Symbol.for("effect/Option");
 var none2 = () => none;
 var some2 = some;
@@ -930,6 +931,7 @@ var getRight2 = getRight;
 var getLeft2 = getLeft;
 var getOrElse = /* @__PURE__ */ dual(2, (self, onNone) => isNone2(self) ? onNone() : self.value);
 var orElse = /* @__PURE__ */ dual(2, (self, that) => isNone2(self) ? that() : self);
+var orElseSome = /* @__PURE__ */ dual(2, (self, onNone) => isNone2(self) ? some2(onNone()) : self);
 var orElseEither = /* @__PURE__ */ dual(2, (self, that) => isNone2(self) ? map(that(), right) : map(self, left));
 var firstSomeOf = (collection) => {
   let out = none2();
@@ -1068,7 +1070,7 @@ var gen = (f) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/BigDecimal.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/BigDecimal.js
 var TypeId4 = /* @__PURE__ */ Symbol.for("effect/BigDecimal");
 var BigDecimalProto = {
   [TypeId4]: TypeId4,
@@ -1229,14 +1231,14 @@ var unsafeToNumber = (n) => Number(format2(n));
 var isNegative = (n) => n.value < bigint0;
 var isPositive = (n) => n.value > bigint0;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/BigInt.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/BigInt.js
 var Order2 = bigint;
 var clamp3 = /* @__PURE__ */ clamp(Order2);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Boolean.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Boolean.js
 var not = (self) => !self;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Either.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Either.js
 var right2 = right;
 var left2 = left;
 var try_ = (evaluate2) => {
@@ -1274,7 +1276,7 @@ var getOrThrowWith2 = /* @__PURE__ */ dual(2, (self, onLeft) => {
   throw onLeft(self.left);
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/ReadonlyArray.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/ReadonlyArray.js
 var ReadonlyArray_exports = {};
 __export(ReadonlyArray_exports, {
   append: () => append,
@@ -1351,7 +1353,7 @@ __export(ReadonlyArray_exports, {
   matchRight: () => matchRight,
   max: () => max2,
   min: () => min2,
-  modify: () => modify,
+  modify: () => modify2,
   modifyNonEmptyHead: () => modifyNonEmptyHead,
   modifyNonEmptyLast: () => modifyNonEmptyLast,
   modifyOption: () => modifyOption2,
@@ -1364,7 +1366,7 @@ __export(ReadonlyArray_exports, {
   reduce: () => reduce2,
   reduceRight: () => reduceRight,
   remove: () => remove2,
-  replace: () => replace,
+  replace: () => replace2,
   replaceOption: () => replaceOption2,
   replicate: () => replicate,
   reverse: () => reverse2,
@@ -1399,10 +1401,10 @@ __export(ReadonlyArray_exports, {
   zipWith: () => zipWith2
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/readonlyArray.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/readonlyArray.js
 var isNonEmptyArray = (self) => self.length > 0;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/ReadonlyRecord.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/ReadonlyRecord.js
 var ReadonlyRecord_exports = {};
 __export(ReadonlyRecord_exports, {
   collect: () => collect,
@@ -1430,21 +1432,22 @@ __export(ReadonlyRecord_exports, {
   map: () => map2,
   mapEntries: () => mapEntries,
   mapKeys: () => mapKeys,
+  modify: () => modify,
   modifyOption: () => modifyOption,
   partition: () => partition,
   partitionMap: () => partitionMap2,
   pop: () => pop,
   reduce: () => reduce,
   remove: () => remove,
+  replace: () => replace,
   replaceOption: () => replaceOption,
   separate: () => separate,
+  set: () => set,
   singleton: () => singleton,
   size: () => size,
   some: () => some3,
   toEntries: () => toEntries,
   union: () => union,
-  update: () => update,
-  upsert: () => upsert,
   values: () => values
 });
 var empty2 = () => ({});
@@ -1479,6 +1482,17 @@ var toEntries = /* @__PURE__ */ collect((key2, value3) => [key2, value3]);
 var size = (self) => Object.keys(self).length;
 var has = /* @__PURE__ */ dual(2, (self, key2) => Object.prototype.hasOwnProperty.call(self, key2));
 var get = /* @__PURE__ */ dual(2, (self, key2) => has(self, key2) ? some2(self[key2]) : none2());
+var modify = /* @__PURE__ */ dual(3, (self, key2, f) => {
+  if (!has(self, key2)) {
+    return {
+      ...self
+    };
+  }
+  return {
+    ...self,
+    [key2]: f(self[key2])
+  };
+});
 var modifyOption = /* @__PURE__ */ dual(3, (self, key2, f) => {
   if (!has(self, key2)) {
     return none2();
@@ -1589,14 +1603,14 @@ var partition = /* @__PURE__ */ dual(2, (self, predicate) => {
 });
 var keys = (self) => Object.keys(self);
 var values = (self) => collect(self, (_, a) => a);
-var upsert = /* @__PURE__ */ dual(3, (self, key2, value3) => {
+var set = /* @__PURE__ */ dual(3, (self, key2, value3) => {
   const out = {
     ...self
   };
   out[key2] = value3;
   return out;
 });
-var update = /* @__PURE__ */ dual(3, (self, key2, value3) => {
+var replace = /* @__PURE__ */ dual(3, (self, key2, value3) => {
   const out = {
     ...self
   };
@@ -1707,10 +1721,10 @@ var singleton = (key2, value3) => ({
   [key2]: value3
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Tuple.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Tuple.js
 var make4 = (...elements) => elements;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/ReadonlyArray.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/ReadonlyArray.js
 var make5 = (...elements) => elements;
 var makeBy = (n, f) => {
   const max6 = Math.max(1, Math.floor(n));
@@ -1895,9 +1909,9 @@ var insertAt = /* @__PURE__ */ dual(3, (self, i, b) => {
   out.splice(i, 0, b);
   return some2(out);
 });
-var replace = /* @__PURE__ */ dual(3, (self, i, b) => modify(self, i, () => b));
+var replace2 = /* @__PURE__ */ dual(3, (self, i, b) => modify2(self, i, () => b));
 var replaceOption2 = /* @__PURE__ */ dual(3, (self, i, b) => modifyOption2(self, i, () => b));
-var modify = /* @__PURE__ */ dual(3, (self, i, f) => getOrElse(modifyOption2(self, i, f), () => Array.from(self)));
+var modify2 = /* @__PURE__ */ dual(3, (self, i, f) => getOrElse(modifyOption2(self, i, f), () => Array.from(self)));
 var modifyOption2 = /* @__PURE__ */ dual(3, (self, i, f) => {
   const out = Array.from(self);
   if (isOutOfBound(i, out)) {
@@ -2107,7 +2121,10 @@ var flatMap2 = /* @__PURE__ */ dual(2, (self, f) => {
   }
   const out = [];
   for (let i = 0; i < self.length; i++) {
-    out.push(...f(self[i], i));
+    const inner = f(self[i], i);
+    for (let j = 0; j < inner.length; j++) {
+      out.push(inner[j]);
+    }
   }
   return out;
 });
@@ -2267,10 +2284,10 @@ var mapAccum = /* @__PURE__ */ dual(3, (self, s, f) => {
 var cartesianWith = /* @__PURE__ */ dual(3, (self, that, f) => flatMap2(self, (a) => map3(that, (b) => f(a, b))));
 var cartesian = /* @__PURE__ */ dual(2, (self, that) => cartesianWith(self, that, (a, b) => [a, b]));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Brand.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Brand.js
 var RefinedConstructorsTypeId = /* @__PURE__ */ Symbol.for("effect/Brand/Refined");
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/context.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/context.js
 var TagTypeId = /* @__PURE__ */ Symbol.for("effect/Context/Tag");
 var STMSymbolKey = "effect/STM";
 var STMTypeId = /* @__PURE__ */ Symbol.for(STMSymbolKey);
@@ -2289,7 +2306,7 @@ var TagProto = {
   toJSON() {
     return {
       _id: "Tag",
-      identifier: this.identifier,
+      key: this.key,
       stack: this.stack
     };
   },
@@ -2303,11 +2320,7 @@ var TagProto = {
     return make6(this, self);
   }
 };
-var tagRegistry = /* @__PURE__ */ globalValue("effect/Context/Tag/tagRegistry", () => /* @__PURE__ */ new Map());
-var makeTag = (identifier2) => {
-  if (identifier2 && tagRegistry.has(identifier2)) {
-    return tagRegistry.get(identifier2);
-  }
+var makeGenericTag = (key2) => {
   const limit = Error.stackTraceLimit;
   Error.stackTraceLimit = 2;
   const creationError = new Error();
@@ -2318,10 +2331,7 @@ var makeTag = (identifier2) => {
       return creationError.stack;
     }
   });
-  if (identifier2) {
-    tag2.identifier = identifier2;
-    tagRegistry.set(identifier2, tag2);
-  }
+  tag2.key = key2;
   return tag2;
 };
 var TypeId5 = /* @__PURE__ */ Symbol.for("effect/Context");
@@ -2367,7 +2377,7 @@ var makeContext = (unsafeMap) => {
   return context7;
 };
 var serviceNotFoundError = (tag2) => {
-  const error = new Error(`Service not found${tag2.identifier ? `: ${String(tag2.identifier)}` : ""}`);
+  const error = new Error(`Service not found${tag2.key ? `: ${String(tag2.key)}` : ""}`);
   if (tag2.stack) {
     const lines = tag2.stack.split("\n");
     if (lines.length > 2) {
@@ -2388,24 +2398,24 @@ var isContext = (u) => hasProperty(u, TypeId5);
 var isTag = (u) => hasProperty(u, TagTypeId);
 var _empty = /* @__PURE__ */ makeContext(/* @__PURE__ */ new Map());
 var empty4 = () => _empty;
-var make6 = (tag2, service3) => makeContext(/* @__PURE__ */ new Map([[tag2, service3]]));
+var make6 = (tag2, service3) => makeContext(/* @__PURE__ */ new Map([[tag2.key, service3]]));
 var add = /* @__PURE__ */ dual(3, (self, tag2, service3) => {
   const map26 = new Map(self.unsafeMap);
-  map26.set(tag2, service3);
+  map26.set(tag2.key, service3);
   return makeContext(map26);
 });
 var unsafeGet2 = /* @__PURE__ */ dual(2, (self, tag2) => {
-  if (!self.unsafeMap.has(tag2)) {
+  if (!self.unsafeMap.has(tag2.key)) {
     throw serviceNotFoundError(tag2);
   }
-  return self.unsafeMap.get(tag2);
+  return self.unsafeMap.get(tag2.key);
 });
 var get3 = unsafeGet2;
 var getOption = /* @__PURE__ */ dual(2, (self, tag2) => {
-  if (!self.unsafeMap.has(tag2)) {
+  if (!self.unsafeMap.has(tag2.key)) {
     return none;
   }
-  return some(self.unsafeMap.get(tag2));
+  return some(self.unsafeMap.get(tag2.key));
 });
 var merge2 = /* @__PURE__ */ dual(2, (self, that) => {
   const map26 = new Map(self.unsafeMap);
@@ -2415,8 +2425,8 @@ var merge2 = /* @__PURE__ */ dual(2, (self, that) => {
   return makeContext(map26);
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Context.js
-var Tag = makeTag;
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Context.js
+var GenericTag = makeGenericTag;
 var isContext2 = isContext;
 var isTag2 = isTag;
 var empty5 = empty4;
@@ -2427,7 +2437,7 @@ var unsafeGet3 = unsafeGet2;
 var getOption2 = getOption;
 var merge3 = merge2;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Chunk.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Chunk.js
 var TypeId6 = /* @__PURE__ */ Symbol.for("effect/Chunk");
 function copy2(src, srcPos, dest, destPos, len) {
   for (let i = srcPos; i < Math.min(src.length, srcPos + len); i++) {
@@ -2861,14 +2871,14 @@ var findFirst2 = findFirst;
 var reduce3 = reduce2;
 var reduceRight2 = reduceRight;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/hashMap/config.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/hashMap/config.js
 var SIZE = 5;
 var BUCKET_SIZE = /* @__PURE__ */ Math.pow(2, SIZE);
 var MASK = BUCKET_SIZE - 1;
 var MAX_INDEX_NODE = BUCKET_SIZE / 2;
 var MIN_ARRAY_NODE = BUCKET_SIZE / 4;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/hashMap/bitwise.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/hashMap/bitwise.js
 function popcount(x) {
   x -= x >> 1 & 1431655765;
   x = (x & 858993459) + (x >> 2 & 858993459);
@@ -2887,13 +2897,13 @@ function fromBitmap(bitmap, bit) {
   return popcount(bitmap & bit - 1);
 }
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stack.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stack.js
 var make9 = (value3, previous2) => ({
   value: value3,
   previous: previous2
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/hashMap/array.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/hashMap/array.js
 function arrayUpdate(mutate3, at, v, arr) {
   let out = arr;
   if (!mutate3) {
@@ -2944,7 +2954,7 @@ function arraySpliceIn(mutate3, at, v, arr) {
   return out;
 }
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/hashMap/node.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/hashMap/node.js
 var EmptyNode = class _EmptyNode {
   _tag = "EmptyNode";
   modify(edit, _shift, f, hash4, key2, size16) {
@@ -3192,7 +3202,7 @@ function mergeLeaves(edit, shift2, h1, n1, h2, n2) {
   }
 }
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/hashMap.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/hashMap.js
 var HashMapSymbolKey = "effect/HashMap";
 var HashMapTypeId = /* @__PURE__ */ Symbol.for(HashMapSymbolKey);
 var HashMapProto = {
@@ -3315,7 +3325,7 @@ var make10 = (...entries2) => fromIterable5(entries2);
 var fromIterable5 = (entries2) => {
   const map26 = beginMutation(empty7());
   for (const entry of entries2) {
-    set(map26, entry[0], entry[1]);
+    set2(map26, entry[0], entry[1]);
   }
   return endMutation(map26);
 };
@@ -3366,7 +3376,7 @@ var getHash = /* @__PURE__ */ dual(3, (self, key2, hash4) => {
   }
 });
 var has2 = /* @__PURE__ */ dual(2, (self, key2) => isSome2(getHash(self, key2, hash(key2))));
-var set = /* @__PURE__ */ dual(3, (self, key2, value3) => modifyAt(self, key2, () => some2(value3)));
+var set2 = /* @__PURE__ */ dual(3, (self, key2, value3) => modifyAt(self, key2, () => some2(value3)));
 var setTree = /* @__PURE__ */ dual(3, (self, newRoot, newSize) => {
   if (self._editable) {
     self._root = newRoot;
@@ -3391,7 +3401,7 @@ var modifyHash = /* @__PURE__ */ dual(4, (self, key2, hash4, f) => {
   return pipe(self, setTree(newRoot, size16.value));
 });
 var remove3 = /* @__PURE__ */ dual(2, (self, key2) => modifyAt(self, key2, none2));
-var map5 = /* @__PURE__ */ dual(2, (self, f) => reduce4(self, empty7(), (map26, value3, key2) => set(map26, key2, f(value3, key2))));
+var map5 = /* @__PURE__ */ dual(2, (self, f) => reduce4(self, empty7(), (map26, value3, key2) => set2(map26, key2, f(value3, key2))));
 var forEach2 = /* @__PURE__ */ dual(2, (self, f) => reduce4(self, void 0, (_, value3, key2) => f(value3, key2)));
 var reduce4 = /* @__PURE__ */ dual(3, (self, zero3, f) => {
   const root = self._root;
@@ -3420,7 +3430,7 @@ var reduce4 = /* @__PURE__ */ dual(3, (self, zero3, f) => {
   return zero3;
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/hashSet.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/hashSet.js
 var HashSetSymbolKey = "effect/HashSet";
 var HashSetTypeId = /* @__PURE__ */ Symbol.for(HashSetSymbolKey);
 var HashSetProto = {
@@ -3454,26 +3464,26 @@ var HashSetProto = {
   }
 };
 var makeImpl2 = (keyMap) => {
-  const set10 = Object.create(HashSetProto);
-  set10._keyMap = keyMap;
-  return set10;
+  const set11 = Object.create(HashSetProto);
+  set11._keyMap = keyMap;
+  return set11;
 };
 var isHashSet = (u) => hasProperty(u, HashSetTypeId);
 var _empty4 = /* @__PURE__ */ makeImpl2(/* @__PURE__ */ empty7());
 var empty8 = () => _empty4;
 var fromIterable6 = (elements) => {
-  const set10 = beginMutation2(empty8());
+  const set11 = beginMutation2(empty8());
   for (const value3 of elements) {
-    add3(set10, value3);
+    add3(set11, value3);
   }
-  return endMutation2(set10);
+  return endMutation2(set11);
 };
 var make11 = (...elements) => {
-  const set10 = beginMutation2(empty8());
+  const set11 = beginMutation2(empty8());
   for (const value3 of elements) {
-    add3(set10, value3);
+    add3(set11, value3);
   }
-  return endMutation2(set10);
+  return endMutation2(set11);
 };
 var has3 = /* @__PURE__ */ dual(2, (self, value3) => has2(self._keyMap, value3));
 var size3 = (self) => size2(self._keyMap);
@@ -3487,23 +3497,23 @@ var mutate = /* @__PURE__ */ dual(2, (self, f) => {
   f(transient);
   return endMutation2(transient);
 });
-var add3 = /* @__PURE__ */ dual(2, (self, value3) => self._keyMap._editable ? (set(value3, true)(self._keyMap), self) : makeImpl2(set(value3, true)(self._keyMap)));
+var add3 = /* @__PURE__ */ dual(2, (self, value3) => self._keyMap._editable ? (set2(value3, true)(self._keyMap), self) : makeImpl2(set2(value3, true)(self._keyMap)));
 var remove4 = /* @__PURE__ */ dual(2, (self, value3) => self._keyMap._editable ? (remove3(value3)(self._keyMap), self) : makeImpl2(remove3(value3)(self._keyMap)));
-var difference3 = /* @__PURE__ */ dual(2, (self, that) => mutate(self, (set10) => {
+var difference3 = /* @__PURE__ */ dual(2, (self, that) => mutate(self, (set11) => {
   for (const value3 of that) {
-    remove4(set10, value3);
+    remove4(set11, value3);
   }
 }));
-var union3 = /* @__PURE__ */ dual(2, (self, that) => mutate(empty8(), (set10) => {
-  forEach3(self, (value3) => add3(set10, value3));
+var union3 = /* @__PURE__ */ dual(2, (self, that) => mutate(empty8(), (set11) => {
+  forEach3(self, (value3) => add3(set11, value3));
   for (const value3 of that) {
-    add3(set10, value3);
+    add3(set11, value3);
   }
 }));
 var forEach3 = /* @__PURE__ */ dual(2, (self, f) => forEach2(self._keyMap, (_, k) => f(k)));
 var reduce5 = /* @__PURE__ */ dual(3, (self, zero3, f) => reduce4(self._keyMap, zero3, (z, _, a) => f(z, a)));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/HashSet.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/HashSet.js
 var isHashSet2 = isHashSet;
 var empty9 = empty8;
 var fromIterable7 = fromIterable6;
@@ -3516,7 +3526,7 @@ var difference4 = difference3;
 var union4 = union3;
 var reduce6 = reduce5;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/MutableRef.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/MutableRef.js
 var TypeId7 = /* @__PURE__ */ Symbol.for("effect/MutableRef");
 var MutableRefProto = {
   [TypeId7]: TypeId7,
@@ -3550,7 +3560,7 @@ var compareAndSet = /* @__PURE__ */ dual(3, (self, oldValue, newValue) => {
 });
 var get7 = (self) => self.current;
 var incrementAndGet = (self) => updateAndGet(self, (n) => n + 1);
-var set2 = /* @__PURE__ */ dual(2, (self, value3) => {
+var set3 = /* @__PURE__ */ dual(2, (self, value3) => {
   self.current = value3;
   return self;
 });
@@ -3560,21 +3570,18 @@ var setAndGet = /* @__PURE__ */ dual(2, (self, value3) => {
 });
 var updateAndGet = /* @__PURE__ */ dual(2, (self, f) => setAndGet(self, f(get7(self))));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiberId.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiberId.js
 var FiberIdSymbolKey = "effect/FiberId";
 var FiberIdTypeId = /* @__PURE__ */ Symbol.for(FiberIdSymbolKey);
 var OP_NONE = "None";
 var OP_RUNTIME = "Runtime";
 var OP_COMPOSITE = "Composite";
+var emptyHash = /* @__PURE__ */ string(`${FiberIdSymbolKey}-${OP_NONE}`);
 var None = class {
   [FiberIdTypeId] = FiberIdTypeId;
   _tag = OP_NONE;
-  _hash;
-  constructor() {
-    this._hash = string(`${FiberIdSymbolKey}-${this._tag}`);
-  }
   [symbol]() {
-    return this._hash;
+    return emptyHash;
   }
   [symbol2](that) {
     return isFiberId(that) && that._tag === OP_NONE;
@@ -3597,13 +3604,15 @@ var Runtime = class {
   startTimeMillis;
   [FiberIdTypeId] = FiberIdTypeId;
   _tag = OP_RUNTIME;
-  _hash;
   constructor(id2, startTimeMillis) {
     this.id = id2;
     this.startTimeMillis = startTimeMillis;
-    this._hash = string(`${FiberIdSymbolKey}-${this._tag}-${this.id}-${this.startTimeMillis}`);
   }
+  _hash;
   [symbol]() {
+    if (this._hash == void 0) {
+      this._hash = string(`${FiberIdSymbolKey}-${this._tag}-${this.id}-${this.startTimeMillis}`);
+    }
     return this._hash;
   }
   [symbol2](that) {
@@ -3629,13 +3638,15 @@ var Composite = class {
   right;
   [FiberIdTypeId] = FiberIdTypeId;
   _tag = OP_COMPOSITE;
-  _hash;
   constructor(left3, right3) {
     this.left = left3;
     this.right = right3;
-    this._hash = pipe(string(`${FiberIdSymbolKey}-${this._tag}`), combine(hash(this.left)), combine(hash(this.right)));
   }
+  _hash;
   [symbol]() {
+    if (this._hash == void 0) {
+      this._hash = pipe(string(`${FiberIdSymbolKey}-${this._tag}`), combine(hash(this.left)), combine(hash(this.right)));
+    }
     return this._hash;
   }
   [symbol2](that) {
@@ -3693,11 +3704,11 @@ var threadName = (self) => {
 };
 var unsafeMake = () => {
   const id2 = get7(_fiberCounter);
-  pipe(_fiberCounter, set2(id2 + 1));
+  pipe(_fiberCounter, set3(id2 + 1));
   return new Runtime(id2, Date.now());
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/FiberId.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/FiberId.js
 var none4 = none3;
 var runtime2 = runtime;
 var composite2 = composite;
@@ -3707,21 +3718,21 @@ var ids2 = ids;
 var threadName2 = threadName;
 var unsafeMake2 = unsafeMake;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/HashMap.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/HashMap.js
 var isHashMap2 = isHashMap;
 var empty10 = empty7;
 var make15 = make10;
 var fromIterable8 = fromIterable5;
 var isEmpty3 = isEmpty2;
 var get8 = get6;
-var set3 = set;
+var set4 = set2;
 var keys3 = keys2;
 var size5 = size2;
 var map7 = map5;
 var forEach4 = forEach2;
 var reduce7 = reduce4;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/List.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/List.js
 var TypeId8 = /* @__PURE__ */ Symbol.for("effect/List");
 var toArray2 = (self) => Array.from(self);
 var getEquivalence6 = (isEquivalent) => mapInput(getEquivalence4(isEquivalent), toArray2);
@@ -3886,7 +3897,7 @@ var reverse4 = (self) => {
   return result;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/data.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/data.js
 var ArrayProto = /* @__PURE__ */ Object.assign(/* @__PURE__ */ Object.create(Array.prototype), {
   [symbol]() {
     return array(this);
@@ -3910,7 +3921,7 @@ var Structural = /* @__PURE__ */ function() {
 }();
 var struct2 = (as9) => Object.assign(Object.create(StructuralPrototype), as9);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/differ/contextPatch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/differ/contextPatch.js
 var ContextPatchTypeId = /* @__PURE__ */ Symbol.for("effect/DifferContextPatch");
 function variance(a) {
   return a;
@@ -3939,27 +3950,27 @@ var makeAndThen = (first2, second) => {
 var AddServiceProto = /* @__PURE__ */ Object.assign(/* @__PURE__ */ Object.create(PatchProto), {
   _tag: "AddService"
 });
-var makeAddService = (tag2, service3) => {
+var makeAddService = (key2, service3) => {
   const o = Object.create(AddServiceProto);
-  o.tag = tag2;
+  o.key = key2;
   o.service = service3;
   return o;
 };
 var RemoveServiceProto = /* @__PURE__ */ Object.assign(/* @__PURE__ */ Object.create(PatchProto), {
   _tag: "RemoveService"
 });
-var makeRemoveService = (tag2) => {
+var makeRemoveService = (key2) => {
   const o = Object.create(RemoveServiceProto);
-  o.tag = tag2;
+  o.key = key2;
   return o;
 };
 var UpdateServiceProto = /* @__PURE__ */ Object.assign(/* @__PURE__ */ Object.create(PatchProto), {
   _tag: "UpdateService"
 });
-var makeUpdateService = (tag2, update6) => {
+var makeUpdateService = (key2, update5) => {
   const o = Object.create(UpdateServiceProto);
-  o.tag = tag2;
-  o.update = update6;
+  o.key = key2;
+  o.update = update5;
   return o;
 };
 var diff = (oldValue, newValue) => {
@@ -3999,7 +4010,7 @@ var patch = /* @__PURE__ */ dual(2, (self, context7) => {
         break;
       }
       case "AddService": {
-        updatedContext.set(head7.tag, head7.service);
+        updatedContext.set(head7.key, head7.service);
         patches = tail2;
         break;
       }
@@ -4008,12 +4019,12 @@ var patch = /* @__PURE__ */ dual(2, (self, context7) => {
         break;
       }
       case "RemoveService": {
-        updatedContext.delete(head7.tag);
+        updatedContext.delete(head7.key);
         patches = tail2;
         break;
       }
       case "UpdateService": {
-        updatedContext.set(head7.tag, head7.update(updatedContext.get(head7.tag)));
+        updatedContext.set(head7.key, head7.update(updatedContext.get(head7.key)));
         wasServiceUpdated = true;
         patches = tail2;
         break;
@@ -4036,7 +4047,7 @@ var patch = /* @__PURE__ */ dual(2, (self, context7) => {
   return makeContext(map26);
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/differ/hashSetPatch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/differ/hashSetPatch.js
 var HashSetPatchTypeId = /* @__PURE__ */ Symbol.for("effect/DifferHashSetPatch");
 function variance2(a) {
   return a;
@@ -4080,11 +4091,11 @@ var makeRemove = (value3) => {
   return o;
 };
 var diff2 = (oldValue, newValue) => {
-  const [removed, patch9] = reduce6([oldValue, empty13()], ([set10, patch10], value3) => {
-    if (has4(value3)(set10)) {
-      return [remove5(value3)(set10), patch10];
+  const [removed, patch9] = reduce6([oldValue, empty13()], ([set11, patch10], value3) => {
+    if (has4(value3)(set11)) {
+      return [remove5(value3)(set11), patch10];
     }
-    return [set10, combine5(makeAdd(value3))(patch10)];
+    return [set11, combine5(makeAdd(value3))(patch10)];
   })(newValue);
   return reduce6(patch9, (patch10, value3) => combine5(makeRemove(value3))(patch10))(removed);
 };
@@ -4093,7 +4104,7 @@ var patch2 = /* @__PURE__ */ dual(2, (self, oldValue) => {
   if (self._tag === "Empty") {
     return oldValue;
   }
-  let set10 = oldValue;
+  let set11 = oldValue;
   let patches = of2(self);
   while (isNonEmpty(patches)) {
     const head7 = headNonEmpty2(patches);
@@ -4108,20 +4119,20 @@ var patch2 = /* @__PURE__ */ dual(2, (self, oldValue) => {
         break;
       }
       case "Add": {
-        set10 = add4(head7.value)(set10);
+        set11 = add4(head7.value)(set11);
         patches = tail2;
         break;
       }
       case "Remove": {
-        set10 = remove5(head7.value)(set10);
+        set11 = remove5(head7.value)(set11);
         patches = tail2;
       }
     }
   }
-  return set10;
+  return set11;
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/differ/readonlyArrayPatch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/differ/readonlyArrayPatch.js
 var ReadonlyArrayPatchTypeId = /* @__PURE__ */ Symbol.for("effect/DifferReadonlyArrayPatch");
 function variance3(a) {
   return a;
@@ -4214,7 +4225,9 @@ var patch3 = /* @__PURE__ */ dual(3, (self, oldValue, differ3) => {
         break;
       }
       case "Append": {
-        readonlyArray2.push(...head7.values);
+        for (const value3 of head7.values) {
+          readonlyArray2.push(value3);
+        }
         patches = tail2;
         break;
       }
@@ -4233,7 +4246,7 @@ var patch3 = /* @__PURE__ */ dual(3, (self, oldValue, differ3) => {
   return readonlyArray2;
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/differ.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/differ.js
 var DifferTypeId = /* @__PURE__ */ Symbol.for("effect/Differ");
 var DifferProto = {
   [DifferTypeId]: {
@@ -4271,7 +4284,7 @@ var readonlyArray = (differ3) => make16({
   }),
   patch: (patch9, oldValue) => patch3(patch9, oldValue, differ3)
 });
-var update2 = () => updateWith((_, a) => a);
+var update = () => updateWith((_, a) => a);
 var updateWith = (f) => make16({
   empty: identity,
   combine: (first2, second) => {
@@ -4292,7 +4305,7 @@ var updateWith = (f) => make16({
   patch: (patch9, oldValue) => f(oldValue, patch9(oldValue))
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/runtimeFlagsPatch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/runtimeFlagsPatch.js
 var BIT_MASK = 255;
 var BIT_SHIFT = 8;
 var active = (patch9) => patch9 & BIT_MASK;
@@ -4305,7 +4318,7 @@ var exclude = /* @__PURE__ */ dual(2, (self, flag) => make17(active(self) & ~fla
 var andThen2 = /* @__PURE__ */ dual(2, (self, that) => self | that);
 var invert = (n) => ~n >>> 0 & BIT_MASK;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/runtimeFlags.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/runtimeFlags.js
 var None2 = 0;
 var Interruption = 1 << 0;
 var OpSupervision = 1 << 1;
@@ -4330,13 +4343,13 @@ var differ = /* @__PURE__ */ make16({
   patch: (_patch, oldValue) => patch4(oldValue, _patch)
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/RuntimeFlagsPatch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/RuntimeFlagsPatch.js
 var empty16 = empty15;
 var enable3 = enable;
 var disable2 = disable;
 var exclude2 = exclude;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/blockedRequests.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/blockedRequests.js
 var empty17 = {
   _tag: "Empty"
 };
@@ -4481,7 +4494,7 @@ var ParallelImpl = class {
 };
 var parallelCollectionEmpty = () => new ParallelImpl(empty10());
 var parallelCollectionMake = (dataSource, blockedRequest) => new ParallelImpl(make15([dataSource, Array.of(blockedRequest)]));
-var parallelCollectionCombine = (self, that) => new ParallelImpl(reduce7(self.map, that.map, (map26, value3, key2) => set3(map26, key2, match(get8(map26, key2), {
+var parallelCollectionCombine = (self, that) => new ParallelImpl(reduce7(self.map, that.map, (map26, value3, key2) => set4(map26, key2, match(get8(map26, key2), {
   onNone: () => value3,
   onSome: (a) => [...a, ...value3]
 }))));
@@ -4501,14 +4514,14 @@ var SequentialImpl = class {
   }
 };
 var sequentialCollectionMake = (map26) => new SequentialImpl(map26);
-var sequentialCollectionCombine = (self, that) => new SequentialImpl(reduce7(that.map, self.map, (map26, value3, key2) => set3(map26, key2, match(get8(map26, key2), {
+var sequentialCollectionCombine = (self, that) => new SequentialImpl(reduce7(that.map, self.map, (map26, value3, key2) => set4(map26, key2, match(get8(map26, key2), {
   onNone: () => [],
   onSome: (a) => [...a, ...value3]
 }))));
 var sequentialCollectionKeys = (self) => Array.from(keys3(self.map));
 var sequentialCollectionToChunk = (self) => Array.from(self.map);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/cause.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/cause.js
 var OP_DIE = "Die";
 var OP_EMPTY = "Empty";
 var OP_FAIL = "Fail";
@@ -4516,7 +4529,7 @@ var OP_INTERRUPT = "Interrupt";
 var OP_PARALLEL = "Parallel";
 var OP_SEQUENTIAL = "Sequential";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/cause.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/cause.js
 var CauseSymbolKey = "effect/Cause";
 var CauseTypeId = /* @__PURE__ */ Symbol.for(CauseSymbolKey);
 var variance4 = {
@@ -4639,7 +4652,7 @@ var isInterrupted = (self) => isSome2(interruptOption(self));
 var isInterruptedOnly = (self) => reduceWithContext(void 0, IsInterruptedOnlyCauseReducer)(self);
 var failures = (self) => reverse3(reduce9(self, empty6(), (list2, cause4) => cause4._tag === OP_FAIL ? some2(pipe(list2, prepend2(cause4.error))) : none2()));
 var defects = (self) => reverse3(reduce9(self, empty6(), (list2, cause4) => cause4._tag === OP_DIE ? some2(pipe(list2, prepend2(cause4.defect))) : none2()));
-var interruptors = (self) => reduce9(self, empty9(), (set10, cause4) => cause4._tag === OP_INTERRUPT ? some2(pipe(set10, add4(cause4.fiberId))) : none2());
+var interruptors = (self) => reduce9(self, empty9(), (set11, cause4) => cause4._tag === OP_INTERRUPT ? some2(pipe(set11, add4(cause4.fiberId))) : none2());
 var failureOption = (self) => find(self, (cause4) => cause4._tag === OP_FAIL ? some2(cause4.error) : none2());
 var failureOrCause = (self) => {
   const option4 = failureOption(self);
@@ -5117,11 +5130,11 @@ var prettyErrors = (cause4) => reduceWithContext(cause4, void 0, {
   sequentialCase: (_, l, r) => [...l, ...r]
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/deferred.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/deferred.js
 var OP_STATE_PENDING = "Pending";
 var OP_STATE_DONE = "Done";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/deferred.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/deferred.js
 var DeferredSymbolKey = "effect/Deferred";
 var DeferredTypeId = /* @__PURE__ */ Symbol.for(DeferredSymbolKey);
 var deferredVariance = {
@@ -5143,7 +5156,7 @@ var done = (effect3) => {
   };
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/internalize.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/internalize.js
 var internalize = (f) => {
   Object.defineProperty(f, "name", {
     value: "effect_cutpoint"
@@ -5151,14 +5164,14 @@ var internalize = (f) => {
   return f;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/tracer.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/tracer.js
 var TracerTypeId = /* @__PURE__ */ Symbol.for("effect/Tracer");
 var make19 = (options) => ({
   [TracerTypeId]: TracerTypeId,
   ...options
 });
-var tracerTag = /* @__PURE__ */ Tag(/* @__PURE__ */ Symbol.for("effect/Tracer"));
-var spanTag = /* @__PURE__ */ Tag(/* @__PURE__ */ Symbol.for("effect/ParentSpan"));
+var tracerTag = /* @__PURE__ */ GenericTag("effect/Tracer");
+var spanTag = /* @__PURE__ */ GenericTag("effect/ParentSpan");
 var ids3 = /* @__PURE__ */ globalValue("effect/Tracer/SpanId.ids", () => make13(0));
 var NativeSpan = class {
   name;
@@ -5206,7 +5219,7 @@ var nativeTracer = /* @__PURE__ */ make19({
   context: (f) => f()
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/core.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/core.js
 var EffectErrorSymbolKey = "effect/EffectError";
 var EffectErrorTypeId = /* @__PURE__ */ Symbol.for(EffectErrorSymbolKey);
 var isEffectError = (u) => hasProperty(u, EffectErrorTypeId);
@@ -5356,12 +5369,10 @@ var acquireUseRelease = /* @__PURE__ */ dual(3, (acquire, use2, release) => unin
   return suspend(() => release(a, exit4)).pipe(matchCauseEffect({
     onFailure: (cause4) => {
       switch (exit4._tag) {
-        case OP_FAILURE: {
+        case OP_FAILURE:
           return failCause(parallel(exit4.i0, cause4));
-        }
-        case OP_SUCCESS: {
+        case OP_SUCCESS:
           return failCause(cause4);
-        }
       }
     },
     onSuccess: () => exit4
@@ -5426,23 +5437,19 @@ var unified = (f) => (...args) => f(...args);
 var catchIf = /* @__PURE__ */ dual(3, (self, predicate, f) => catchAllCause(self, (cause4) => {
   const either8 = failureOrCause(cause4);
   switch (either8._tag) {
-    case "Left": {
+    case "Left":
       return predicate(either8.left) ? f(either8.left) : failCause(cause4);
-    }
-    case "Right": {
+    case "Right":
       return failCause(either8.right);
-    }
   }
 }));
 var catchSome = /* @__PURE__ */ dual(2, (self, pf) => catchAllCause(self, (cause4) => {
   const either8 = failureOrCause(cause4);
   switch (either8._tag) {
-    case "Left": {
+    case "Left":
       return pipe(pf(either8.left), getOrElse(() => failCause(cause4)));
-    }
-    case "Right": {
+    case "Right":
       return failCause(either8.right);
-    }
   }
 }));
 var checkInterruptible = (f) => withFiberRuntime((_, status2) => f(interruption(status2.runtimeFlags)));
@@ -5516,41 +5523,32 @@ var flip = (self) => matchEffect(self, {
   onFailure: succeed,
   onSuccess: fail2
 });
-var matchCause = /* @__PURE__ */ dual(2, (self, {
-  onFailure,
-  onSuccess
-}) => matchCauseEffect(self, {
-  onFailure: (cause4) => succeed(onFailure(cause4)),
-  onSuccess: (a) => succeed(onSuccess(a))
+var matchCause = /* @__PURE__ */ dual(2, (self, options) => matchCauseEffect(self, {
+  onFailure: (cause4) => succeed(options.onFailure(cause4)),
+  onSuccess: (a) => succeed(options.onSuccess(a))
 }));
-var matchCauseEffect = /* @__PURE__ */ dual(2, (self, {
-  onFailure,
-  onSuccess
-}) => {
+var matchCauseEffect = /* @__PURE__ */ dual(2, (self, options) => {
   const effect3 = new EffectPrimitive(OP_ON_SUCCESS_AND_FAILURE);
   effect3.i0 = self;
-  effect3.i1 = onFailure;
-  effect3.i2 = onSuccess;
-  internalize(onFailure);
-  internalize(onSuccess);
+  effect3.i1 = options.onFailure;
+  effect3.i2 = options.onSuccess;
+  internalize(options.onFailure);
+  internalize(options.onSuccess);
   return effect3;
 });
-var matchEffect = /* @__PURE__ */ dual(2, (self, {
-  onFailure,
-  onSuccess
-}) => matchCauseEffect(self, {
+var matchEffect = /* @__PURE__ */ dual(2, (self, options) => matchCauseEffect(self, {
   onFailure: (cause4) => {
-    const failures2 = failures(cause4);
     const defects2 = defects(cause4);
     if (defects2.length > 0) {
       return failCause(electFailures(cause4));
     }
+    const failures2 = failures(cause4);
     if (failures2.length > 0) {
-      return onFailure(unsafeHead(failures2));
+      return options.onFailure(unsafeHead(failures2));
     }
     return failCause(cause4);
   },
-  onSuccess
+  onSuccess: options.onSuccess
 }));
 var forEachSequential = /* @__PURE__ */ dual(2, (self, f) => suspend(() => {
   const arr = fromIterable3(self);
@@ -5596,12 +5594,9 @@ var interruptibleMask = (f) => {
 };
 var intoDeferred = /* @__PURE__ */ dual(2, (self, deferred) => uninterruptibleMask((restore) => flatMap8(exit(restore(self)), (exit4) => deferredDone(deferred, exit4))));
 var map10 = /* @__PURE__ */ dual(2, (self, f) => flatMap8(self, (a) => sync(() => f(a))));
-var mapBoth = /* @__PURE__ */ dual(2, (self, {
-  onFailure,
-  onSuccess
-}) => matchEffect(self, {
-  onFailure: (e) => failSync(() => onFailure(e)),
-  onSuccess: (a) => sync(() => onSuccess(a))
+var mapBoth = /* @__PURE__ */ dual(2, (self, options) => matchEffect(self, {
+  onFailure: (e) => failSync(() => options.onFailure(e)),
+  onSuccess: (a) => sync(() => options.onSuccess(a))
 }));
 var mapError = /* @__PURE__ */ dual(2, (self, f) => matchCauseEffect(self, {
   onFailure: (cause4) => {
@@ -5729,9 +5724,9 @@ var whileLoop = (options) => {
 };
 var withConcurrency = /* @__PURE__ */ dual(2, (self, concurrency) => fiberRefLocally(self, currentConcurrency, concurrency));
 var withRequestBatching = /* @__PURE__ */ dual(2, (self, requestBatching) => fiberRefLocally(self, currentRequestBatching, requestBatching));
-var withRuntimeFlags = /* @__PURE__ */ dual(2, (self, update6) => {
+var withRuntimeFlags = /* @__PURE__ */ dual(2, (self, update5) => {
   const effect3 = new EffectPrimitive(OP_UPDATE_RUNTIME_FLAGS);
-  effect3.i0 = update6;
+  effect3.i0 = update5;
   effect3.i1 = () => self;
   return effect3;
 });
@@ -5841,7 +5836,7 @@ var fiberRefModify = /* @__PURE__ */ dual(2, (self, f) => withFiberRuntime((stat
 var fiberRefLocally = /* @__PURE__ */ dual(3, (use2, self, value3) => acquireUseRelease(zipLeft2(fiberRefGet(self), fiberRefSet(self, value3)), () => use2, (oldValue) => fiberRefSet(self, oldValue)));
 var fiberRefLocallyWith = /* @__PURE__ */ dual(3, (use2, self, f) => fiberRefGetWith(self, (a) => fiberRefLocally(use2, self, f(a))));
 var fiberRefUnsafeMake = (initial, options) => fiberRefUnsafeMakePatch(initial, {
-  differ: update2(),
+  differ: update(),
   fork: options?.fork ?? identity,
   join: options?.join
 });
@@ -5853,7 +5848,7 @@ var fiberRefUnsafeMakeHashSet = (initial) => {
   });
 };
 var fiberRefUnsafeMakeReadonlyArray = (initial) => {
-  const differ3 = readonlyArray(update2());
+  const differ3 = readonlyArray(update());
   return fiberRefUnsafeMakePatch(initial, {
     differ: differ3,
     fork: differ3.empty
@@ -6030,6 +6025,10 @@ var InvalidPubSubCapacityExceptionTypeId = /* @__PURE__ */ Symbol.for("effect/Ca
 var InvalidPubSubCapacityException = /* @__PURE__ */ makeException({
   [InvalidPubSubCapacityExceptionTypeId]: InvalidPubSubCapacityExceptionTypeId
 }, "InvalidPubSubCapacityException");
+var TimeoutExceptionTypeId = /* @__PURE__ */ Symbol.for("effect/Cause/errors/Timeout");
+var TimeoutException = /* @__PURE__ */ makeException({
+  [TimeoutExceptionTypeId]: TimeoutExceptionTypeId
+}, "TimeoutException");
 var UnknownExceptionTypeId = /* @__PURE__ */ Symbol.for("effect/Cause/errors/UnknownException");
 var UnknownException = /* @__PURE__ */ function() {
   class UnknownException2 extends YieldableError {
@@ -6082,12 +6081,10 @@ var exitFlatten = (self) => pipe(self, exitFlatMap(identity));
 var exitInterrupt = (fiberId3) => exitFailCause(interrupt(fiberId3));
 var exitMap = /* @__PURE__ */ dual(2, (self, f) => {
   switch (self._tag) {
-    case OP_FAILURE: {
+    case OP_FAILURE:
       return exitFailCause(self.i0);
-    }
-    case OP_SUCCESS: {
+    case OP_SUCCESS:
       return exitSucceed(f(self.i0));
-    }
   }
 });
 var exitMapBoth = /* @__PURE__ */ dual(2, (self, {
@@ -6095,12 +6092,10 @@ var exitMapBoth = /* @__PURE__ */ dual(2, (self, {
   onSuccess
 }) => {
   switch (self._tag) {
-    case OP_FAILURE: {
+    case OP_FAILURE:
       return exitFailCause(pipe(self.i0, map9(onFailure)));
-    }
-    case OP_SUCCESS: {
+    case OP_SUCCESS:
       return exitSucceed(onSuccess(self.i0));
-    }
   }
 });
 var exitMatch = /* @__PURE__ */ dual(2, (self, {
@@ -6108,12 +6103,10 @@ var exitMatch = /* @__PURE__ */ dual(2, (self, {
   onSuccess
 }) => {
   switch (self._tag) {
-    case OP_FAILURE: {
+    case OP_FAILURE:
       return onFailure(self.i0);
-    }
-    case OP_SUCCESS: {
+    case OP_SUCCESS:
       return onSuccess(self.i0);
-    }
   }
 });
 var exitMatchEffect = /* @__PURE__ */ dual(2, (self, {
@@ -6121,12 +6114,10 @@ var exitMatchEffect = /* @__PURE__ */ dual(2, (self, {
   onSuccess
 }) => {
   switch (self._tag) {
-    case OP_FAILURE: {
+    case OP_FAILURE:
       return onFailure(self.i0);
-    }
-    case OP_SUCCESS: {
+    case OP_SUCCESS:
       return onSuccess(self.i0);
-    }
   }
 });
 var exitSucceed = (value3) => {
@@ -6150,9 +6141,8 @@ var exitZipWith = /* @__PURE__ */ dual(3, (self, that, {
   switch (self._tag) {
     case OP_FAILURE: {
       switch (that._tag) {
-        case OP_SUCCESS: {
+        case OP_SUCCESS:
           return exitFailCause(self.i0);
-        }
         case OP_FAILURE: {
           return exitFailCause(onFailure(self.i0, that.i0));
         }
@@ -6160,12 +6150,10 @@ var exitZipWith = /* @__PURE__ */ dual(3, (self, that, {
     }
     case OP_SUCCESS: {
       switch (that._tag) {
-        case OP_SUCCESS: {
+        case OP_SUCCESS:
           return exitSucceed(onSuccess(self.i0, that.i0));
-        }
-        case OP_FAILURE: {
+        case OP_FAILURE:
           return exitFailCause(that.i0);
-        }
       }
     }
   }
@@ -6197,7 +6185,7 @@ var deferredAwait = (self) => asyncEither((k) => {
       return right2(state.effect);
     }
     case OP_STATE_PENDING: {
-      pipe(self.state, set2(pending([k, ...state.joiners])));
+      pipe(self.state, set3(pending([k, ...state.joiners])));
       return left2(deferredInterruptJoiner(self, k));
     }
   }
@@ -6210,7 +6198,7 @@ var deferredCompleteWith = /* @__PURE__ */ dual(2, (self, effect3) => sync(() =>
       return false;
     }
     case OP_STATE_PENDING: {
-      pipe(self.state, set2(done(effect3)));
+      pipe(self.state, set3(done(effect3)));
       for (let i = 0; i < state.joiners.length; i++) {
         state.joiners[i](effect3);
       }
@@ -6239,7 +6227,7 @@ var deferredSucceed = /* @__PURE__ */ dual(2, (self, value3) => deferredComplete
 var deferredUnsafeDone = (self, effect3) => {
   const state = get7(self.state);
   if (state._tag === OP_STATE_PENDING) {
-    pipe(self.state, set2(done(effect3)));
+    pipe(self.state, set3(done(effect3)));
     for (let i = state.joiners.length - 1; i >= 0; i--) {
       state.joiners[i](effect3);
     }
@@ -6248,7 +6236,7 @@ var deferredUnsafeDone = (self, effect3) => {
 var deferredInterruptJoiner = (self, joiner) => sync(() => {
   const state = get7(self.state);
   if (state._tag === OP_STATE_PENDING) {
-    pipe(self.state, set2(pending(state.joiners.filter((j) => j !== joiner))));
+    pipe(self.state, set3(pending(state.joiners.filter((j) => j !== joiner))));
   }
 });
 var constContext = /* @__PURE__ */ fiberRefGet(currentContext);
@@ -6258,11 +6246,11 @@ var provideContext = /* @__PURE__ */ dual(2, (self, context7) => fiberRefLocally
 var provideSomeContext = /* @__PURE__ */ dual(2, (self, context7) => fiberRefLocallyWith(currentContext, (parent2) => merge3(parent2, context7))(self));
 var mapInputContext = /* @__PURE__ */ dual(2, (self, f) => contextWithEffect((context7) => provideContext(self, f(context7))));
 var currentSpanFromFiber = (fiber) => {
-  const span4 = fiber.getFiberRef(currentContext).unsafeMap.get(spanTag);
+  const span4 = fiber.getFiberRef(currentContext).unsafeMap.get(spanTag.key);
   return span4 !== void 0 && span4._tag === "Span" ? some2(span4) : none2();
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Deferred.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Deferred.js
 var make20 = deferredMake;
 var _await = deferredAwait;
 var done2 = deferredDone;
@@ -6274,7 +6262,7 @@ var poll = deferredPoll;
 var succeed2 = deferredSucceed;
 var unsafeMake3 = deferredUnsafeMake;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Duration.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Duration.js
 var TypeId9 = /* @__PURE__ */ Symbol.for("effect/Duration");
 var bigint1e3 = /* @__PURE__ */ BigInt(1e3);
 var bigint1e9 = /* @__PURE__ */ BigInt(1e9);
@@ -6527,7 +6515,7 @@ var format3 = (self) => {
   return parts.reverse().join(" ");
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Exit.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Exit.js
 var isExit = exitIsExit;
 var isFailure = exitIsFailure;
 var isSuccess = exitIsSuccess;
@@ -6544,7 +6532,7 @@ var unit3 = exitUnit;
 var zip3 = exitZip;
 var zipRight3 = exitZipRight;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/MutableHashMap.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/MutableHashMap.js
 var TypeId10 = /* @__PURE__ */ Symbol.for("effect/MutableHashMap");
 var MutableHashMapProto = {
   [TypeId10]: TypeId10,
@@ -6644,7 +6632,7 @@ var getFromBucket = (self, bucket, key2, remove10 = false) => {
   return none2();
 };
 var has5 = /* @__PURE__ */ dual(2, (self, key2) => isSome2(get9(self, key2)));
-var set4 = /* @__PURE__ */ dual(3, (self, key2, value3) => {
+var set5 = /* @__PURE__ */ dual(3, (self, key2, value3) => {
   if (isEqual(key2) === false) {
     self.referential.set(key2, value3);
     return self;
@@ -6696,7 +6684,7 @@ var size6 = (self) => {
   return self.referential.size + self.bucketsSize;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/MutableList.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/MutableList.js
 var TypeId11 = /* @__PURE__ */ Symbol.for("effect/MutableList");
 var MutableListProto = {
   [TypeId11]: TypeId11,
@@ -6807,7 +6795,7 @@ var remove7 = (self, node) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/MutableQueue.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/MutableQueue.js
 var TypeId12 = /* @__PURE__ */ Symbol.for("effect/MutableQueue");
 var EmptyMutableQueue = /* @__PURE__ */ Symbol.for("effect/mutable/MutableQueue/Empty");
 var MutableQueueProto = {
@@ -6884,10 +6872,10 @@ var pollUpTo = /* @__PURE__ */ dual(2, (self, n) => {
   return reverse3(result);
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/timeout.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/timeout.js
 var isBun = typeof process === "undefined" ? false : !!process?.isBun;
 var clear2 = isBun ? (id2) => clearInterval(id2) : (id2) => clearTimeout(id2);
-var set5 = isBun ? (fn, ms) => {
+var set6 = isBun ? (fn, ms) => {
   const id2 = setInterval(() => {
     fn();
     clearInterval(id2);
@@ -6895,10 +6883,10 @@ var set5 = isBun ? (fn, ms) => {
   return id2;
 } : (fn, ms) => setTimeout(fn, ms);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/clock.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/clock.js
 var ClockSymbolKey = "effect/Clock";
 var ClockTypeId = /* @__PURE__ */ Symbol.for(ClockSymbolKey);
-var clockTag = /* @__PURE__ */ Tag(ClockTypeId);
+var clockTag = /* @__PURE__ */ GenericTag("effect/Clock");
 var MAX_TIMER_MILLIS = 2 ** 31 - 1;
 var globalClockScheduler = {
   unsafeSchedule(task, duration2) {
@@ -6907,7 +6895,7 @@ var globalClockScheduler = {
       return constFalse;
     }
     let completed = false;
-    const handle = set5(() => {
+    const handle = set6(() => {
       completed = true;
       task();
     }, millis2);
@@ -6955,7 +6943,7 @@ var ClockImpl = class {
 };
 var make23 = () => new ClockImpl();
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Number.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Number.js
 var Order4 = number3;
 var clamp6 = /* @__PURE__ */ clamp(Order4);
 var remainder = /* @__PURE__ */ dual(2, (self, divisor) => {
@@ -6966,8 +6954,12 @@ var remainder = /* @__PURE__ */ dual(2, (self, divisor) => {
   const divisorInt = parseInt(divisor.toFixed(decCount).replace(".", ""));
   return selfInt % divisorInt / Math.pow(10, decCount);
 });
+var nextPow2 = (n) => {
+  const nextPow = Math.ceil(Math.log(n) / Math.log(2));
+  return Math.max(Math.pow(2, nextPow), 2);
+};
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/configError.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/configError.js
 var OP_AND = "And";
 var OP_OR = "Or";
 var OP_INVALID_DATA = "InvalidData";
@@ -6975,7 +6967,7 @@ var OP_MISSING_DATA = "MissingData";
 var OP_SOURCE_UNAVAILABLE = "SourceUnavailable";
 var OP_UNSUPPORTED = "Unsupported";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/configError.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/configError.js
 var ConfigErrorSymbolKey = "effect/ConfigError";
 var ConfigErrorTypeId = /* @__PURE__ */ Symbol.for(ConfigErrorSymbolKey);
 var proto2 = {
@@ -7095,7 +7087,7 @@ var prefixed = /* @__PURE__ */ dual(2, (self, prefix) => {
   }
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/configProvider/pathPatch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/configProvider/pathPatch.js
 var empty21 = {
   _tag: "Empty"
 };
@@ -7138,7 +7130,7 @@ var patch5 = /* @__PURE__ */ dual(2, (path, patch9) => {
   return right2(output);
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/config.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/config.js
 var OP_CONSTANT = "Constant";
 var OP_FAIL2 = "Fail";
 var OP_FALLBACK = "Fallback";
@@ -7151,11 +7143,11 @@ var OP_SEQUENCE = "Sequence";
 var OP_HASHMAP = "HashMap";
 var OP_ZIP_WITH = "ZipWith";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/configProvider.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/configProvider.js
 var concat = (l, r) => [...l, ...r];
 var ConfigProviderSymbolKey = "effect/ConfigProvider";
 var ConfigProviderTypeId = /* @__PURE__ */ Symbol.for(ConfigProviderSymbolKey);
-var configProviderTag = /* @__PURE__ */ Tag(ConfigProviderTypeId);
+var configProviderTag = /* @__PURE__ */ GenericTag("effect/ConfigProvider");
 var FlatConfigProviderSymbolKey = "effect/ConfigProviderFlat";
 var FlatConfigProviderTypeId = /* @__PURE__ */ Symbol.for(FlatConfigProviderSymbolKey);
 var make24 = (options) => ({
@@ -7338,9 +7330,7 @@ var parsePrimitive = (text, path, primitive, delimiter, split6) => {
 var transpose = (array6) => {
   return Object.keys(array6[0]).map((column) => array6.map((row) => row[column]));
 };
-var escapeRegex = (string3) => {
-  return string3.replace(/[/\-\\^$*+?.()|[\]{}]/g, "\\$&");
-};
+var escapeRegex = (string3) => string3.replace(/[/\-\\^$*+?.()|[\]{}]/g, "\\$&");
 var indicesFrom = (quotedIndices) => pipe(forEachSequential(quotedIndices, parseQuotedIndex), mapBoth({
   onFailure: () => empty3(),
   onSuccess: sort(Order4)
@@ -7359,9 +7349,9 @@ var parseInteger = (str) => {
   return Number.isNaN(parsedIndex) ? none2() : some2(parsedIndex);
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/defaultServices/console.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/defaultServices/console.js
 var TypeId13 = /* @__PURE__ */ Symbol.for("effect/Console");
-var consoleTag = /* @__PURE__ */ Tag(TypeId13);
+var consoleTag = /* @__PURE__ */ GenericTag("effect/Console");
 var defaultConsole = {
   [TypeId13]: TypeId13,
   assert(condition, ...args) {
@@ -7447,10 +7437,10 @@ var defaultConsole = {
   unsafe: console
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/random.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/random.js
 var RandomSymbolKey = "effect/Random";
 var RandomTypeId = /* @__PURE__ */ Symbol.for(RandomSymbolKey);
-var randomTag = /* @__PURE__ */ Tag(RandomTypeId);
+var randomTag = /* @__PURE__ */ GenericTag("effect/Random");
 var RandomImpl = class {
   seed;
   [RandomTypeId] = RandomTypeId;
@@ -7495,7 +7485,7 @@ var swap = (buffer3, index1, index2) => {
 };
 var make25 = (seed) => new RandomImpl(seed);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/defaultServices.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/defaultServices.js
 var liveServices = /* @__PURE__ */ pipe(/* @__PURE__ */ empty5(), /* @__PURE__ */ add2(clockTag, /* @__PURE__ */ make23()), /* @__PURE__ */ add2(consoleTag, defaultConsole), /* @__PURE__ */ add2(randomTag, /* @__PURE__ */ make25(/* @__PURE__ */ Math.random() * 4294967296 >>> 0)), /* @__PURE__ */ add2(configProviderTag, /* @__PURE__ */ fromEnv()), /* @__PURE__ */ add2(tracerTag, nativeTracer));
 var currentServices = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/DefaultServices/currentServices"), () => fiberRefUnsafeMakeContext(liveServices));
 var sleep = (duration2) => {
@@ -7512,14 +7502,14 @@ var randomWith = (f) => fiberRefGetWith(currentServices, (services) => f(get4(se
 var tracerWith = (f) => fiberRefGetWith(currentServices, (services) => f(get4(services, tracerTag)));
 var withTracer = /* @__PURE__ */ dual(2, (effect3, value3) => fiberRefLocallyWith(currentServices, add2(tracerTag, value3))(effect3));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Clock.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Clock.js
 var sleep2 = sleep;
 var currentTimeMillis2 = currentTimeMillis;
 var currentTimeNanos2 = currentTimeNanos;
 var clockWith2 = clockWith;
 var Clock = clockTag;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiberRefs.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiberRefs.js
 function unsafeMake4(fiberRefLocals) {
   return new FiberRefsImpl(fiberRefLocals);
 }
@@ -7688,7 +7678,7 @@ var updateManyAs = /* @__PURE__ */ dual(2, (self, {
   return new FiberRefsImpl(locals);
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/FiberRefs.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/FiberRefs.js
 var get11 = get10;
 var getOrDefault2 = getOrDefault;
 var joinAs2 = joinAs;
@@ -7696,7 +7686,7 @@ var setAll2 = setAll;
 var updateManyAs2 = updateManyAs;
 var empty23 = empty22;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/LogLevel.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/LogLevel.js
 var LogLevel_exports = {};
 __export(LogLevel_exports, {
   All: () => All,
@@ -7752,23 +7742,21 @@ var fromLiteral = (literal2) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/logSpan.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/logSpan.js
 var make26 = (label, startTime) => ({
   label,
   startTime
 });
-var render = (now) => {
-  return (self) => {
-    const label = self.label.replace(/[\s="]/g, "_");
-    return `${label}=${now - self.startTime}ms`;
-  };
+var render = (now) => (self) => {
+  const label = self.label.replace(/[\s="]/g, "_");
+  return `${label}=${now - self.startTime}ms`;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/LogSpan.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/LogSpan.js
 var make27 = make26;
 var render2 = render;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/ref.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/ref.js
 var RefTypeId = /* @__PURE__ */ Symbol.for("effect/Ref");
 var refVariance = {
   /* c8 ignore next */
@@ -7785,7 +7773,7 @@ var RefImpl = class {
       const current2 = get7(this.ref);
       const [b, a] = f(current2);
       if (current2 !== a) {
-        set2(a)(this.ref);
+        set3(a)(this.ref);
       }
       return b;
     });
@@ -7797,24 +7785,24 @@ var RefImpl = class {
 var unsafeMake5 = (value3) => new RefImpl(make13(value3));
 var make28 = (value3) => sync(() => unsafeMake5(value3));
 var get12 = (self) => self.modify((a) => [a, a]);
-var set6 = /* @__PURE__ */ dual(2, (self, value3) => self.modify(() => [void 0, value3]));
+var set7 = /* @__PURE__ */ dual(2, (self, value3) => self.modify(() => [void 0, value3]));
 var getAndSet = /* @__PURE__ */ dual(2, (self, value3) => self.modify((a) => [a, value3]));
-var modify3 = /* @__PURE__ */ dual(2, (self, f) => self.modify(f));
-var update3 = /* @__PURE__ */ dual(2, (self, f) => self.modify((a) => [void 0, f(a)]));
+var modify4 = /* @__PURE__ */ dual(2, (self, f) => self.modify(f));
+var update2 = /* @__PURE__ */ dual(2, (self, f) => self.modify((a) => [void 0, f(a)]));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Ref.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Ref.js
 var RefTypeId2 = RefTypeId;
 var make29 = make28;
 var get13 = get12;
 var getAndSet2 = getAndSet;
-var modify4 = modify3;
-var set7 = set6;
-var update4 = update3;
+var modify5 = modify4;
+var set8 = set7;
+var update3 = update2;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Tracer.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Tracer.js
 var tracerWith2 = tracerWith;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiberRefs/patch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiberRefs/patch.js
 var OP_EMPTY2 = "Empty";
 var OP_ADD = "Add";
 var OP_REMOVE = "Remove";
@@ -7904,7 +7892,7 @@ var patch6 = /* @__PURE__ */ dual(3, (self, fiberId3, oldValue) => {
   return fiberRefs3;
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/label.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/label.js
 var MetricLabelSymbolKey = "effect/MetricLabel";
 var MetricLabelTypeId = /* @__PURE__ */ Symbol.for(MetricLabelSymbolKey);
 var MetricLabelImpl = class {
@@ -7932,7 +7920,7 @@ var make30 = (key2, value3) => {
 };
 var isMetricLabel = (u) => hasProperty(u, MetricLabelTypeId);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/singleShotGen.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/singleShotGen.js
 var SingleShotGen2 = class _SingleShotGen {
   self;
   called = false;
@@ -7962,10 +7950,10 @@ var SingleShotGen2 = class _SingleShotGen {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/core-effect.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/core-effect.js
 var annotateLogs = /* @__PURE__ */ dual((args) => isEffect(args[0]), function() {
   const args = arguments;
-  return fiberRefLocallyWith(args[0], currentLogAnnotations, typeof args[1] === "string" ? set3(args[1], args[2]) : (annotations2) => Object.entries(args[1]).reduce((acc, [key2, value3]) => set3(acc, key2, value3), annotations2));
+  return fiberRefLocallyWith(args[0], currentLogAnnotations, typeof args[1] === "string" ? set4(args[1], args[2]) : (annotations2) => Object.entries(args[1]).reduce((acc, [key2, value3]) => set4(acc, key2, value3), annotations2));
 });
 var asSome = (self) => map10(self, some2);
 var asSomeError = (self) => mapError(self, some2);
@@ -7997,16 +7985,12 @@ var try_2 = (arg) => {
     }
   });
 };
-var _catch = /* @__PURE__ */ dual(
-  // @ts-expect-error
-  3,
-  (self, tag2, options) => catchAll(self, (e) => {
-    if (hasProperty(e, tag2) && e[tag2] === options.failure) {
-      return options.onFailure(e);
-    }
-    return fail2(e);
-  })
-);
+var _catch = /* @__PURE__ */ dual(3, (self, tag2, options) => catchAll(self, (e) => {
+  if (hasProperty(e, tag2) && e[tag2] === options.failure) {
+    return options.onFailure(e);
+  }
+  return fail2(e);
+}));
 var catchAllDefect = /* @__PURE__ */ dual(2, (self, f) => catchAllCause(self, unified((cause4) => {
   const option4 = find(cause4, (_) => isDieType(_) ? some2(_) : none2());
   switch (option4._tag) {
@@ -8076,7 +8060,7 @@ var bind2 = /* @__PURE__ */ dual(3, (self, tag2, f) => flatMap8(self, (k) => map
 var bindTo2 = /* @__PURE__ */ dual(2, (self, tag2) => map10(self, (a) => ({
   [tag2]: a
 })));
-var bindValue = /* @__PURE__ */ dual(3, (self, tag2, f) => map10(self, (k) => ({
+var let_2 = /* @__PURE__ */ dual(3, (self, tag2, f) => map10(self, (k) => ({
   ...k,
   [tag2]: f(k)
 })));
@@ -8149,12 +8133,9 @@ var firstSuccessOf = (effects) => suspend(() => {
   return pipe(tailNonEmpty2(list2), reduce2(headNonEmpty2(list2), (left3, right3) => orElse2(left3, () => right3)));
 });
 var flipWith = /* @__PURE__ */ dual(2, (self, f) => flip(f(flip(self))));
-var match6 = /* @__PURE__ */ dual(2, (self, {
-  onFailure,
-  onSuccess
-}) => matchEffect(self, {
-  onFailure: (e) => succeed(onFailure(e)),
-  onSuccess: (a) => succeed(onSuccess(a))
+var match6 = /* @__PURE__ */ dual(2, (self, options) => matchEffect(self, {
+  onFailure: (e) => succeed(options.onFailure(e)),
+  onSuccess: (a) => succeed(options.onSuccess(a))
 }));
 var every5 = /* @__PURE__ */ dual(2, (elements, f) => suspend(() => forAllLoop(elements[Symbol.iterator](), 0, f)));
 var forAllLoop = (iterator, index2, f) => {
@@ -8253,7 +8234,7 @@ var logError = /* @__PURE__ */ logWithLevel(Error2);
 var logFatal = /* @__PURE__ */ logWithLevel(Fatal);
 var withLogSpan = /* @__PURE__ */ dual(2, (effect3, label) => flatMap8(currentTimeMillis2, (now) => fiberRefLocallyWith(effect3, currentLogSpan, prepend3(make27(label, now)))));
 var logAnnotations = /* @__PURE__ */ fiberRefGet(currentLogAnnotations);
-var loop = (initial, options) => options.discard ? loopDiscard(initial, options.while, options.step, options.body) : map10(loopInternal(initial, options.while, options.step, options.body), (x) => Array.from(x));
+var loop = (initial, options) => options.discard ? loopDiscard(initial, options.while, options.step, options.body) : map10(loopInternal(initial, options.while, options.step, options.body), Array.from);
 var loopInternal = (initial, cont, inc, body) => suspend(() => cont(initial) ? flatMap8(body(initial), (a) => map10(loopInternal(inc(initial), cont, inc, body), prepend3(a))) : sync(() => empty11()));
 var loopDiscard = (initial, cont, inc, body) => suspend(() => cont(initial) ? flatMap8(body(initial), () => loopDiscard(inc(initial), cont, inc, body)) : unit2);
 var mapAccum3 = /* @__PURE__ */ dual(3, (elements, zero3, f) => suspend(() => {
@@ -8283,12 +8264,10 @@ var merge5 = (self) => matchEffect(self, {
 var negate2 = (self) => map10(self, (b) => !b);
 var none6 = (self) => flatMap8(self, (option4) => {
   switch (option4._tag) {
-    case "None": {
+    case "None":
       return unit2;
-    }
-    case "Some": {
+    case "Some":
       return fail2(new NoSuchElementException());
-    }
   }
 });
 var once = (self) => map10(make29(true), (ref) => asUnit2(whenEffect(self, getAndSet2(ref, false))));
@@ -8401,12 +8380,10 @@ var tapError = /* @__PURE__ */ dual(2, (self, f) => matchCauseEffect(self, {
   onFailure: (cause4) => {
     const either8 = failureOrCause(cause4);
     switch (either8._tag) {
-      case "Left": {
+      case "Left":
         return zipRight2(f(either8.left), failCause(cause4));
-      }
-      case "Right": {
+      case "Right":
         return failCause(cause4);
-      }
     }
   },
   onSuccess: succeed
@@ -8480,7 +8457,7 @@ var serviceFunctions = (getService) => new Proxy({}, {
 });
 var serviceConstants = (getService) => new Proxy({}, {
   get(_target, prop2, _receiver) {
-    return flatMap8(getService, (s) => s[prop2]);
+    return flatMap8(getService, (s) => isEffect(s[prop2]) ? s[prop2] : succeed(s[prop2]));
   }
 });
 var serviceMembers = (getService) => ({
@@ -8503,11 +8480,11 @@ var annotateCurrentSpan = function() {
 };
 var annotateSpans = /* @__PURE__ */ dual((args) => isEffect(args[0]), function() {
   const args = arguments;
-  return fiberRefLocallyWith(args[0], currentTracerSpanAnnotations, typeof args[1] === "string" ? set3(args[1], args[2]) : (annotations2) => Object.entries(args[1]).reduce((acc, [key2, value3]) => set3(acc, key2, value3), annotations2));
+  return fiberRefLocallyWith(args[0], currentTracerSpanAnnotations, typeof args[1] === "string" ? set4(args[1], args[2]) : (annotations2) => Object.entries(args[1]).reduce((acc, [key2, value3]) => set4(acc, key2, value3), annotations2));
 });
 var currentParentSpan = /* @__PURE__ */ serviceOptional(spanTag);
 var currentSpan = /* @__PURE__ */ flatMap8(/* @__PURE__ */ context(), (context7) => {
-  const span4 = context7.unsafeMap.get(spanTag);
+  const span4 = context7.unsafeMap.get(spanTag.key);
   return span4 !== void 0 && span4._tag === "Span" ? succeed(span4) : fail2(new NoSuchElementException());
 });
 var bigint02 = /* @__PURE__ */ BigInt(0);
@@ -8548,10 +8525,10 @@ var withSpan = /* @__PURE__ */ dual((args) => typeof args[0] !== "string", (self
 var fromNullable3 = (value3) => value3 == null ? fail2(new NoSuchElementException()) : succeed(value3);
 var optionFromOptional = (self) => catchAll(map10(self, some2), (error) => isNoSuchElementException(error) ? succeedNone : fail2(error));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Effectable.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Effectable.js
 var EffectTypeId3 = EffectTypeId;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/executionStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/executionStrategy.js
 var OP_SEQUENTIAL2 = "Sequential";
 var OP_PARALLEL2 = "Parallel";
 var OP_PARALLEL_N = "ParallelN";
@@ -8568,16 +8545,16 @@ var parallelN = (parallelism) => ({
 var isSequential = (self) => self._tag === OP_SEQUENTIAL2;
 var isParallel = (self) => self._tag === OP_PARALLEL2;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/ExecutionStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/ExecutionStrategy.js
 var sequential3 = sequential2;
 var parallel3 = parallel2;
 var parallelN2 = parallelN;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/FiberRefsPatch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/FiberRefsPatch.js
 var diff6 = diff5;
 var patch7 = patch6;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiberStatus.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiberStatus.js
 var FiberStatusSymbolKey = "effect/FiberStatus";
 var FiberStatusTypeId = /* @__PURE__ */ Symbol.for(FiberStatusSymbolKey);
 var OP_DONE = "Done";
@@ -8629,13 +8606,13 @@ var suspended = (runtimeFlags2, blockingOn) => new Suspended(runtimeFlags2, bloc
 var isFiberStatus = (u) => hasProperty(u, FiberStatusTypeId);
 var isDone2 = (self) => self._tag === OP_DONE;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/FiberStatus.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/FiberStatus.js
 var done4 = done3;
 var running2 = running;
 var suspended2 = suspended;
 var isDone3 = isDone2;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Scheduler.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Scheduler.js
 var PriorityBuckets = class {
   /**
    * @since 2.0.0
@@ -8704,7 +8681,7 @@ var MixedScheduler = class {
    */
   starve(depth = 0) {
     if (depth >= this.maxNextTickBeforeTimer) {
-      set5(() => this.starveInternal(0), 0);
+      set6(() => this.starveInternal(0), 0);
     } else {
       Promise.resolve(void 0).then(() => this.starveInternal(depth + 1));
     }
@@ -8771,10 +8748,10 @@ var SyncScheduler = class {
 var currentScheduler = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberRef/currentScheduler"), () => fiberRefUnsafeMake(defaultScheduler));
 var withScheduler = /* @__PURE__ */ dual(2, (self, scheduler) => fiberRefLocally(self, currentScheduler, scheduler));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/completedRequestMap.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/completedRequestMap.js
 var currentRequestMap = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberRef/currentRequestMap"), () => fiberRefUnsafeMake(/* @__PURE__ */ new Map()));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/concurrency.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/concurrency.js
 var match8 = (concurrency, sequential5, unbounded6, bounded6) => {
   switch (concurrency) {
     case void 0:
@@ -8800,7 +8777,7 @@ var matchSimple = (concurrency, sequential5, concurrent) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiberMessage.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiberMessage.js
 var OP_INTERRUPT_SIGNAL = "InterruptSignal";
 var OP_STATEFUL = "Stateful";
 var OP_RESUME = "Resume";
@@ -8821,7 +8798,7 @@ var yieldNow2 = () => ({
   _tag: OP_YIELD_NOW
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiberScope.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiberScope.js
 var FiberScopeSymbolKey = "effect/FiberScope";
 var FiberScopeTypeId = /* @__PURE__ */ Symbol.for(FiberScopeSymbolKey);
 var Global = class {
@@ -8857,7 +8834,7 @@ var unsafeMake6 = (fiber) => {
 };
 var globalScope = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberScope/Global"), () => new Global());
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiber.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiber.js
 var FiberSymbolKey = "effect/Fiber";
 var FiberTypeId = /* @__PURE__ */ Symbol.for(FiberSymbolKey);
 var fiberVariance = {
@@ -8875,7 +8852,7 @@ var join2 = (self) => zipLeft2(flatten6(self.await), self.inheritAll);
 var poll3 = (self) => self.poll;
 var currentFiberURI = "effect/FiberCurrent";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/logger.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/logger.js
 var LoggerSymbolKey = "effect/Logger";
 var LoggerTypeId = /* @__PURE__ */ Symbol.for(LoggerSymbolKey);
 var loggerVariance = {
@@ -9039,7 +9016,7 @@ var renderLogSpanLogfmt = (now) => (self) => {
   return `${label}=${now - self.startTime}ms`;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/boundaries.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/boundaries.js
 var MetricBoundariesSymbolKey = "effect/MetricBoundaries";
 var MetricBoundariesTypeId = /* @__PURE__ */ Symbol.for(MetricBoundariesSymbolKey);
 var MetricBoundariesImpl = class {
@@ -9067,7 +9044,7 @@ var fromIterable10 = (iterable) => {
 };
 var exponential = (options) => pipe(makeBy(options.count - 1, (i) => options.start * Math.pow(options.factor, i)), unsafeFromArray, fromIterable10);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/keyType.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/keyType.js
 var MetricKeyTypeSymbolKey = "effect/MetricKeyType";
 var MetricKeyTypeTypeId = /* @__PURE__ */ Symbol.for(MetricKeyTypeSymbolKey);
 var CounterKeyTypeSymbolKey = "effect/MetricKeyType/Counter";
@@ -9136,7 +9113,7 @@ var isGaugeKey = (u) => hasProperty(u, GaugeKeyTypeTypeId);
 var isHistogramKey = (u) => hasProperty(u, HistogramKeyTypeTypeId);
 var isSummaryKey = (u) => hasProperty(u, SummaryKeyTypeTypeId);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/key.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/key.js
 var MetricKeySymbolKey = "effect/MetricKey";
 var MetricKeyTypeId = /* @__PURE__ */ Symbol.for(MetricKeySymbolKey);
 var metricKeyVariance = {
@@ -9173,7 +9150,7 @@ var counter2 = (name, options) => new MetricKeyImpl(name, counter(options), from
 var histogram2 = (name, boundaries, description2) => new MetricKeyImpl(name, histogram(boundaries), fromNullable(description2));
 var taggedWithLabels = /* @__PURE__ */ dual(2, (self, extraTags) => extraTags.length === 0 ? self : new MetricKeyImpl(self.name, self.keyType, self.description, union2(self.tags, extraTags)));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/state.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/state.js
 var MetricStateSymbolKey = "effect/MetricState";
 var MetricStateTypeId = /* @__PURE__ */ Symbol.for(MetricStateSymbolKey);
 var CounterStateSymbolKey = "effect/MetricState/Counter";
@@ -9312,7 +9289,7 @@ var isGaugeState = (u) => hasProperty(u, GaugeStateTypeId);
 var isHistogramState = (u) => hasProperty(u, HistogramStateTypeId);
 var isSummaryState = (u) => hasProperty(u, SummaryStateTypeId);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/hook.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/hook.js
 var MetricHookSymbolKey = "effect/MetricHook";
 var MetricHookTypeId = /* @__PURE__ */ Symbol.for(MetricHookSymbolKey);
 var metricHookVariance = {
@@ -9343,13 +9320,13 @@ var counter4 = (key2) => {
 };
 var frequency3 = (_key) => {
   const values4 = /* @__PURE__ */ new Map();
-  const update6 = (word) => {
+  const update5 = (word) => {
     const slotCount = values4.get(word) ?? 0;
     values4.set(word, slotCount + 1);
   };
   return make31({
     get: () => frequency2(values4),
-    update: update6
+    update: update5
   });
 };
 var gauge3 = (_key, startAt) => {
@@ -9373,7 +9350,7 @@ var histogram4 = (key2) => {
   pipe(bounds, sort(Order4), map3((n, i) => {
     boundaries[i] = n;
   }));
-  const update6 = (value3) => {
+  const update5 = (value3) => {
     let from3 = 0;
     let to3 = size16;
     while (from3 !== to3) {
@@ -9421,7 +9398,7 @@ var histogram4 = (key2) => {
       max: max6,
       sum: sum3
     }),
-    update: update6
+    update: update5
   });
 };
 var summary3 = (key2) => {
@@ -9598,7 +9575,7 @@ var resolveQuantile = (error, sampleCount, current2, consumed, quantile, rest2) 
   throw new Error("BUG: MetricHook.resolveQuantiles - please report an issue at https://github.com/Effect-TS/effect/issues");
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/pair.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/pair.js
 var MetricPairSymbolKey = "effect/MetricPair";
 var MetricPairTypeId = /* @__PURE__ */ Symbol.for(MetricPairSymbolKey);
 var metricPairVariance = {
@@ -9616,7 +9593,7 @@ var unsafeMake7 = (metricKey, metricState) => {
   };
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric/registry.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric/registry.js
 var MetricRegistrySymbolKey = "effect/MetricRegistry";
 var MetricRegistryTypeId = /* @__PURE__ */ Symbol.for(MetricRegistrySymbolKey);
 var MetricRegistryImpl = class {
@@ -9657,7 +9634,7 @@ var MetricRegistryImpl = class {
     if (value3 == null) {
       const counter6 = counter4(key2);
       if (!pipe(this.map, has5(key2))) {
-        pipe(this.map, set4(key2, counter6));
+        pipe(this.map, set5(key2, counter6));
       }
       value3 = counter6;
     }
@@ -9668,7 +9645,7 @@ var MetricRegistryImpl = class {
     if (value3 == null) {
       const frequency5 = frequency3();
       if (!pipe(this.map, has5(key2))) {
-        pipe(this.map, set4(key2, frequency5));
+        pipe(this.map, set5(key2, frequency5));
       }
       value3 = frequency5;
     }
@@ -9679,7 +9656,7 @@ var MetricRegistryImpl = class {
     if (value3 == null) {
       const gauge5 = gauge3(key2, key2.keyType.bigint ? BigInt(0) : 0);
       if (!pipe(this.map, has5(key2))) {
-        pipe(this.map, set4(key2, gauge5));
+        pipe(this.map, set5(key2, gauge5));
       }
       value3 = gauge5;
     }
@@ -9690,7 +9667,7 @@ var MetricRegistryImpl = class {
     if (value3 == null) {
       const histogram6 = histogram4(key2);
       if (!pipe(this.map, has5(key2))) {
-        pipe(this.map, set4(key2, histogram6));
+        pipe(this.map, set5(key2, histogram6));
       }
       value3 = histogram6;
     }
@@ -9701,7 +9678,7 @@ var MetricRegistryImpl = class {
     if (value3 == null) {
       const summary5 = summary3(key2);
       if (!pipe(this.map, has5(key2))) {
-        pipe(this.map, set4(key2, summary5));
+        pipe(this.map, set5(key2, summary5));
       }
       value3 = summary5;
     }
@@ -9712,7 +9689,7 @@ var make32 = () => {
   return new MetricRegistryImpl();
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/metric.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/metric.js
 var MetricSymbolKey = "effect/Metric";
 var MetricTypeId = /* @__PURE__ */ Symbol.for(MetricSymbolKey);
 var metricVariance = {
@@ -9768,7 +9745,7 @@ var taggedWithLabels2 = /* @__PURE__ */ dual(2, (self, extraTags) => {
   return make33(self.keyType, (input, extraTags1) => self.unsafeUpdate(input, union2(extraTags, extraTags1)), (extraTags1) => self.unsafeValue(union2(extraTags, extraTags1)));
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/request.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/request.js
 var RequestSymbolKey = "effect/Request";
 var RequestTypeId = /* @__PURE__ */ Symbol.for(RequestSymbolKey);
 var requestVariance = {
@@ -9818,7 +9795,7 @@ var Listeners = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/supervisor.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/supervisor.js
 var SupervisorSymbolKey = "effect/Supervisor";
 var SupervisorTypeId = /* @__PURE__ */ Symbol.for(SupervisorSymbolKey);
 var supervisorVariance = {
@@ -9964,10 +9941,10 @@ var fromEffect = (effect3) => {
 };
 var none8 = /* @__PURE__ */ globalValue("effect/Supervisor/none", () => fromEffect(unit2));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Differ.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Differ.js
 var make35 = make16;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/supervisor/patch.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/supervisor/patch.js
 var OP_EMPTY3 = "Empty";
 var OP_ADD_SUPERVISOR = "AddSupervisor";
 var OP_REMOVE_SUPERVISOR = "RemoveSupervisor";
@@ -10058,7 +10035,7 @@ var differ2 = /* @__PURE__ */ make35({
   diff: diff7
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/fiberRuntime.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/fiberRuntime.js
 var fiberStarted = /* @__PURE__ */ counter5("effect_fiber_started");
 var fiberActive = /* @__PURE__ */ counter5("effect_fiber_active");
 var fiberSuccesses = /* @__PURE__ */ counter5("effect_fiber_successes");
@@ -11082,16 +11059,12 @@ var loggerWithSpanAnnotations = (self) => mapInputOptions(self, (options) => {
   }
   return {
     ...options,
-    annotations: pipe(options.annotations, set3("effect.traceId", span4.value.traceId), set3("effect.spanId", span4.value.spanId), span4.value._tag === "Span" ? set3("effect.spanName", span4.value.name) : identity)
+    annotations: pipe(options.annotations, set4("effect.traceId", span4.value.traceId), set4("effect.spanId", span4.value.spanId), span4.value._tag === "Span" ? set4("effect.spanName", span4.value.name) : identity)
   };
 });
 var currentLoggers = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberRef/currentLoggers"), () => fiberRefUnsafeMakeHashSet(make12(defaultLogger, tracerLogger)));
-var acquireRelease = /* @__PURE__ */ dual((args) => isEffect(args[0]), (acquire, release) => {
-  return uninterruptible(tap2(acquire, (a) => addFinalizer((exit4) => release(a, exit4))));
-});
-var acquireReleaseInterruptible = /* @__PURE__ */ dual((args) => isEffect(args[0]), (acquire, release) => {
-  return ensuring(acquire, addFinalizer((exit4) => release(exit4)));
-});
+var acquireRelease = /* @__PURE__ */ dual((args) => isEffect(args[0]), (acquire, release) => uninterruptible(tap2(acquire, (a) => addFinalizer((exit4) => release(a, exit4)))));
+var acquireReleaseInterruptible = /* @__PURE__ */ dual((args) => isEffect(args[0]), (acquire, release) => ensuring(acquire, addFinalizer((exit4) => release(exit4))));
 var addFinalizer = (finalizer3) => withFiberRuntime((runtime6) => {
   const acquireRefs = runtime6.getFiberRefs();
   const acquireFlags = runtime6._runtimeFlags;
@@ -11354,12 +11327,10 @@ var forkDaemon = (self) => forkWithScopeOverride(self, globalScope);
 var forkWithErrorHandler = /* @__PURE__ */ dual(2, (self, handler) => fork(onError(self, (cause4) => {
   const either8 = failureOrCause(cause4);
   switch (either8._tag) {
-    case "Left": {
+    case "Left":
       return handler(either8.left);
-    }
-    case "Right": {
+    case "Right":
       return failCause(either8.right);
-    }
   }
 })));
 var unsafeFork = (effect3, parentFiber, parentRuntimeFlags, overrideScope = null) => {
@@ -11385,7 +11356,7 @@ var unsafeMakeChildFiber = (effect3, parentFiber, parentRuntimeFlags, overrideSc
   return childFiber;
 };
 var forkWithScopeOverride = (self, scopeOverride) => withFiberRuntime((parentFiber, parentStatus) => succeed(unsafeFork(self, parentFiber, parentStatus.runtimeFlags, scopeOverride)));
-var mergeAll = /* @__PURE__ */ dual((args) => isFunction2(args[2]), (elements, zero3, f, options) => matchSimple(options?.concurrency, () => fromIterable3(elements).reduce((acc, a, i) => zipWith4(acc, a, (acc2, a2) => f(acc2, a2, i)), succeed(zero3)), () => flatMap8(make29(zero3), (acc) => flatMap8(forEach7(elements, (effect3, i) => flatMap8(effect3, (a) => update4(acc, (b) => f(b, a, i))), options), () => get13(acc)))));
+var mergeAll = /* @__PURE__ */ dual((args) => isFunction2(args[2]), (elements, zero3, f, options) => matchSimple(options?.concurrency, () => fromIterable3(elements).reduce((acc, a, i) => zipWith4(acc, a, (acc2, a2) => f(acc2, a2, i)), succeed(zero3)), () => flatMap8(make29(zero3), (acc) => flatMap8(forEach7(elements, (effect3, i) => flatMap8(effect3, (a) => update3(acc, (b) => f(b, a, i))), options), () => get13(acc)))));
 var partition4 = /* @__PURE__ */ dual((args) => isIterable(args[0]), (elements, f, options) => pipe(forEach7(elements, (a, i) => either2(f(a, i)), options), map10((chunk4) => partitionMap4(chunk4, identity))));
 var validateAll = /* @__PURE__ */ dual((args) => isIterable(args[0]), (elements, f, options) => flatMap8(partition4(elements, f, {
   concurrency: options?.concurrency,
@@ -11399,11 +11370,11 @@ var raceAll = (all6) => {
   const self = headNonEmpty2(list2);
   const effects = tailNonEmpty2(list2);
   const inheritAll3 = (res) => pipe(inheritAll(res[1]), as2(res[0]));
-  return pipe(deferredMake(), flatMap8((done9) => pipe(make29(effects.length), flatMap8((fails) => uninterruptibleMask((restore) => pipe(fork(interruptible2(self)), flatMap8((head7) => pipe(effects, forEachSequential((effect3) => fork(interruptible2(effect3))), map10(unsafeFromArray), map10((tail2) => pipe(tail2, prepend2(head7))), tap2((fibers) => pipe(fibers, reduce2(unit2, (effect3, fiber) => pipe(effect3, zipRight2(pipe(_await2(fiber), flatMap8(raceAllArbiter(fibers, fiber, done9, fails)), fork, asUnit2)))))), flatMap8((fibers) => pipe(restore(pipe(_await(done9), flatMap8(inheritAll3))), onInterrupt(() => pipe(fibers, reduce2(unit2, (effect3, fiber) => pipe(effect3, zipLeft2(interruptFiber(fiber))))))))))))))));
+  return pipe(deferredMake(), flatMap8((done9) => pipe(make29(effects.length), flatMap8((fails) => uninterruptibleMask((restore) => pipe(fork(interruptible2(self)), flatMap8((head7) => pipe(effects, forEachSequential((effect3) => fork(interruptible2(effect3))), map10((fibers) => unsafeFromArray(fibers)), map10((tail2) => pipe(tail2, prepend2(head7))), tap2((fibers) => pipe(fibers, reduce2(unit2, (effect3, fiber) => pipe(effect3, zipRight2(pipe(_await2(fiber), flatMap8(raceAllArbiter(fibers, fiber, done9, fails)), fork, asUnit2)))))), flatMap8((fibers) => pipe(restore(pipe(_await(done9), flatMap8(inheritAll3))), onInterrupt(() => pipe(fibers, reduce2(unit2, (effect3, fiber) => pipe(effect3, zipLeft2(interruptFiber(fiber))))))))))))))));
 };
 var raceAllArbiter = (fibers, winner, deferred, fails) => (exit4) => exitMatchEffect(exit4, {
-  onFailure: (cause4) => pipe(modify4(fails, (fails2) => [fails2 === 0 ? pipe(deferredFailCause(deferred, cause4), asUnit2) : unit2, fails2 - 1]), flatten6),
-  onSuccess: (value3) => pipe(deferredSucceed(deferred, [value3, winner]), flatMap8((set10) => set10 ? pipe(fromIterable4(fibers), reduce2(unit2, (effect3, fiber) => fiber === winner ? effect3 : pipe(effect3, zipLeft2(interruptFiber(fiber))))) : unit2))
+  onFailure: (cause4) => pipe(modify5(fails, (fails2) => [fails2 === 0 ? pipe(deferredFailCause(deferred, cause4), asUnit2) : unit2, fails2 - 1]), flatten6),
+  onSuccess: (value3) => pipe(deferredSucceed(deferred, [value3, winner]), flatMap8((set11) => set11 ? pipe(fromIterable4(fibers), reduce2(unit2, (effect3, fiber) => fiber === winner ? effect3 : pipe(effect3, zipLeft2(interruptFiber(fiber))))) : unit2))
 });
 var reduceEffect = /* @__PURE__ */ dual((args) => isIterable(args[0]), (elements, zero3, f, options) => matchSimple(options?.concurrency, () => fromIterable3(elements).reduce((acc, a, i) => zipWith4(acc, a, (acc2, a2) => f(acc2, a2, i)), zero3), () => suspend(() => pipe(mergeAll([zero3, ...elements], none2(), (acc, elem, i) => {
   switch (acc._tag) {
@@ -11492,14 +11463,14 @@ var zipWithOptions = /* @__PURE__ */ dual((args) => isEffect(args[1]), (self, th
   concurrency: options?.concurrent ? 2 : 1,
   batching: options?.batching
 }), ([a, a2]) => f(a, a2)));
-var withRuntimeFlagsScoped = (update6) => {
-  if (update6 === empty16) {
+var withRuntimeFlagsScoped = (update5) => {
+  if (update5 === empty16) {
     return unit2;
   }
   return pipe(runtimeFlags, flatMap8((runtimeFlags2) => {
-    const updatedRuntimeFlags = patch4(runtimeFlags2, update6);
+    const updatedRuntimeFlags = patch4(runtimeFlags2, update5);
     const revertRuntimeFlags = diff4(updatedRuntimeFlags, runtimeFlags2);
-    return pipe(updateRuntimeFlags(update6), zipRight2(addFinalizer(() => updateRuntimeFlags(revertRuntimeFlags))), asUnit2);
+    return pipe(updateRuntimeFlags(update5), zipRight2(addFinalizer(() => updateRuntimeFlags(revertRuntimeFlags))), asUnit2);
   }), uninterruptible);
 };
 var releaseMapReleaseAll = (strategy, exit4) => (self) => suspend(() => {
@@ -11509,23 +11480,23 @@ var releaseMapReleaseAll = (strategy, exit4) => (self) => suspend(() => {
     }
     case "Running": {
       const finalizersMap = self.state.finalizers;
-      const update6 = self.state.update;
+      const update5 = self.state.update;
       const finalizers = Array.from(finalizersMap.keys()).sort((a, b) => b - a).map((key2) => finalizersMap.get(key2));
       self.state = {
         _tag: "Exited",
         nextKey: self.state.nextKey,
         exit: exit4,
-        update: update6
+        update: update5
       };
-      return isSequential(strategy) ? pipe(finalizers, forEachSequential((fin) => exit(update6(fin)(exit4))), flatMap8((results) => pipe(exitCollectAll(results), map(exitAsUnit), getOrElse(() => exitUnit)))) : isParallel(strategy) ? pipe(forEachParUnbounded(finalizers, (fin) => exit(update6(fin)(exit4)), false), flatMap8((results) => pipe(exitCollectAll(results, {
+      return isSequential(strategy) ? pipe(finalizers, forEachSequential((fin) => exit(update5(fin)(exit4))), flatMap8((results) => pipe(exitCollectAll(results), map(exitAsUnit), getOrElse(() => exitUnit)))) : isParallel(strategy) ? pipe(forEachParUnbounded(finalizers, (fin) => exit(update5(fin)(exit4)), false), flatMap8((results) => pipe(exitCollectAll(results, {
         parallel: true
-      }), map(exitAsUnit), getOrElse(() => exitUnit)))) : pipe(forEachParN(finalizers, strategy.parallelism, (fin) => exit(update6(fin)(exit4)), false), flatMap8((results) => pipe(exitCollectAll(results, {
+      }), map(exitAsUnit), getOrElse(() => exitUnit)))) : pipe(forEachParN(finalizers, strategy.parallelism, (fin) => exit(update5(fin)(exit4)), false), flatMap8((results) => pipe(exitCollectAll(results, {
         parallel: true
       }), map(exitAsUnit), getOrElse(() => exitUnit))));
     }
   }
 });
-var scopeTag = /* @__PURE__ */ Tag(ScopeTypeId);
+var scopeTag = /* @__PURE__ */ GenericTag("effect/Scope");
 var scope = scopeTag;
 var scopeMake = (strategy = sequential2) => map10(releaseMapMake, (rm) => ({
   [ScopeTypeId]: ScopeTypeId,
@@ -11641,8 +11612,8 @@ var ensuring = /* @__PURE__ */ dual(2, (self, finalizer3) => uninterruptibleMask
   }),
   onSuccess: (a) => as2(finalizer3, a)
 })));
-var invokeWithInterrupt = (dataSource, all6) => fiberIdWith((id2) => flatMap8(flatMap8(forkDaemon(interruptible2(dataSource)), (processing) => async((cb) => {
-  const counts = all6.map((_) => _.listeners.count);
+var invokeWithInterrupt = (self, entries2) => fiberIdWith((id2) => flatMap8(flatMap8(forkDaemon(interruptible2(self)), (processing) => async((cb) => {
+  const counts = entries2.map((_) => _.listeners.count);
   const checkDone = () => {
     if (counts.every((count3) => count3 === 0)) {
       cleanup.forEach((f) => f());
@@ -11653,7 +11624,7 @@ var invokeWithInterrupt = (dataSource, all6) => fiberIdWith((id2) => flatMap8(fl
     cleanup.forEach((f) => f());
     cb(exit4);
   });
-  const cleanup = all6.map((r, i) => {
+  const cleanup = entries2.map((r, i) => {
     const observer = (count3) => {
       counts[i] = count3;
       checkDone();
@@ -11666,7 +11637,7 @@ var invokeWithInterrupt = (dataSource, all6) => fiberIdWith((id2) => flatMap8(fl
     cleanup.forEach((f) => f());
   });
 })), () => suspend(() => {
-  const residual = all6.flatMap((entry) => {
+  const residual = entries2.flatMap((entry) => {
     if (!entry.state.completed) {
       return [entry];
     }
@@ -11678,7 +11649,7 @@ var makeSpanScoped = (name, options) => acquireRelease(makeSpan(name, options), 
 var withTracerScoped = (value3) => fiberRefLocallyScopedWith(currentServices, add2(tracerTag, value3));
 var withSpanScoped = /* @__PURE__ */ dual((args) => typeof args[0] !== "string", (self, name, options) => flatMap8(makeSpanScoped(name, options), (span4) => provideService(self, spanTag, span4)));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/cache.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/cache.js
 var complete2 = (key2, exit4, entryStats, timeToLiveMillis) => struct2({
   _tag: "Complete",
   key: key2,
@@ -11868,7 +11839,7 @@ var CacheImpl = class {
         if (has5(this.cacheState.map, k)) {
           value3 = getOrUndefined(get9(this.cacheState.map, k));
         } else {
-          set4(this.cacheState.map, k, pending2(mapKey, deferred));
+          set5(this.cacheState.map, k, pending2(mapKey, deferred));
         }
       }
       if (value3 === void 0) {
@@ -11914,7 +11885,7 @@ var CacheImpl = class {
         if (has5(this.cacheState.map, k)) {
           value3 = getOrUndefined(get9(this.cacheState.map, k));
         } else {
-          set4(this.cacheState.map, k, pending2(makeMapKey(k), deferred));
+          set5(this.cacheState.map, k, pending2(makeMapKey(k), deferred));
         }
       }
       if (value3 === void 0) {
@@ -11933,7 +11904,7 @@ var CacheImpl = class {
               const current2 = getOrUndefined(get9(this.cacheState.map, k));
               if (equals(current2, value3)) {
                 const mapValue = refreshing(deferred, value3);
-                set4(this.cacheState.map, k, mapValue);
+                set5(this.cacheState.map, k, mapValue);
                 return true;
               }
               return false;
@@ -11955,7 +11926,7 @@ var CacheImpl = class {
       const k = key2;
       const lookupResult = succeed3(value3);
       const mapValue = complete2(makeMapKey(k), lookupResult, makeEntryStats(now), now + toMillis(decode(this.timeToLive(lookupResult))));
-      set4(this.cacheState.map, k, mapValue);
+      set5(this.cacheState.map, k, mapValue);
     }));
   }
   get size() {
@@ -12062,7 +12033,7 @@ var CacheImpl = class {
           loop3 = false;
         }
       }
-      set2(this.cacheState.updating, false);
+      set3(this.cacheState.updating, false);
     }
   }
   hasExpired(clock3, timeToLiveMillis) {
@@ -12075,7 +12046,7 @@ var CacheImpl = class {
         const now = clock3.unsafeCurrentTimeMillis();
         const stats = makeEntryStats(now);
         const value3 = complete2(makeMapKey(key2), exit4, stats, now + toMillis(decode(this.timeToLive(exit4))));
-        set4(this.cacheState.map, key2, value3);
+        set5(this.cacheState.map, key2, value3);
         return zipRight2(done2(deferred, exit4), exit4);
       }), onInterrupt(() => zipRight2(interrupt3(deferred), sync(() => {
         remove6(this.cacheState.map, key2);
@@ -12085,7 +12056,7 @@ var CacheImpl = class {
 };
 var unsafeMakeWith = (capacity5, lookup, timeToLive) => new CacheImpl(capacity5, empty5(), none3, lookup, (exit4) => decode(timeToLive(exit4)));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Cause.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Cause.js
 var empty28 = empty18;
 var fail5 = fail;
 var die4 = die;
@@ -12105,7 +12076,7 @@ var RuntimeException2 = RuntimeException;
 var isRuntimeException2 = isRuntimeException;
 var pretty2 = pretty;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Effect.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Effect.js
 var Effect_exports = {};
 __export(Effect_exports, {
   Do: () => Do3,
@@ -12137,8 +12108,8 @@ __export(Effect_exports, {
   blocked: () => blocked2,
   cacheRequestResult: () => cacheRequestResult,
   cached: () => cached2,
-  cachedFunction: () => cachedFunction,
-  cachedInvalidateWithTTL: () => cachedInvalidateWithTTL,
+  cachedFunction: () => cachedFunction2,
+  cachedInvalidateWithTTL: () => cachedInvalidateWithTTL2,
   cachedWithTTL: () => cachedWithTTL,
   catch: () => _catch2,
   catchAll: () => catchAll3,
@@ -12229,7 +12200,7 @@ __export(Effect_exports, {
   iterate: () => iterate2,
   labelMetrics: () => labelMetrics2,
   labelMetricsScoped: () => labelMetricsScoped2,
-  let: () => let_2,
+  let: () => let_3,
   linkSpans: () => linkSpans2,
   locally: () => locally2,
   locallyScoped: () => locallyScoped,
@@ -12413,7 +12384,7 @@ __export(Effect_exports, {
   zipWith: () => zipWith6
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/schedule/interval.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/schedule/interval.js
 var IntervalSymbolKey = "effect/ScheduleInterval";
 var IntervalTypeId = /* @__PURE__ */ Symbol.for(IntervalSymbolKey);
 var empty29 = {
@@ -12460,7 +12431,7 @@ var after = (startMilliseconds) => {
   return make36(startMilliseconds, Number.POSITIVE_INFINITY);
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/ScheduleInterval.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/ScheduleInterval.js
 var make37 = make36;
 var empty30 = empty29;
 var lessThan6 = lessThan5;
@@ -12469,7 +12440,7 @@ var intersect2 = intersect;
 var size11 = size10;
 var after2 = after;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/schedule/intervals.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/schedule/intervals.js
 var IntervalsSymbolKey = "effect/ScheduleIntervals";
 var IntervalsTypeId = /* @__PURE__ */ Symbol.for(IntervalsSymbolKey);
 var make38 = (intervals) => {
@@ -12506,7 +12477,7 @@ var isNonEmpty3 = (self) => {
   return isNonEmpty(self.intervals);
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/ScheduleIntervals.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/ScheduleIntervals.js
 var make39 = make38;
 var intersect4 = intersect3;
 var start2 = start;
@@ -12514,7 +12485,7 @@ var end2 = end;
 var lessThan8 = lessThan7;
 var isNonEmpty4 = isNonEmpty3;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/schedule/decision.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/schedule/decision.js
 var OP_CONTINUE = "Continue";
 var OP_DONE2 = "Done";
 var _continue = (intervals) => {
@@ -12539,14 +12510,14 @@ var isDone4 = (self) => {
   return self._tag === OP_DONE2;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/ScheduleDecision.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/ScheduleDecision.js
 var _continue2 = _continue;
 var continueWith2 = continueWith;
 var done6 = done5;
 var isContinue2 = isContinue;
 var isDone5 = isDone4;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Scope.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Scope.js
 var Scope_exports = {};
 __export(Scope_exports, {
   CloseableScopeTypeId: () => CloseableScopeTypeId2,
@@ -12571,13 +12542,13 @@ var fork2 = scopeFork;
 var use = scopeUse;
 var make40 = scopeMake;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/String.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/String.js
 var split2 = /* @__PURE__ */ dual(2, (self, separator) => {
   const out = self.split(separator);
   return isNonEmptyArray(out) ? out : [self];
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/schedule.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/schedule.js
 var ScheduleSymbolKey = "effect/Schedule";
 var ScheduleTypeId = /* @__PURE__ */ Symbol.for(ScheduleSymbolKey);
 var isSchedule = (u) => hasProperty(u, ScheduleTypeId);
@@ -12635,11 +12606,11 @@ var ScheduleDriverImpl = class {
     });
   }
   get reset() {
-    return set6(this.ref, [none2(), this.schedule.initial]);
+    return set7(this.ref, [none2(), this.schedule.initial]);
   }
   next(input) {
     return pipe(map10(get12(this.ref), (tuple4) => tuple4[1]), flatMap8((state) => pipe(currentTimeMillis2, flatMap8((now) => pipe(suspend(() => this.schedule.step(now, input, state)), flatMap8(([state2, out, decision]) => {
-      const setState = set6(this.ref, [some2(out), state2]);
+      const setState = set7(this.ref, [some2(out), state2]);
       if (isDone5(decision)) {
         return zipRight2(setState, fail2(none2()));
       }
@@ -12801,10 +12772,10 @@ var scheduleFrom_EffectLoop = (self, initial, driver3) => matchEffect(driver3.ne
 });
 var forever2 = /* @__PURE__ */ unfold2(0, (n) => n + 1);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/effect/circular.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/effect/circular.js
 var Semaphore = class {
   permits;
-  waiters = new Array();
+  waiters = /* @__PURE__ */ new Set();
   taken = 0;
   constructor(permits) {
     this.permits = permits;
@@ -12815,42 +12786,42 @@ var Semaphore = class {
   take = (n) => asyncEither((resume2) => {
     if (this.free < n) {
       const observer = () => {
-        if (this.free >= n) {
-          const observerIndex = this.waiters.findIndex((cb) => cb === observer);
-          if (observerIndex !== -1) {
-            this.waiters.splice(observerIndex, 1);
-          }
-          this.taken += n;
-          resume2(succeed(n));
+        if (this.free < n) {
+          return false;
         }
+        this.waiters.delete(observer);
+        this.taken += n;
+        resume2(succeed(n));
+        return true;
       };
-      this.waiters.push(observer);
+      this.waiters.add(observer);
       return left2(sync(() => {
-        const observerIndex = this.waiters.findIndex((cb) => cb === observer);
-        if (observerIndex !== -1) {
-          this.waiters.splice(observerIndex, 1);
-        }
+        this.waiters.delete(observer);
       }));
     }
     this.taken += n;
     return right2(succeed(n));
   });
-  release = (n) => withFiberRuntime((fiber) => {
-    this.taken -= n;
+  updateTaken = (f) => withFiberRuntime((fiber) => {
+    this.taken = f(this.taken);
     fiber.getFiberRef(currentScheduler).scheduleTask(() => {
-      this.waiters.forEach((wake) => wake());
+      const iter = this.waiters.values();
+      let item = iter.next();
+      while (item.done === false && item.value() === true) {
+        item = iter.next();
+      }
     }, fiber.getFiberRef(currentSchedulingPriority));
     return unit2;
   });
+  release = (n) => this.updateTaken((taken) => taken - n);
+  releaseAll = this.updateTaken((_) => 0);
   withPermits = (n) => (self) => uninterruptibleMask((restore) => flatMap8(restore(this.take(n)), (permits) => ensuring(restore(self), this.release(permits))));
 };
-var unsafeMakeSemaphore = (leases) => {
-  return new Semaphore(leases);
-};
+var unsafeMakeSemaphore = (permits) => new Semaphore(permits);
 var makeSemaphore = (permits) => sync(() => unsafeMakeSemaphore(permits));
 var awaitAllChildren = (self) => ensuringChildren(self, fiberAwaitAll);
-var cached = /* @__PURE__ */ dual(2, (self, timeToLive) => map10(cachedInvalidate(self, timeToLive), (tuple4) => tuple4[0]));
-var cachedInvalidate = /* @__PURE__ */ dual(2, (self, timeToLive) => {
+var cached = /* @__PURE__ */ dual(2, (self, timeToLive) => map10(cachedInvalidateWithTTL(self, timeToLive), (tuple4) => tuple4[0]));
+var cachedInvalidateWithTTL = /* @__PURE__ */ dual(2, (self, timeToLive) => {
   const duration2 = decode(timeToLive);
   return flatMap8(context(), (env) => map10(makeSynchronized(none2()), (cache) => [provideContext(getCachedValue(self, duration2, cache), env), invalidateCache(cache)]));
 });
@@ -12869,7 +12840,7 @@ var getCachedValue = (self, timeToLive, cache) => uninterruptibleMask((restore) 
     }
   }
 })), flatMap8((option4) => isNone2(option4) ? dieMessage("BUG: Effect.cachedInvalidate - please report an issue at https://github.com/Effect-TS/effect/issues") : restore(deferredAwait(option4.value[1])))));
-var invalidateCache = (cache) => set6(cache, none2());
+var invalidateCache = (cache) => set7(cache, none2());
 var ensuringChild = /* @__PURE__ */ dual(2, (self, f) => ensuringChildren(self, (children3) => f(fiberAll(children3))));
 var ensuringChildren = /* @__PURE__ */ dual(2, (self, children3) => flatMap8(track, (supervisor) => pipe(supervised(self, supervisor), ensuring(flatMap8(supervisor.value, children3)))));
 var forkAll = /* @__PURE__ */ dual((args) => isIterable(args[0]), (effects, options) => options?.discard ? forEachSequentialDiscard(effects, fork) : map10(forEachSequential(effects, fork), fiberAll));
@@ -12900,11 +12871,11 @@ var Key = class {
     return this.eq ? 0 : hash(this.a);
   }
 };
-var memoizeFunction = (f, eq) => {
+var cachedFunction = (f, eq) => {
   return pipe(sync(() => empty19()), flatMap8(makeSynchronized), map10((ref) => (a) => pipe(ref.modifyEffect((map26) => {
     const result = pipe(map26, get9(new Key(a, eq)));
     if (isNone2(result)) {
-      return pipe(deferredMake(), tap2((deferred) => pipe(diffFiberRefs(f(a)), intoDeferred(deferred), fork)), map10((deferred) => [deferred, pipe(map26, set4(new Key(a, eq), deferred))]));
+      return pipe(deferredMake(), tap2((deferred) => pipe(diffFiberRefs(f(a)), intoDeferred(deferred), fork)), map10((deferred) => [deferred, pipe(map26, set5(new Key(a, eq), deferred))]));
     }
     return succeed([result.value, map26]);
   }), flatMap8(deferredAwait), flatMap8(([patch9, b]) => pipe(patchFiberRefs(patch9), as2(b))))));
@@ -12916,7 +12887,7 @@ var supervised = /* @__PURE__ */ dual(2, (self, supervisor) => {
   return supervise(self);
 });
 var timeout = /* @__PURE__ */ dual(2, (self, duration2) => timeoutFail(self, {
-  onTimeout: () => new NoSuchElementException(),
+  onTimeout: () => new TimeoutException(),
   duration: duration2
 }));
 var timeoutFail = /* @__PURE__ */ dual(2, (self, {
@@ -12975,7 +12946,7 @@ var SynchronizedImpl = class {
     return this.modifyEffect((a) => succeed(f(a)));
   }
   modifyEffect(f) {
-    return this.withLock(pipe(flatMap8(get12(this.ref), f), flatMap8(([b, a]) => as2(set6(this.ref, a), b))));
+    return this.withLock(pipe(flatMap8(get12(this.ref), f), flatMap8(([b, a]) => as2(set7(this.ref, a), b))));
   }
   pipe() {
     return pipeArguments(this, arguments);
@@ -12999,7 +12970,7 @@ var updateSomeAndGetEffectSynchronized = /* @__PURE__ */ dual(2, (self, pf) => s
   }
 }));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/layer.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/layer.js
 var OP_EXTEND_SCOPE = "ExtendScope";
 var OP_FOLD = "Fold";
 var OP_FRESH = "Fresh";
@@ -13010,7 +12981,7 @@ var OP_PROVIDE = "Provide";
 var OP_PROVIDE_MERGE = "ProvideMerge";
 var OP_ZIP_WITH2 = "ZipWith";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Fiber.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Fiber.js
 var _await3 = _await2;
 var inheritAll2 = inheritAll;
 var interrupt5 = interruptFiber;
@@ -13018,7 +12989,7 @@ var interruptAs = interruptAsFiber;
 var join3 = join2;
 var poll4 = poll3;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/runtime.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/runtime.js
 var unsafeFork2 = (runtime6) => (self, options) => {
   const fiberId3 = unsafeMake2();
   const fiberRefUpdates = [[currentContext, [[fiberId3, runtime6.context]]]];
@@ -13218,10 +13189,10 @@ var unsafeRunSyncEffect = /* @__PURE__ */ unsafeRunSync(defaultRuntime);
 var unsafeRunSyncExitEffect = /* @__PURE__ */ unsafeRunSyncExit(defaultRuntime);
 var asyncEffect = (register) => flatMap8(deferredMake(), (deferred) => flatMap8(runtime3(), (runtime6) => uninterruptibleMask((restore) => zipRight2(fork(restore(catchAllCause(register((cb) => unsafeRunCallback(runtime6)(intoDeferred(cb, deferred))), (cause4) => deferredFailCause(deferred, cause4)))), restore(deferredAwait(deferred))))));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/synchronizedRef.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/synchronizedRef.js
 var modifyEffect = /* @__PURE__ */ dual(2, (self, f) => self.modifyEffect(f));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/layer.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/layer.js
 var LayerSymbolKey = "effect/Layer";
 var LayerTypeId = /* @__PURE__ */ Symbol.for(LayerSymbolKey);
 var layerVariance = {
@@ -13274,13 +13245,13 @@ var MemoMapImpl = class {
               return pipe(deferredFailCause(deferred, exit4.i0), zipRight2(scopeClose(innerScope, exit4)), zipRight2(failCause(exit4.i0)));
             }
             case OP_SUCCESS: {
-              return pipe(set6(finalizerRef, (exit5) => pipe(scopeClose(innerScope, exit5), whenEffect(modify3(observers, (n) => [n === 1, n - 1])), asUnit2)), zipRight2(update3(observers, (n) => n + 1)), zipRight2(scopeAddFinalizerExit(scope5, (exit5) => pipe(sync(() => map26.delete(layer3)), zipRight2(get12(finalizerRef)), flatMap8((finalizer3) => finalizer3(exit5))))), zipRight2(deferredSucceed(deferred, exit4.i0)), as2(exit4.i0[1]));
+              return pipe(set7(finalizerRef, (exit5) => pipe(scopeClose(innerScope, exit5), whenEffect(modify4(observers, (n) => [n === 1, n - 1])), asUnit2)), zipRight2(update2(observers, (n) => n + 1)), zipRight2(scopeAddFinalizerExit(scope5, (exit5) => pipe(sync(() => map26.delete(layer3)), zipRight2(get12(finalizerRef)), flatMap8((finalizer3) => finalizer3(exit5))))), zipRight2(deferredSucceed(deferred, exit4.i0)), as2(exit4.i0[1]));
             }
           }
         })))));
         const memoized = [pipe(deferredAwait(deferred), onExit(exitMatchEffect({
           onFailure: () => unit2,
-          onSuccess: () => update3(observers, (n) => n + 1)
+          onSuccess: () => update2(observers, (n) => n + 1)
         }))), (exit4) => pipe(get12(finalizerRef), flatMap8((finalizer3) => finalizer3(exit4)))];
         return [resource, isFresh(layer3) ? map26 : map26.set(layer3, memoized)];
       }))))));
@@ -13434,7 +13405,7 @@ var orElse4 = /* @__PURE__ */ dual(2, (self, that) => catchAll2(self, that));
 var passthrough2 = (self) => merge6(context2(), self);
 var project = /* @__PURE__ */ dual(4, (self, tagA, tagB, f) => map15(self, (context7) => make7(tagB, f(unsafeGet3(context7, tagA)))));
 var retry = /* @__PURE__ */ dual(2, (self, schedule4) => suspend2(() => {
-  const stateTag = Tag();
+  const stateTag = GenericTag("effect/Layer/retry/{ state: unknown }");
   return pipe(succeed6(stateTag, {
     state: schedule4.initial
   }), flatMap9((env) => retryLoop(self, schedule4, stateTag, pipe(env, get4(stateTag)).state)));
@@ -13534,11 +13505,11 @@ var zipWith5 = /* @__PURE__ */ dual(3, (self, that, f) => suspend2(() => {
   return zipWith12;
 }));
 var unwrapEffect = (self) => {
-  const tag2 = Tag();
+  const tag2 = GenericTag("effect/Layer/unwrapEffect/Layer.Layer<R1, E1, A>");
   return flatMap9(fromEffect3(tag2, self), (context7) => get4(context7, tag2));
 };
 var unwrapScoped = (self) => {
-  const tag2 = Tag();
+  const tag2 = GenericTag("effect/Layer/unwrapScoped/Layer.Layer<R1, E1, A>");
   return flatMap9(scoped(tag2, self), (context7) => get4(context7, tag2));
 };
 var withSpan2 = /* @__PURE__ */ dual((args) => isLayer(args[0]), (self, name, options) => unwrapScoped(map10(options?.onEnd ? tap2(makeSpanScoped(name, options), (span4) => addFinalizer((exit4) => options.onEnd(span4, exit4))) : makeSpanScoped(name, options), (span4) => withParentSpan2(self, span4))));
@@ -13565,13 +13536,13 @@ var provideSomeRuntime = /* @__PURE__ */ dual(2, (self, rt) => {
 });
 var effect_provide = /* @__PURE__ */ dual(2, (self, source) => isLayer(source) ? provideSomeLayer(self, source) : isContext2(source) ? provideSomeContext(self, source) : provideSomeRuntime(self, source));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/console.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/console.js
 var console2 = /* @__PURE__ */ map10(/* @__PURE__ */ fiberRefGet(currentServices), /* @__PURE__ */ get4(consoleTag));
 var consoleWith = (f) => fiberRefGetWith(currentServices, (services) => f(get4(services, consoleTag)));
 var withConsole = /* @__PURE__ */ dual(2, (effect3, value3) => fiberRefLocallyWith(effect3, currentServices, add2(consoleTag, value3)));
 var withConsoleScoped = (console4) => fiberRefLocallyScopedWith(currentServices, add2(consoleTag, console4));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/query.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/query.js
 var currentCache = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberRef/currentCache"), () => fiberRefUnsafeMake(unsafeMakeWith(65536, () => map10(deferredMake(), (handle) => ({
   listeners: new Listeners(),
   handle
@@ -13648,13 +13619,13 @@ var withRequestCache = /* @__PURE__ */ dual(
   (self, cache) => fiberRefLocally(self, currentCache, cache)
 );
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Effect.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Effect.js
 var EffectTypeId4 = EffectTypeId2;
 var isEffect2 = isEffect;
 var cachedWithTTL = cached;
-var cachedInvalidateWithTTL = cachedInvalidate;
+var cachedInvalidateWithTTL2 = cachedInvalidateWithTTL;
 var cached2 = memoize;
-var cachedFunction = memoizeFunction;
+var cachedFunction2 = cachedFunction;
 var once2 = once;
 var all5 = all4;
 var allWith2 = allWith;
@@ -13823,7 +13794,7 @@ var updateService2 = updateService;
 var Do3 = Do2;
 var bind3 = bind2;
 var bindTo3 = bindTo2;
-var let_2 = bindValue;
+var let_3 = let_2;
 var either3 = either2;
 var exit2 = exit;
 var intoDeferred2 = intoDeferred;
@@ -13953,7 +13924,7 @@ var withParentSpan3 = withParentSpan;
 var fromNullable4 = fromNullable3;
 var optionFromOptional2 = optionFromOptional;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Layer.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Layer.js
 var Layer_exports = {};
 __export(Layer_exports, {
   LayerTypeId: () => LayerTypeId2,
@@ -14035,7 +14006,7 @@ __export(Layer_exports, {
   zipWith: () => zipWith7
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/layer/circular.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/layer/circular.js
 var minimumLogLevel = (level) => scopedDiscard(fiberRefLocallyScoped(currentMinimumLogLevel, level));
 var withMinimumLogLevel = /* @__PURE__ */ dual(2, (self, level) => fiberRefLocally(currentMinimumLogLevel, level)(self));
 var addLogger = (logger) => scopedDiscard(fiberRefLocallyScopedWith(currentLoggers, add4(logger)));
@@ -14050,7 +14021,7 @@ var parentSpan = (span4) => succeedContext(make7(spanTag, span4));
 var span2 = (name, options) => scoped(spanTag, options?.onEnd ? tap2(makeSpanScoped(name, options), (span4) => addFinalizer((exit4) => options.onEnd(span4, exit4))) : makeSpanScoped(name, options));
 var setTracer = (tracer3) => scopedDiscard(withTracerScoped(tracer3));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Layer.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Layer.js
 var LayerTypeId2 = LayerTypeId;
 var MemoMapTypeId2 = MemoMapTypeId;
 var isLayer2 = isLayer;
@@ -14129,7 +14100,7 @@ var withParentSpan4 = withParentSpan2;
 var makeMemoMap2 = makeMemoMap;
 var buildWithMemoMap2 = buildWithMemoMap;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/queue.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/queue.js
 var EnqueueSymbolKey = "effect/QueueEnqueue";
 var EnqueueTypeId = /* @__PURE__ */ Symbol.for(EnqueueSymbolKey);
 var DequeueSymbolKey = "effect/QueueDequeue";
@@ -14192,7 +14163,7 @@ var QueueImpl = class {
   }
   get shutdown() {
     return uninterruptible(withFiberRuntime((state) => {
-      pipe(this.shutdownFlag, set2(true));
+      pipe(this.shutdownFlag, set3(true));
       return pipe(forEachConcurrentDiscard(unsafePollAll(this.takers), (d) => deferredInterruptWith(d, state.id()), false, false), zipRight2(this.strategy.shutdown), whenEffect(deferredSucceed(this.shutdownHook, void 0)), asUnit2);
     }));
   }
@@ -14529,22 +14500,22 @@ var unsafeCompleteTakers = (strategy, queue, takers) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/pubsub.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/pubsub.js
 var AbsentValue = /* @__PURE__ */ Symbol.for("effect/PubSub/AbsentValue");
 var addSubscribers = (subscription, pollers) => (subscribers) => {
   if (!subscribers.has(subscription)) {
     subscribers.set(subscription, /* @__PURE__ */ new Set());
   }
-  const set10 = subscribers.get(subscription);
-  set10.add(pollers);
+  const set11 = subscribers.get(subscription);
+  set11.add(pollers);
 };
 var removeSubscribers = (subscription, pollers) => (subscribers) => {
   if (!subscribers.has(subscription)) {
     return;
   }
-  const set10 = subscribers.get(subscription);
-  set10.delete(pollers);
-  if (set10.size === 0) {
+  const set11 = subscribers.get(subscription);
+  set11.delete(pollers);
+  if (set11.size === 0) {
     subscribers.delete(subscription);
   }
 };
@@ -15163,7 +15134,7 @@ var SubscriptionImpl = class {
   }
   get shutdown() {
     return uninterruptible(withFiberRuntime((state) => {
-      set2(this.shutdownFlag, true);
+      set3(this.shutdownFlag, true);
       return pipe(forEachParUnbounded(unsafePollAllQueue(this.pollers), (d) => deferredInterruptWith(d, state.id()), false), zipRight2(sync(() => {
         this.subscribers.delete(this.subscription);
         this.subscription.unsubscribe();
@@ -15279,7 +15250,7 @@ var PubSubImpl = class {
   }
   get shutdown() {
     return uninterruptible(withFiberRuntime((state) => {
-      pipe(this.shutdownFlag, set2(true));
+      pipe(this.shutdownFlag, set3(true));
       return pipe(this.scope.close(exitInterrupt(state.id())), zipRight2(this.strategy.shutdown), whenEffect(deferredSucceed(this.shutdownHook, void 0)), asUnit2);
     }));
   }
@@ -15338,10 +15309,6 @@ var PubSubImpl = class {
 var makePubSub = (pubsub, strategy) => flatMap8(scopeMake(), (scope5) => map10(deferredMake(), (deferred) => unsafeMakePubSub(pubsub, /* @__PURE__ */ new Map(), scope5, deferred, make13(false), strategy)));
 var unsafeMakePubSub = (pubsub, subscribers, scope5, shutdownHook, shutdownFlag, strategy) => {
   return new PubSubImpl(pubsub, subscribers, scope5, shutdownHook, shutdownFlag, strategy);
-};
-var nextPow2 = (n) => {
-  const nextPow = Math.ceil(Math.log(n) / Math.log(2));
-  return Math.max(Math.pow(2, nextPow), 2);
 };
 var ensureCapacity = (capacity5) => {
   if (capacity5 <= 0) {
@@ -15473,14 +15440,14 @@ var unsafeStrategyCompleteSubscribers = (strategy, pubsub, subscribers) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/PubSub.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/PubSub.js
 var bounded4 = bounded3;
 var unbounded4 = unbounded3;
 var shutdown3 = shutdown2;
 var publish2 = publish;
 var subscribe2 = subscribe;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Queue.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Queue.js
 var DequeueTypeId2 = DequeueTypeId;
 var bounded5 = bounded2;
 var dropping3 = dropping;
@@ -15502,12 +15469,12 @@ var takeUpTo2 = takeUpTo;
 var takeBetween2 = takeBetween;
 var takeN2 = takeN;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channelChildExecutorDecision.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channelChildExecutorDecision.js
 var OP_CONTINUE2 = "Continue";
 var OP_CLOSE = "Close";
 var OP_YIELD2 = "Yield";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/childExecutorDecision.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/childExecutorDecision.js
 var ChildExecutorDecisionSymbolKey = "effect/ChannelChildExecutorDecision";
 var ChildExecutorDecisionTypeId = /* @__PURE__ */ Symbol.for(ChildExecutorDecisionSymbolKey);
 var proto4 = {
@@ -15519,11 +15486,11 @@ var Continue = (_) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/continuation.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/continuation.js
 var OP_CONTINUATION_K = "ContinuationK";
 var OP_CONTINUATION_FINALIZER = "ContinuationFinalizer";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/continuation.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/continuation.js
 var ContinuationTypeId = /* @__PURE__ */ Symbol.for("effect/ChannelContinuation");
 var continuationVariance = {
   /* c8 ignore next */
@@ -15567,11 +15534,11 @@ var ContinuationFinalizerImpl = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullStrategy.js
 var OP_PULL_AFTER_NEXT = "PullAfterNext";
 var OP_PULL_AFTER_ALL_ENQUEUED = "PullAfterAllEnqueued";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/upstreamPullStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/upstreamPullStrategy.js
 var UpstreamPullStrategySymbolKey = "effect/ChannelUpstreamPullStrategy";
 var UpstreamPullStrategyTypeId = /* @__PURE__ */ Symbol.for(UpstreamPullStrategySymbolKey);
 var upstreamPullStrategyVariance = {
@@ -15588,7 +15555,7 @@ var PullAfterNext = (emitSeparator) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channel.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channel.js
 var OP_BRACKET_OUT = "BracketOut";
 var OP_BRIDGE = "Bridge";
 var OP_CONCAT_ALL = "ConcatAll";
@@ -15604,7 +15571,7 @@ var OP_SUCCEED = "Succeed";
 var OP_SUCCEED_NOW = "SucceedNow";
 var OP_SUSPEND2 = "Suspend";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/core-stream.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/core-stream.js
 var ChannelSymbolKey = "effect/Channel";
 var ChannelTypeId2 = /* @__PURE__ */ Symbol.for(ChannelSymbolKey);
 var channelVariance2 = {
@@ -15777,13 +15744,13 @@ var write = (out) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channelState.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channelState.js
 var OP_DONE3 = "Done";
 var OP_EMIT2 = "Emit";
 var OP_FROM_EFFECT3 = "FromEffect";
 var OP_READ2 = "Read";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/channelState.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/channelState.js
 var ChannelStateTypeId = /* @__PURE__ */ Symbol.for("effect/ChannelState");
 var channelStateVariance = {
   /* c8 ignore next */
@@ -15823,7 +15790,7 @@ var isFromEffect = (self) => self._tag === OP_FROM_EFFECT3;
 var effect2 = (self) => isFromEffect(self) ? self.effect : unit5;
 var effectOrUndefinedIgnored = (self) => isFromEffect(self) ? ignore2(self.effect) : void 0;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/subexecutor.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/subexecutor.js
 var OP_PULL_FROM_CHILD = "PullFromChild";
 var OP_PULL_FROM_UPSTREAM = "PullFromUpstream";
 var OP_DRAIN_CHILD_EXECUTORS = "DrainChildExecutors";
@@ -15950,11 +15917,11 @@ var Emit2 = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullRequest.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullRequest.js
 var OP_PULLED = "Pulled";
 var OP_NO_UPSTREAM = "NoUpstream";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/upstreamPullRequest.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/upstreamPullRequest.js
 var UpstreamPullRequestSymbolKey = "effect/ChannelUpstreamPullRequest";
 var UpstreamPullRequestTypeId = /* @__PURE__ */ Symbol.for(UpstreamPullRequestSymbolKey);
 var upstreamPullRequestVariance = {
@@ -15977,7 +15944,7 @@ var NoUpstream = (activeDownstreamCount) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/channelExecutor.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/channelExecutor.js
 var ChannelExecutor = class _ChannelExecutor {
   _activeSubexecutor = void 0;
   _cancelled = void 0;
@@ -16596,11 +16563,11 @@ var runScopedInterpret = (channelState, exec) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channelMergeDecision.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channelMergeDecision.js
 var OP_DONE4 = "Done";
 var OP_AWAIT = "Await";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/mergeDecision.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/mergeDecision.js
 var MergeDecisionSymbolKey = "effect/ChannelMergeDecision";
 var MergeDecisionTypeId = /* @__PURE__ */ Symbol.for(MergeDecisionSymbolKey);
 var proto9 = {
@@ -16625,12 +16592,12 @@ var Await = (f) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channelMergeState.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channelMergeState.js
 var OP_BOTH_RUNNING = "BothRunning";
 var OP_LEFT_DONE = "LeftDone";
 var OP_RIGHT_DONE = "RightDone";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/mergeState.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/mergeState.js
 var MergeStateSymbolKey = "effect/ChannelMergeState";
 var MergeStateTypeId = /* @__PURE__ */ Symbol.for(MergeStateSymbolKey);
 var proto10 = {
@@ -16656,11 +16623,11 @@ var RightDone = (f) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/channelMergeStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/channelMergeStrategy.js
 var OP_BACK_PRESSURE = "BackPressure";
 var OP_BUFFER_SLIDING = "BufferSliding";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/mergeStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/mergeStrategy.js
 var MergeStrategySymbolKey = "effect/ChannelMergeStrategy";
 var MergeStrategyTypeId = /* @__PURE__ */ Symbol.for(MergeStrategySymbolKey);
 var proto11 = {
@@ -16690,7 +16657,7 @@ var match13 = /* @__PURE__ */ dual(2, (self, {
   }
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel/singleProducerAsyncInput.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel/singleProducerAsyncInput.js
 var OP_STATE_EMPTY = "Empty";
 var OP_STATE_EMIT = "Emit";
 var OP_STATE_ERROR = "Error";
@@ -16717,13 +16684,13 @@ var SingleProducerAsyncInputImpl = class {
     this.ref = ref;
   }
   awaitRead() {
-    return flatten9(modify4(this.ref, (state) => state._tag === OP_STATE_EMPTY ? [_await(state.notifyProducer), state] : [unit5, state]));
+    return flatten9(modify5(this.ref, (state) => state._tag === OP_STATE_EMPTY ? [_await(state.notifyProducer), state] : [unit5, state]));
   }
   get close() {
     return fiberIdWith2((fiberId3) => this.error(interrupt4(fiberId3)));
   }
   done(value3) {
-    return flatten9(modify4(this.ref, (state) => {
+    return flatten9(modify5(this.ref, (state) => {
       switch (state._tag) {
         case OP_STATE_EMPTY: {
           return [_await(state.notifyProducer), state];
@@ -16743,7 +16710,7 @@ var SingleProducerAsyncInputImpl = class {
     }));
   }
   emit(element2) {
-    return flatMap10(make20(), (deferred) => flatten9(modify4(this.ref, (state) => {
+    return flatMap10(make20(), (deferred) => flatten9(modify5(this.ref, (state) => {
       switch (state._tag) {
         case OP_STATE_EMPTY: {
           return [_await(state.notifyProducer), state];
@@ -16766,7 +16733,7 @@ var SingleProducerAsyncInputImpl = class {
     })));
   }
   error(cause4) {
-    return flatten9(modify4(this.ref, (state) => {
+    return flatten9(modify5(this.ref, (state) => {
       switch (state._tag) {
         case OP_STATE_EMPTY: {
           return [_await(state.notifyProducer), state];
@@ -16789,7 +16756,7 @@ var SingleProducerAsyncInputImpl = class {
     return this.takeWith((cause4) => failCause3(map13(cause4, left2)), (elem) => succeed3(elem), (done9) => fail4(right2(done9)));
   }
   takeWith(onError5, onElement, onDone3) {
-    return flatMap10(make20(), (deferred) => flatten9(modify4(this.ref, (state) => {
+    return flatMap10(make20(), (deferred) => flatten9(modify5(this.ref, (state) => {
       switch (state._tag) {
         case OP_STATE_EMPTY: {
           return [zipRight5(succeed2(state.notifyProducer, void 0), matchCause3(_await(deferred), {
@@ -16821,7 +16788,7 @@ var SingleProducerAsyncInputImpl = class {
 };
 var make43 = () => pipe(make20(), flatMap10((deferred) => make29(stateEmpty(deferred))), map16((ref) => new SingleProducerAsyncInputImpl(ref)));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/channel.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/channel.js
 var as5 = /* @__PURE__ */ dual(2, (self, value3) => map18(self, () => value3));
 var catchAll5 = /* @__PURE__ */ dual(2, (self, f) => catchAllCause5(self, (cause4) => match2(failureOrCause2(cause4), {
   onLeft: f,
@@ -16951,7 +16918,7 @@ var mergeAllWith = ({
     onRight: (outElem) => as4(offer3(queue, succeed7(right2(outElem))), none2())
   })), repeat({
     until: (_) => isSome2(_)
-  }), flatMap10((outDone) => update4(lastDone, match({
+  }), flatMap10((outDone) => update3(lastDone, match({
     onNone: () => some2(outDone.value),
     onSome: (lastDone2) => some2(f(lastDone2, outDone.value))
   }))), catchAllCause3((cause4) => isInterrupted2(cause4) ? failCause6(cause4) : pipe(offer3(queue, failCause6(cause4)), zipRight5(succeed2(errorSignal, void 0)), asUnit3)));
@@ -17084,7 +17051,7 @@ var pipeToOrFail = /* @__PURE__ */ dual(2, (self, that) => suspend5(() => {
 }));
 var repeated = (self) => flatMap12(self, () => repeated(self));
 var runDrain = (self) => run(drain(self));
-var scoped4 = (effect3) => unwrap(uninterruptibleMask2((restore) => map16(make40(), (scope5) => acquireReleaseOut(tapErrorCause3(restore(extend3(scope5)(effect3)), (cause4) => close(scope5, failCause3(cause4))), (_, exit4) => close(scope5, exit4)))));
+var scoped4 = (effect3) => unwrap(uninterruptibleMask2((restore) => map16(make40(), (scope5) => acquireReleaseOut(tapErrorCause3(restore(extend3(effect3, scope5)), (cause4) => close(scope5, failCause3(cause4))), (_, exit4) => close(scope5, exit4)))));
 var toPubSub = (pubsub) => toQueue(pubsub);
 var toPull = (self) => map16(acquireRelease2(sync4(() => new ChannelExecutor(self, void 0, identity)), (exec, exit4) => {
   const finalize = exec.close(exit4);
@@ -17142,19 +17109,19 @@ var ChannelException = (error) => ({
 });
 var isChannelException = (u) => hasProperty(u, ChannelExceptionTypeId);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/sink.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/sink.js
 var SinkTypeId2 = /* @__PURE__ */ Symbol.for("effect/Sink");
 var sinkVariance2 = {
   /* c8 ignore next */
-  _R: (_) => _,
-  /* c8 ignore next */
-  _E: (_) => _,
+  _A: (_) => _,
   /* c8 ignore next */
   _In: (_) => _,
   /* c8 ignore next */
   _L: (_) => _,
   /* c8 ignore next */
-  _Z: (_) => _
+  _E: (_) => _,
+  /* c8 ignore next */
+  _R: (_) => _
 };
 var SinkImpl = class {
   channel;
@@ -17373,27 +17340,27 @@ var mkString = /* @__PURE__ */ suspend6(() => {
   })), map19(() => strings.join("")));
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/MergeDecision.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/MergeDecision.js
 var Done4 = Done3;
 var Await2 = Await;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Runtime.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Runtime.js
 var runFork2 = unsafeFork2;
 var runSync2 = unsafeRunSync;
 var runPromiseExit2 = unsafeRunPromiseExit;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Schedule.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Schedule.js
 var driver2 = driver;
 var forever4 = forever2;
 var spaced2 = spaced;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/opCodes/streamHaltStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/opCodes/streamHaltStrategy.js
 var OP_LEFT = "Left";
 var OP_RIGHT = "Right";
 var OP_BOTH = "Both";
 var OP_EITHER = "Either";
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/haltStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/haltStrategy.js
 var Left = {
   _tag: OP_LEFT
 };
@@ -17421,10 +17388,10 @@ var fromInput2 = (input) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/StreamHaltStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/StreamHaltStrategy.js
 var Both2 = Both;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/ringBuffer.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/ringBuffer.js
 var RingBuffer = class {
   capacity;
   array;
@@ -17477,7 +17444,7 @@ var RingBuffer = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/debounceState.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/debounceState.js
 var OP_NOT_STARTED = "NotStarted";
 var OP_PREVIOUS = "Previous";
 var OP_CURRENT = "Current";
@@ -17493,7 +17460,7 @@ var current = (fiber) => ({
   fiber
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/emit.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/emit.js
 var make44 = (emit2) => {
   const ops = {
     chunk(as9) {
@@ -17536,7 +17503,7 @@ var make44 = (emit2) => {
   return Object.assign(emit2, ops);
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/handoff.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/handoff.js
 var HandoffTypeId = /* @__PURE__ */ Symbol.for("effect/Stream/Handoff");
 var OP_HANDOFF_STATE_EMPTY = "Empty";
 var OP_HANDOFF_STATE_FULL = "Full";
@@ -17570,11 +17537,11 @@ var make45 = () => pipe(make20(), flatMap10((deferred) => make29(handoffStateEmp
   ref
 })));
 var offer4 = /* @__PURE__ */ dual(2, (self, value3) => {
-  return flatMap10(make20(), (deferred) => flatten9(modify4(self.ref, (state) => pipe(state, handoffStateMatch((notifyConsumer) => [zipRight5(succeed2(notifyConsumer, void 0), _await(deferred)), handoffStateFull(value3, deferred)], (_, notifyProducer) => [flatMap10(_await(notifyProducer), () => pipe(self, offer4(value3))), state])))));
+  return flatMap10(make20(), (deferred) => flatten9(modify5(self.ref, (state) => pipe(state, handoffStateMatch((notifyConsumer) => [zipRight5(succeed2(notifyConsumer, void 0), _await(deferred)), handoffStateFull(value3, deferred)], (_, notifyProducer) => [flatMap10(_await(notifyProducer), () => pipe(self, offer4(value3))), state])))));
 });
-var take5 = (self) => flatMap10(make20(), (deferred) => flatten9(modify4(self.ref, (state) => pipe(state, handoffStateMatch((notifyConsumer) => [flatMap10(_await(notifyConsumer), () => take5(self)), state], (value3, notifyProducer) => [as4(succeed2(notifyProducer, void 0), value3), handoffStateEmpty(deferred)])))));
+var take5 = (self) => flatMap10(make20(), (deferred) => flatten9(modify5(self.ref, (state) => pipe(state, handoffStateMatch((notifyConsumer) => [flatMap10(_await(notifyConsumer), () => take5(self)), state], (value3, notifyProducer) => [as4(succeed2(notifyProducer, void 0), value3), handoffStateEmpty(deferred)])))));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/handoffSignal.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/handoffSignal.js
 var OP_EMIT4 = "Emit";
 var OP_HALT = "Halt";
 var OP_END = "End";
@@ -17591,14 +17558,14 @@ var end3 = (reason) => ({
   reason
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/take.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/take.js
 var TakeSymbolKey = "effect/Take";
 var TakeTypeId = /* @__PURE__ */ Symbol.for(TakeSymbolKey);
 var takeVariance = {
   /* c8 ignore next */
-  _E: (_) => _,
+  _A: (_) => _,
   /* c8 ignore next */
-  _A: (_) => _
+  _E: (_) => _
 };
 var TakeImpl = class {
   exit;
@@ -17634,11 +17601,11 @@ var match16 = /* @__PURE__ */ dual(2, (self, {
 }));
 var of4 = (value3) => new TakeImpl(succeed3(of2(value3)));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/pull.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/pull.js
 var end5 = () => fail8(none2());
 var failCause10 = (cause4) => mapError3(failCause6(cause4), some2);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/sinkEndReason.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/sinkEndReason.js
 var OP_SCHEDULE_END = "ScheduleEnd";
 var OP_UPSTREAM_END = "UpstreamEnd";
 var ScheduleEnd = {
@@ -17648,7 +17615,7 @@ var UpstreamEnd = {
   _tag: OP_UPSTREAM_END
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/zipAllState.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/zipAllState.js
 var OP_DRAIN_LEFT = "DrainLeft";
 var OP_DRAIN_RIGHT = "DrainRight";
 var OP_PULL_BOTH = "PullBoth";
@@ -17672,7 +17639,7 @@ var PullRight = (leftChunk) => ({
   leftChunk
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream/zipChunksState.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream/zipChunksState.js
 var OP_PULL_BOTH2 = "PullBoth";
 var OP_PULL_LEFT2 = "PullLet";
 var OP_PULL_RIGHT2 = "PullRight";
@@ -17688,7 +17655,7 @@ var PullRight2 = (leftChunk) => ({
   leftChunk
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/stream.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/stream.js
 var StreamSymbolKey = "effect/Stream";
 var StreamTypeId2 = /* @__PURE__ */ Symbol.for(StreamSymbolKey);
 var streamVariance = {
@@ -17736,29 +17703,29 @@ var aggregateWithinEither = /* @__PURE__ */ dual(3, (self, sink, schedule4) => {
     });
     const handoffConsumer = pipe(getAndSet2(sinkLeftovers, empty6()), flatMap10((leftovers) => {
       if (isNonEmpty(leftovers)) {
-        return pipe(set7(consumed, true), zipRight5(succeed7(pipe(write(leftovers), flatMap12(() => handoffConsumer)))));
+        return pipe(set8(consumed, true), zipRight5(succeed7(pipe(write(leftovers), flatMap12(() => handoffConsumer)))));
       }
       return pipe(take5(handoff), map16((signal) => {
         switch (signal._tag) {
           case OP_EMIT4: {
-            return pipe(fromEffect4(set7(consumed, true)), zipRight6(write(signal.elements)), zipRight6(fromEffect4(get13(endAfterEmit))), flatMap12((bool) => bool ? unit6 : handoffConsumer));
+            return pipe(fromEffect4(set8(consumed, true)), zipRight6(write(signal.elements)), zipRight6(fromEffect4(get13(endAfterEmit))), flatMap12((bool) => bool ? unit6 : handoffConsumer));
           }
           case OP_HALT: {
             return failCause8(signal.cause);
           }
           case OP_END: {
             if (signal.reason._tag === OP_SCHEDULE_END) {
-              return pipe(get13(consumed), map16((bool) => bool ? fromEffect4(pipe(set7(sinkEndReason, ScheduleEnd), zipRight5(set7(endAfterEmit, true)))) : pipe(fromEffect4(pipe(set7(sinkEndReason, ScheduleEnd), zipRight5(set7(endAfterEmit, true)))), flatMap12(() => handoffConsumer))), unwrap);
+              return pipe(get13(consumed), map16((bool) => bool ? fromEffect4(pipe(set8(sinkEndReason, ScheduleEnd), zipRight5(set8(endAfterEmit, true)))) : pipe(fromEffect4(pipe(set8(sinkEndReason, ScheduleEnd), zipRight5(set8(endAfterEmit, true)))), flatMap12(() => handoffConsumer))), unwrap);
             }
-            return pipe(set7(sinkEndReason, signal.reason), zipRight5(set7(endAfterEmit, true)), fromEffect4);
+            return pipe(set8(sinkEndReason, signal.reason), zipRight5(set8(endAfterEmit, true)), fromEffect4);
           }
         }
       }));
     }), unwrap);
     const timeout5 = (lastB) => scheduleDriver.next(lastB);
     const scheduledAggregator = (sinkFiber, scheduleFiber, scope5) => {
-      const forkSink = pipe(set7(consumed, false), zipRight5(set7(endAfterEmit, false)), zipRight5(pipe(handoffConsumer, pipeToOrFail(toChannel(sink)), collectElements, run, forkIn2(scope5))));
-      const handleSide = (leftovers, b, c) => pipe(set7(sinkLeftovers, flatten3(leftovers)), zipRight5(map16(get13(sinkEndReason), (reason) => {
+      const forkSink = pipe(set8(consumed, false), zipRight5(set8(endAfterEmit, false)), zipRight5(pipe(handoffConsumer, pipeToOrFail(toChannel(sink)), collectElements, run, forkIn2(scope5))));
+      const handleSide = (leftovers, b, c) => pipe(set8(sinkLeftovers, flatten3(leftovers)), zipRight5(map16(get13(sinkEndReason), (reason) => {
         switch (reason._tag) {
           case OP_SCHEDULE_END: {
             return pipe(all5([get13(consumed), forkSink, pipe(timeout5(some2(b)), forkIn2(scope5))]), map16(([wasConsumed, sinkFiber2, scheduleFiber2]) => {
@@ -17841,7 +17808,7 @@ var asyncScoped = (register, outputBuffer = 16) => pipe(acquireRelease2(bounded5
       throw squash(exit4.cause);
     }
   }
-}))), zipRight5(make29(false)), flatMap10((ref) => pipe(get13(ref), map16((isDone6) => isDone6 ? end5() : pipe(take4(output), flatMap10(done8), onError2(() => pipe(set7(ref, true), zipRight5(shutdown4(output)))))))))))), scoped5, flatMap14(repeatEffectChunkOption));
+}))), zipRight5(make29(false)), flatMap10((ref) => pipe(get13(ref), map16((isDone6) => isDone6 ? end5() : pipe(take4(output), flatMap10(done8), onError2(() => pipe(set8(ref, true), zipRight5(shutdown4(output)))))))))))), scoped5, flatMap14(repeatEffectChunkOption));
 var branchAfter = /* @__PURE__ */ dual(3, (self, n, f) => suspend7(() => {
   const buffering = (acc) => readWith({
     onInput: (input) => {
@@ -17933,9 +17900,9 @@ var bufferUnbounded = (self) => {
 };
 var bufferSignal = (scoped7, bufferChannel) => {
   const producer = (queue, ref) => {
-    const terminate = (take8) => pipe(get13(ref), tap4(_await), zipRight5(make20()), flatMap10((deferred) => pipe(offer3(queue, [take8, deferred]), zipRight5(set7(ref, deferred)), zipRight5(_await(deferred)))), asUnit3, fromEffect4);
+    const terminate = (take8) => pipe(get13(ref), tap4(_await), zipRight5(make20()), flatMap10((deferred) => pipe(offer3(queue, [take8, deferred]), zipRight5(set8(ref, deferred)), zipRight5(_await(deferred)))), asUnit3, fromEffect4);
     return readWithCause({
-      onInput: (input) => pipe(make20(), flatMap10((deferred) => pipe(offer3(queue, [chunk2(input), deferred]), flatMap10((added) => pipe(set7(ref, deferred), when2(() => added))))), asUnit3, fromEffect4, flatMap12(() => producer(queue, ref))),
+      onInput: (input) => pipe(make20(), flatMap10((deferred) => pipe(offer3(queue, [chunk2(input), deferred]), flatMap10((added) => pipe(set8(ref, deferred), when2(() => added))))), asUnit3, fromEffect4, flatMap12(() => producer(queue, ref))),
       onFailure: (error) => terminate(failCause9(error)),
       onDone: () => terminate(end4)
     });
@@ -18154,7 +18121,7 @@ var distributedWithDynamicCallback = /* @__PURE__ */ dual(4, (self, maximumLag, 
     return succeed7(acc);
   }), flatMap10((ids4) => {
     if (isNonEmpty(ids4)) {
-      return pipe(update4(queuesRef, (map26) => {
+      return pipe(update3(queuesRef, (map26) => {
         for (const id2 of ids4) {
           map26.delete(id2);
         }
@@ -18166,17 +18133,17 @@ var distributedWithDynamicCallback = /* @__PURE__ */ dual(4, (self, maximumLag, 
   const queuesLock = yield* $(makeSemaphore2(1));
   const newQueue = yield* $(make29(pipe(bounded5(maximumLag), flatMap10((queue) => {
     const id2 = newDistributedWithDynamicId();
-    return pipe(update4(queuesRef, (map26) => map26.set(id2, queue)), as4([id2, queue]));
+    return pipe(update3(queuesRef, (map26) => map26.set(id2, queue)), as4([id2, queue]));
   }))));
   const finalize = (endTake) => (
     // Make sure that no queues are currently being added
-    queuesLock.withPermits(1)(pipe(set7(newQueue, pipe(
+    queuesLock.withPermits(1)(pipe(set8(newQueue, pipe(
       // All newly created queues should end immediately
       bounded5(1),
       tap4((queue) => offer3(queue, endTake)),
       flatMap10((queue) => {
         const id2 = newDistributedWithDynamicId();
-        return pipe(update4(queuesRef, (map26) => map26.set(id2, queue)), as4(make4(id2, queue)));
+        return pipe(update3(queuesRef, (map26) => map26.set(id2, queue)), as4(make4(id2, queue)));
       })
     )), zipRight5(pipe(get13(queuesRef), flatMap10((map26) => pipe(fromIterable4(map26.values()), forEach8((queue) => pipe(offer3(queue, endTake), catchSomeCause2((cause4) => isInterrupted2(cause4) ? some2(unit5) : none2()))))))), zipRight5(done9(endTake)), asUnit3))
   );
@@ -18903,7 +18870,7 @@ var pipeThroughChannelOrFail = /* @__PURE__ */ dual(2, (self, chan) => new Strea
 var prepend4 = /* @__PURE__ */ dual(2, (self, values4) => new StreamImpl(zipRight6(write(values4), toChannel2(self))));
 var provideContext4 = /* @__PURE__ */ dual(2, (self, context7) => new StreamImpl(pipe(toChannel2(self), provideContext2(context7))));
 var provideLayer = /* @__PURE__ */ dual(2, (self, layer3) => new StreamImpl(unwrapScoped3(pipe(build2(layer3), map16((env) => pipe(toChannel2(self), provideContext2(env)))))));
-var provideService4 = /* @__PURE__ */ dual(3, (self, tag2, resource) => provideServiceEffect3(self, tag2, succeed7(resource)));
+var provideService5 = /* @__PURE__ */ dual(3, (self, tag2, resource) => provideServiceEffect3(self, tag2, succeed7(resource)));
 var provideServiceEffect3 = /* @__PURE__ */ dual(3, (self, tag2, effect3) => provideServiceStream(self, tag2, fromEffect6(effect3)));
 var provideServiceStream = /* @__PURE__ */ dual(3, (self, tag2, stream) => contextWithStream((env) => flatMap14(stream, (service3) => pipe(self, provideContext4(add2(env, tag2, service3))))));
 var mapInputContext4 = /* @__PURE__ */ dual(2, (self, f) => contextWithStream((env) => pipe(self, provideContext4(f(env)))));
@@ -19870,8 +19837,8 @@ var zipLatestWith = /* @__PURE__ */ dual(3, (self, that, f) => {
     onSelfDone: (leftDone, rightFiber) => pipe(suspend3(() => leftDone), zipWith6(join3(rightFiber), (l, r) => [l, r, true])),
     onOtherDone: (rightDone, leftFiber) => pipe(suspend3(() => rightDone), zipWith6(join3(leftFiber), (l, r) => [r, l, false]))
   })), flatMap14(([l, r, leftFirst]) => pipe(fromEffect6(make29([unsafeLast(l), unsafeLast(r)])), flatMap14((latest) => pipe(fromChunk(leftFirst ? pipe(r, map4((a2) => f(unsafeLast(l), a2))) : pipe(l, map4((a) => f(a, unsafeLast(r))))), concat2(pipe(repeatEffectOption(left3), mergeEither(repeatEffectOption(right3)), mapEffectSequential(match2({
-    onLeft: (leftChunk) => pipe(modify4(latest, ([_, rightLatest]) => [pipe(leftChunk, map4((a) => f(a, rightLatest))), [unsafeLast(leftChunk), rightLatest]])),
-    onRight: (rightChunk) => pipe(modify4(latest, ([leftLatest, _]) => [pipe(rightChunk, map4((a2) => f(leftLatest, a2))), [leftLatest, unsafeLast(rightChunk)]]))
+    onLeft: (leftChunk) => pipe(modify5(latest, ([_, rightLatest]) => [pipe(leftChunk, map4((a) => f(a, rightLatest))), [unsafeLast(leftChunk), rightLatest]])),
+    onRight: (rightChunk) => pipe(modify5(latest, ([leftLatest, _]) => [pipe(rightChunk, map4((a2) => f(leftLatest, a2))), [leftLatest, unsafeLast(rightChunk)]]))
   })), flatMap14(fromChunk))))))), toPull2)), fromPull2);
 });
 var zipLeft6 = /* @__PURE__ */ dual(2, (self, that) => pipe(self, zipWithChunks(that, (left3, right3) => {
@@ -19993,7 +19960,7 @@ var bind4 = /* @__PURE__ */ dual((args) => typeof args[0] !== "string", (self, t
 var bindTo4 = /* @__PURE__ */ dual(2, (self, tag2) => map21(self, (a) => ({
   [tag2]: a
 })));
-var let_3 = /* @__PURE__ */ dual(3, (self, tag2, f) => map21(self, (k) => ({
+var let_4 = /* @__PURE__ */ dual(3, (self, tag2, f) => map21(self, (k) => ({
   ...k,
   [tag2]: f(k)
 })));
@@ -20006,7 +19973,7 @@ var encodeText = (self) => suspend7(() => {
   return map21(self, (s) => encoder2.encode(s));
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/secret.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/secret.js
 var SecretSymbolKey = "effect/Secret";
 var SecretTypeId = /* @__PURE__ */ Symbol.for(SecretSymbolKey);
 var proto12 = {
@@ -20027,6 +19994,12 @@ var make47 = (bytes) => {
       return "Secret(<redacted>)";
     }
   });
+  Object.defineProperty(secret, "toJSON", {
+    enumerable: false,
+    value() {
+      return "<redacted>";
+    }
+  });
   Object.defineProperty(secret, "raw", {
     enumerable: false,
     value: bytes
@@ -20040,7 +20013,7 @@ var value = (self) => {
   return self.raw.map((byte) => String.fromCharCode(byte)).join("");
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Data.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Data.js
 var struct3 = struct2;
 var array4 = (as9) => unsafeArray(as9.slice(0));
 var unsafeArray = (as9) => Object.setPrototypeOf(as9, ArrayProto);
@@ -20063,7 +20036,7 @@ var TaggedError = (tag2) => {
   return Base2;
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/encoding/common.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/encoding/common.js
 var DecodeExceptionTypeId = /* @__PURE__ */ Symbol.for("effect/Encoding/errors/Decode");
 var DecodeException = (input, message2) => {
   const out = {
@@ -20078,7 +20051,7 @@ var DecodeException = (input, message2) => {
 };
 var encoder = /* @__PURE__ */ new TextEncoder();
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/encoding/base64.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/encoding/base64.js
 var encode = (bytes) => {
   const length5 = bytes.length;
   let result = "";
@@ -20138,7 +20111,7 @@ function getBase64Code(charCode) {
 var base64abc = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "/"];
 var base64codes = [255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 62, 255, 255, 255, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 255, 255, 255, 0, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255, 255, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51];
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/encoding/base64Url.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/encoding/base64Url.js
 var encode2 = (data2) => encode(data2).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
 var decode3 = (str) => {
   const length5 = str.length;
@@ -20153,7 +20126,7 @@ var decode3 = (str) => {
   return decode2(sanitized);
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/encoding/hex.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/encoding/hex.js
 var encode3 = (bytes) => {
   let result = "";
   for (let i = 0; i < bytes.length; ++i) {
@@ -20193,7 +20166,7 @@ var fromHexChar = (byte) => {
   throw new TypeError("Invalid input");
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Encoding.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Encoding.js
 var encodeBase64 = (input) => typeof input === "string" ? encode(encoder.encode(input)) : encode(input);
 var decodeBase64 = (str) => decode2(str);
 var encodeBase64Url = (input) => typeof input === "string" ? encode2(encoder.encode(input)) : encode2(input);
@@ -20201,7 +20174,7 @@ var decodeBase64Url = (str) => decode3(str);
 var encodeHex = (input) => typeof input === "string" ? encode3(encoder.encode(input)) : encode3(input);
 var decodeHex = (str) => decode4(str);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/FiberMap.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/FiberMap.js
 var TypeId15 = /* @__PURE__ */ Symbol.for("effect/FiberMap");
 var isFiberMap = (u) => hasProperty(u, TypeId15);
 var Proto = {
@@ -20239,7 +20212,7 @@ var unsafeSet = /* @__PURE__ */ dual((args) => isFiberMap(args[0]), (self, key2,
     }
     previous2.value.unsafeInterruptAsFork(interruptAs2 ?? none4);
   }
-  set4(self.backing, key2, fiber);
+  set5(self.backing, key2, fiber);
   fiber.addObserver((_) => {
     const current2 = get9(self.backing, key2);
     if (isSome2(current2) && fiber === current2.value) {
@@ -20247,7 +20220,7 @@ var unsafeSet = /* @__PURE__ */ dual((args) => isFiberMap(args[0]), (self, key2,
     }
   });
 });
-var set8 = /* @__PURE__ */ dual(3, (self, key2, fiber) => fiberIdWith2((fiberId3) => sync4(() => unsafeSet(self, key2, fiber, fiberId3))));
+var set9 = /* @__PURE__ */ dual(3, (self, key2, fiber) => fiberIdWith2((fiberId3) => sync4(() => unsafeSet(self, key2, fiber, fiberId3))));
 var clear3 = (self) => zipRight5(forEach8(self.backing, ([_, fiber]) => interrupt5(fiber)), sync4(() => {
   clear(self.backing);
 }));
@@ -20255,15 +20228,15 @@ var run4 = function() {
   if (arguments.length === 2) {
     const self2 = arguments[0];
     const key3 = arguments[1];
-    return (effect4) => tap4(forkDaemon2(effect4), (fiber) => set8(self2, key3, fiber));
+    return (effect4) => tap4(forkDaemon2(effect4), (fiber) => set9(self2, key3, fiber));
   }
   const self = arguments[0];
   const key2 = arguments[1];
   const effect3 = arguments[2];
-  return tap4(forkDaemon2(effect3), (fiber) => set8(self, key2, fiber));
+  return tap4(forkDaemon2(effect3), (fiber) => set9(self, key2, fiber));
 };
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/FiberSet.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/FiberSet.js
 var TypeId16 = /* @__PURE__ */ Symbol.for("effect/FiberSet");
 var Proto2 = {
   [TypeId16]: TypeId16,
@@ -20324,7 +20297,7 @@ var runtime5 = (self) => () => map16(runtime4(), (runtime6) => {
 });
 var size15 = (self) => sync4(() => self.backing.size);
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/groupBy.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/groupBy.js
 var GroupBySymbolKey = "effect/GroupBy";
 var GroupByTypeId = /* @__PURE__ */ Symbol.for(GroupBySymbolKey);
 var groupByVariance = {
@@ -20357,7 +20330,7 @@ var groupBy2 = /* @__PURE__ */ dual((args) => isStream(args[0]), (self, f, optio
   const ref = yield* $(make29(/* @__PURE__ */ new Map()));
   const add8 = yield* $(mapEffectSequential(self, f), distributedWithDynamicCallback(options?.bufferSize ?? 16, ([key2, value3]) => flatMap10(_await(decider), (f2) => f2(key2, value3)), (exit4) => offer3(output, exit4)));
   yield* $(succeed2(decider, (key2, _) => pipe(get13(ref), map16((map26) => fromNullable(map26.get(key2))), flatMap10(match({
-    onNone: () => flatMap10(add8, ([index2, queue]) => zipRight5(update4(ref, (map26) => map26.set(key2, index2)), pipe(offer3(output, succeed3([key2, mapDequeue(queue, (exit4) => new TakeImpl(pipe(exit4, map11((tuple4) => of2(tuple4[1])))))])), as4((n) => n === index2)))),
+    onNone: () => flatMap10(add8, ([index2, queue]) => zipRight5(update3(ref, (map26) => map26.set(key2, index2)), pipe(offer3(output, succeed3([key2, mapDequeue(queue, (exit4) => new TakeImpl(pipe(exit4, map11((tuple4) => of2(tuple4[1])))))])), as4((n) => n === index2)))),
     onSome: (index2) => succeed7((n) => n === index2)
   })))));
   return flattenExitOption(fromQueue2(output, {
@@ -20480,7 +20453,7 @@ var groupByIterable = /* @__PURE__ */ dual(2, (iterable, f) => {
   return unsafeFromArray(builder.map((tuple4) => [tuple4[0], unsafeFromArray(tuple4[1])]));
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Logger.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Logger.js
 var Logger_exports = {};
 __export(Logger_exports, {
   LoggerTypeId: () => LoggerTypeId2,
@@ -20498,7 +20471,7 @@ __export(Logger_exports, {
   minimumLogLevel: () => minimumLogLevel2,
   none: () => none10,
   remove: () => remove9,
-  replace: () => replace2,
+  replace: () => replace3,
   replaceEffect: () => replaceEffect,
   replaceScoped: () => replaceScoped,
   simple: () => simple2,
@@ -20514,7 +20487,7 @@ __export(Logger_exports, {
   zipRight: () => zipRight10
 });
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/logger-circular.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/logger-circular.js
 var test = /* @__PURE__ */ dual(2, (self, input) => self.log({
   fiberId: none3,
   logLevel: logLevelInfo,
@@ -20526,7 +20499,7 @@ var test = /* @__PURE__ */ dual(2, (self, input) => self.log({
   date: /* @__PURE__ */ new Date()
 }));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Logger.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Logger.js
 var LoggerTypeId2 = LoggerTypeId;
 var make51 = makeLogger;
 var add7 = addLogger;
@@ -20538,7 +20511,7 @@ var filterLogLevel2 = filterLogLevel;
 var map22 = map12;
 var none10 = none7;
 var remove9 = removeLogger;
-var replace2 = replaceLogger;
+var replace3 = replaceLogger;
 var replaceEffect = replaceLoggerEffect;
 var replaceScoped = replaceLoggerScoped;
 var simple2 = simple;
@@ -20554,13 +20527,16 @@ var defaultLogger2 = defaultLogger;
 var logfmtLogger2 = logfmtLogger;
 var stringLogger2 = stringLogger;
 var tracerLogger2 = tracerLogger;
-var logFmt = /* @__PURE__ */ replace2(defaultLogger, logFmtLogger);
+var logFmt = /* @__PURE__ */ replace3(defaultLogger, logFmtLogger);
 var minimumLogLevel2 = minimumLogLevel;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Request.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/SynchronizedRef.js
+var SynchronizedRefTypeId = SynchronizedTypeId;
+
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Request.js
 var Class3 = Class;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Stream.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Stream.js
 var Stream_exports = {};
 __export(Stream_exports, {
   DefaultChunkSize: () => DefaultChunkSize2,
@@ -20687,7 +20663,7 @@ __export(Stream_exports, {
   intersperse: () => intersperse3,
   intersperseAffixes: () => intersperseAffixes2,
   iterate: () => iterate4,
-  let: () => let_4,
+  let: () => let_5,
   make: () => make52,
   map: () => map23,
   mapAccum: () => mapAccum6,
@@ -20735,7 +20711,7 @@ __export(Stream_exports, {
   prepend: () => prepend5,
   provideContext: () => provideContext5,
   provideLayer: () => provideLayer2,
-  provideService: () => provideService5,
+  provideService: () => provideService6,
   provideServiceEffect: () => provideServiceEffect4,
   provideServiceStream: () => provideServiceStream2,
   provideSomeLayer: () => provideSomeLayer3,
@@ -21023,7 +20999,7 @@ var pipeThroughChannelOrFail2 = pipeThroughChannelOrFail;
 var prepend5 = prepend4;
 var provideContext5 = provideContext4;
 var provideLayer2 = provideLayer;
-var provideService5 = provideService4;
+var provideService6 = provideService5;
 var provideServiceEffect4 = provideServiceEffect3;
 var provideServiceStream2 = provideServiceStream;
 var mapInputContext5 = mapInputContext4;
@@ -21149,19 +21125,16 @@ var Do5 = Do4;
 var bind5 = bind4;
 var bindEffect2 = bindEffect;
 var bindTo5 = bindTo4;
-var let_4 = let_3;
+var let_5 = let_4;
 var decodeText2 = decodeText;
 var encodeText2 = encodeText;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/Secret.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/Secret.js
 var isSecret2 = isSecret;
 var fromString3 = fromString2;
 var value2 = value;
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/SynchronizedRef.js
-var SynchronizedRefTypeId = SynchronizedTypeId;
-
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/internal/subscriptionRef.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/internal/subscriptionRef.js
 var SubscriptionRefSymbolKey = "effect/SubscriptionRef";
 var SubscriptionRefTypeId = /* @__PURE__ */ Symbol.for(SubscriptionRefSymbolKey);
 var subscriptionRefVariance = {
@@ -21192,23 +21165,23 @@ var SubscriptionRefImpl = class {
     return this.modifyEffect((a) => succeed7(f(a)));
   }
   modifyEffect(f) {
-    return pipe(get13(this.ref), flatMap10(f), flatMap10(([b, a]) => pipe(set7(this.ref, a), as4(b), zipLeft4(publish2(this.pubsub, a)))), this.semaphore.withPermits(1));
+    return pipe(get13(this.ref), flatMap10(f), flatMap10(([b, a]) => pipe(set8(this.ref, a), as4(b), zipLeft4(publish2(this.pubsub, a)))), this.semaphore.withPermits(1));
   }
 };
 var get14 = (self) => get13(self.ref);
 var make53 = (value3) => pipe(all5([unbounded4(), make29(value3), makeSemaphore2(1)]), map16(([pubsub, ref, semaphore]) => new SubscriptionRefImpl(ref, pubsub, semaphore)));
 
-// ../../node_modules/.pnpm/effect@2.2.2/node_modules/effect/dist/esm/SubscriptionRef.js
+// ../../node_modules/.pnpm/effect@2.3.1/node_modules/effect/dist/esm/SubscriptionRef.js
 var get15 = get14;
 var make54 = make53;
-var update5 = update4;
-var Plugin2 = Tag(
+var update4 = update3;
+var Plugin2 = GenericTag(
   "effect-obsidian/Plugin"
 );
-Tag(
+GenericTag(
   "effect-obsidian/Plugin/Editor"
 );
-Tag(
+GenericTag(
   "effect-obsidian/Plugin/MarkdownView"
 );
 var Class4 = (layer3) => class extends EffectClass {
@@ -21278,7 +21251,7 @@ var make55 = () => {
 };
 
 // ../effect-obsidian/src/Canvas.ts
-var Canvas = Tag("effect-obsidian/Canvas");
+var Canvas = GenericTag("effect-obsidian/Canvas");
 var get16 = map16(
   Plugin2,
   (_) => fromNullable(
@@ -21323,18 +21296,18 @@ var selectedNode = gen3(function* (_) {
   return pipe(fromIterable3(canvas.selection), head);
 });
 var onActive = (effect3) => gen3(function* (_) {
-  const set10 = yield* _(make49());
+  const set11 = yield* _(make49());
   yield* _(
     get16,
-    zip6(size15(set10)),
+    zip6(size15(set11)),
     flatMap10(
       ([_2, size16]) => match(_2, {
-        onNone: () => size16 > 0 ? clear4(set10) : unit5,
+        onNone: () => size16 > 0 ? clear4(set11) : unit5,
         onSome: (canvas) => size16 === 0 ? effect3.pipe(
           zipRight5(never3),
           scoped2,
           provideService2(Canvas, canvas),
-          run5(set10)
+          run5(set11)
         ) : unit5
       })
     ),
@@ -21409,7 +21382,7 @@ var prototype = (name, self, method, patch9) => suspend3(() => {
   );
 });
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/internal/ast.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/ast.js
 var getKeysForIndexSignature = (input, parameter) => {
   switch (parameter._tag) {
     case "StringKeyword":
@@ -21435,7 +21408,7 @@ var memoizeThunk = (f) => {
   };
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/AST.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/AST.js
 var BrandAnnotationId = /* @__PURE__ */ Symbol.for("@effect/schema/annotation/Brand");
 var TypeAnnotationId = /* @__PURE__ */ Symbol.for("@effect/schema/annotation/Type");
 var MessageAnnotationId = /* @__PURE__ */ Symbol.for("@effect/schema/annotation/Message");
@@ -21779,7 +21752,9 @@ var getNumberIndexedAccess = (ast) => {
         out.push(undefinedKeyword);
       }
       if (isSome2(ast.rest)) {
-        out.push(...ast.rest.value);
+        for (const e of ast.rest.value) {
+          out.push(e);
+        }
       }
       return createUnion(out);
     }
@@ -21790,7 +21765,7 @@ var getNumberIndexedAccess = (ast) => {
     case "Suspend":
       return getNumberIndexedAccess(ast.f());
   }
-  throw new Error(`getNumberIndexedAccess: unsupported schema (${ast._tag})`);
+  throw new Error(`getNumberIndexedAccess: unsupported schema (${format4(ast)})`);
 };
 var getPropertyKeyIndexedAccess = (ast, name) => {
   switch (ast._tag) {
@@ -21860,7 +21835,7 @@ var createRecord = (key2, value3, isReadonly) => {
         if (isString(key3.literal) || isNumber(key3.literal)) {
           propertySignatures.push(createPropertySignature(key3.literal, value3, false, isReadonly));
         } else {
-          throw new Error(`createRecord: unsupported literal ${String(key3.literal)}`);
+          throw new Error(`createRecord: unsupported literal (${formatUnknown(key3.literal)})`);
         }
         break;
       case "UniqueSymbol":
@@ -21870,7 +21845,7 @@ var createRecord = (key2, value3, isReadonly) => {
         key3.types.forEach(go5);
         break;
       default:
-        throw new Error(`createRecord: unsupported key schema (${key3._tag})`);
+        throw new Error(`createRecord: unsupported key schema (${format4(key3)})`);
     }
   };
   go5(key2);
@@ -22156,7 +22131,7 @@ var _keyof = (ast) => {
     case "Suspend":
       return _keyof(ast.f());
     default:
-      throw new Error(`keyof: unsupported schema (${ast._tag})`);
+      throw new Error(`keyof: unsupported schema (${format4(ast)})`);
   }
 };
 var compose2 = (ab, cd) => createTransform(ab, cd, composeTransformation);
@@ -22183,10 +22158,128 @@ var rename = (ast, mapping) => {
     case "Transform":
       return compose2(ast, rename(to(ast), mapping));
   }
-  throw new Error(`cannot rename ${ast._tag}`);
+  throw new Error(`rename: cannot rename (${format4(ast)})`);
+};
+var formatTransformation = (from3, to3) => `(${from3} <-> ${to3})`;
+var format4 = (ast, verbose = false) => {
+  switch (ast._tag) {
+    case "StringKeyword":
+    case "NumberKeyword":
+    case "BooleanKeyword":
+    case "BigIntKeyword":
+    case "UndefinedKeyword":
+    case "SymbolKeyword":
+    case "ObjectKeyword":
+    case "AnyKeyword":
+    case "UnknownKeyword":
+    case "VoidKeyword":
+    case "NeverKeyword":
+      return getOrElse(getExpected(ast, verbose), () => ast._tag);
+    case "Literal":
+      return getOrElse(getExpected(ast, verbose), () => formatUnknown(ast.literal));
+    case "UniqueSymbol":
+      return getOrElse(getExpected(ast, verbose), () => formatUnknown(ast.symbol));
+    case "Union":
+      return getOrElse(getExpected(ast, verbose), () => ast.types.map((member2) => format4(member2)).join(" | "));
+    case "TemplateLiteral":
+      return getOrElse(getExpected(ast, verbose), () => formatTemplateLiteral(ast));
+    case "Tuple":
+      return getOrElse(getExpected(ast, verbose), () => formatTuple(ast));
+    case "TypeLiteral":
+      return getOrElse(getExpected(ast, verbose), () => formatTypeLiteral(ast));
+    case "Enums":
+      return getOrElse(getExpected(ast, verbose), () => `<enum ${ast.enums.length} value(s): ${ast.enums.map((_, value3) => JSON.stringify(value3)).join(" | ")}>`);
+    case "Suspend":
+      return getExpected(ast, verbose).pipe(orElse(() => flatMap(liftThrowable(ast.f)(), (ast2) => getExpected(ast2, verbose))), getOrElse(() => "<suspended schema>"));
+    case "Declaration":
+      return getOrElse(getExpected(ast, verbose), () => "<declaration schema>");
+    case "Refinement":
+      return getOrElse(getExpected(ast, verbose), () => "<refinement schema>");
+    case "Transform":
+      return getOrElse(getExpected(ast, verbose), () => formatTransformation(format4(ast.from), format4(ast.to)));
+  }
+};
+var formatUnknown = (u) => {
+  if (isString(u)) {
+    return JSON.stringify(u);
+  } else if (isNumber(u) || u == null || isBoolean(u) || isSymbol(u) || isDate(u)) {
+    return String(u);
+  } else if (isBigInt(u)) {
+    return String(u) + "n";
+  } else if (!Array.isArray(u) && hasProperty(u, "toString") && isFunction2(u["toString"]) && u["toString"] !== Object.prototype.toString) {
+    return u["toString"]();
+  }
+  try {
+    return JSON.stringify(u);
+  } catch (e) {
+    return String(u);
+  }
+};
+var formatTemplateLiteral = (ast) => "`" + ast.head + ast.spans.map((span4) => formatTemplateLiteralSpan(span4) + span4.literal).join("") + "`";
+var getExpected = (ast, verbose) => {
+  if (verbose) {
+    const description2 = getDescriptionAnnotation(ast).pipe(orElse(() => getTitleAnnotation(ast)));
+    return match(getIdentifierAnnotation(ast), {
+      onNone: () => description2,
+      onSome: (identifier2) => match(description2, {
+        onNone: () => some2(identifier2),
+        onSome: (description3) => some2(`${identifier2} (${description3})`)
+      })
+    });
+  }
+  return getIdentifierAnnotation(ast).pipe(orElse(() => getTitleAnnotation(ast)), orElse(() => getDescriptionAnnotation(ast)));
+};
+var formatTuple = (ast) => {
+  const formattedElements = ast.elements.map((element2) => format4(element2.type) + (element2.isOptional ? "?" : "")).join(", ");
+  return match(ast.rest, {
+    onNone: () => "readonly [" + formattedElements + "]",
+    onSome: ([head7, ...tail2]) => {
+      const formattedHead = format4(head7);
+      const wrappedHead = formattedHead.includes(" | ") ? "(" + formattedHead + ")" : formattedHead;
+      if (tail2.length > 0) {
+        const formattedTail = tail2.map((ast2) => format4(ast2)).join(", ");
+        if (ast.elements.length > 0) {
+          return `readonly [${formattedElements}, ...${wrappedHead}[], ${formattedTail}]`;
+        } else {
+          return `readonly [...${wrappedHead}[], ${formattedTail}]`;
+        }
+      } else {
+        if (ast.elements.length > 0) {
+          return `readonly [${formattedElements}, ...${wrappedHead}[]]`;
+        } else {
+          return `ReadonlyArray<${formattedHead}>`;
+        }
+      }
+    }
+  });
+};
+var formatTypeLiteral = (ast) => {
+  const formattedPropertySignatures = ast.propertySignatures.map((ps) => String(ps.name) + (ps.isOptional ? "?" : "") + ": " + format4(ps.type)).join("; ");
+  if (ast.indexSignatures.length > 0) {
+    const formattedIndexSignatures = ast.indexSignatures.map((is2) => `[x: ${format4(getParameterBase(is2.parameter))}]: ${format4(is2.type)}`).join("; ");
+    if (ast.propertySignatures.length > 0) {
+      return `{ ${formattedPropertySignatures}; ${formattedIndexSignatures} }`;
+    } else {
+      return `{ ${formattedIndexSignatures} }`;
+    }
+  } else {
+    if (ast.propertySignatures.length > 0) {
+      return `{ ${formattedPropertySignatures} }`;
+    } else {
+      return "{}";
+    }
+  }
+};
+var formatTemplateLiteralSpan = (span4) => {
+  switch (span4.type._tag) {
+    case "StringKeyword":
+      return "${string}";
+    case "NumberKeyword":
+      return "${number}";
+  }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/internal/filters.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/filters.js
 var GreaterThanTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/GreaterThan");
 var GreaterThanOrEqualToTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/GreaterThanOrEqualTo");
 var LessThanTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/LessThan");
@@ -22205,21 +22298,21 @@ var MinItemsTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/MinItems"
 var MaxItemsTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/MaxItems");
 var ItemsCountTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/ItemsCount");
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/internal/hooks.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/hooks.js
 var ArbitraryHookId = /* @__PURE__ */ Symbol.for("@effect/schema/ArbitraryHookId");
 var PrettyHookId = /* @__PURE__ */ Symbol.for("@effect/schema/PrettyHookId");
 var EquivalenceHookId = /* @__PURE__ */ Symbol.for("@effect/schema/EquivalenceHookId");
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/internal/schema.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/schema.js
 var TypeId17 = /* @__PURE__ */ Symbol.for("@effect/schema/Schema");
 var make56 = (ast) => new SchemaImpl(ast);
 var variance5 = {
   /* c8 ignore next */
-  R: (_) => _,
+  _A: (_) => _,
   /* c8 ignore next */
-  From: (_) => _,
+  _I: (_) => _,
   /* c8 ignore next */
-  To: (_) => _
+  _R: (_) => _
 };
 var SchemaImpl = class {
   ast;
@@ -22232,7 +22325,7 @@ var SchemaImpl = class {
   }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/internal/parser.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/parser.js
 var flatMap16 = /* @__PURE__ */ dual(2, (self, f) => {
   const s = self;
   if (s["_tag"] === "Left") {
@@ -22342,128 +22435,7 @@ var union10 = (ast, actual, errors) => ({
   errors
 });
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/Format.js
-var format4 = (schema) => formatAST(schema.ast);
-var formatAST = (ast, verbose = false) => {
-  switch (ast._tag) {
-    case "StringKeyword":
-    case "NumberKeyword":
-    case "BooleanKeyword":
-    case "BigIntKeyword":
-    case "UndefinedKeyword":
-    case "SymbolKeyword":
-    case "ObjectKeyword":
-    case "AnyKeyword":
-    case "UnknownKeyword":
-    case "VoidKeyword":
-    case "NeverKeyword":
-      return getOrElse(getExpected(ast, verbose), () => ast._tag);
-    case "Literal":
-      return getOrElse(getExpected(ast, verbose), () => formatUnknown(ast.literal));
-    case "UniqueSymbol":
-      return getOrElse(getExpected(ast, verbose), () => formatUnknown(ast.symbol));
-    case "Union":
-      return getOrElse(getExpected(ast, verbose), () => ast.types.map((member2) => formatAST(member2)).join(" | "));
-    case "TemplateLiteral":
-      return getOrElse(getExpected(ast, verbose), () => formatTemplateLiteral(ast));
-    case "Tuple":
-      return getOrElse(getExpected(ast, verbose), () => formatTuple(ast));
-    case "TypeLiteral":
-      return getOrElse(getExpected(ast, verbose), () => formatTypeLiteral(ast));
-    case "Enums":
-      return getOrElse(getExpected(ast, verbose), () => `<enum ${ast.enums.length} value(s): ${ast.enums.map((_, value3) => JSON.stringify(value3)).join(" | ")}>`);
-    case "Suspend":
-      return getExpected(ast, verbose).pipe(orElse(() => flatMap(liftThrowable(ast.f)(), (ast2) => getExpected(ast2, verbose))), getOrElse(() => "<suspended schema>"));
-    case "Declaration":
-      return getOrElse(getExpected(ast, verbose), () => "<declaration schema>");
-    case "Refinement":
-      return getOrElse(getExpected(ast, verbose), () => "<refinement schema>");
-    case "Transform":
-      return getOrElse(getExpected(ast, verbose), () => formatTransformation(formatAST(ast.from), formatAST(ast.to)));
-  }
-};
-var formatTransformation = (from3, to3) => `(${from3} <-> ${to3})`;
-var formatUnknown = (u) => {
-  if (isString(u)) {
-    return JSON.stringify(u);
-  } else if (isNumber(u) || u == null || isBoolean(u) || isSymbol(u) || isDate(u)) {
-    return String(u);
-  } else if (isBigInt(u)) {
-    return String(u) + "n";
-  } else if (!Array.isArray(u) && hasProperty(u, "toString") && isFunction2(u["toString"]) && u["toString"] !== Object.prototype.toString) {
-    return u["toString"]();
-  }
-  try {
-    return JSON.stringify(u);
-  } catch (e) {
-    return String(u);
-  }
-};
-var formatTemplateLiteral = (ast) => "`" + ast.head + ast.spans.map((span4) => formatTemplateLiteralSpan(span4) + span4.literal).join("") + "`";
-var getExpected = (ast, verbose) => {
-  if (verbose) {
-    const description2 = getDescriptionAnnotation(ast).pipe(orElse(() => getTitleAnnotation(ast)));
-    return match(getIdentifierAnnotation(ast), {
-      onNone: () => description2,
-      onSome: (identifier2) => match(description2, {
-        onNone: () => some2(identifier2),
-        onSome: (description3) => some2(`${identifier2} (${description3})`)
-      })
-    });
-  }
-  return getIdentifierAnnotation(ast).pipe(orElse(() => getTitleAnnotation(ast)), orElse(() => getDescriptionAnnotation(ast)));
-};
-var formatTuple = (ast) => {
-  const formattedElements = ast.elements.map((element2) => formatAST(element2.type) + (element2.isOptional ? "?" : "")).join(", ");
-  return match(ast.rest, {
-    onNone: () => "readonly [" + formattedElements + "]",
-    onSome: ([head7, ...tail2]) => {
-      const formattedHead = formatAST(head7);
-      const wrappedHead = formattedHead.includes(" | ") ? "(" + formattedHead + ")" : formattedHead;
-      if (tail2.length > 0) {
-        const formattedTail = tail2.map((ast2) => formatAST(ast2)).join(", ");
-        if (ast.elements.length > 0) {
-          return `readonly [${formattedElements}, ...${wrappedHead}[], ${formattedTail}]`;
-        } else {
-          return `readonly [...${wrappedHead}[], ${formattedTail}]`;
-        }
-      } else {
-        if (ast.elements.length > 0) {
-          return `readonly [${formattedElements}, ...${wrappedHead}[]]`;
-        } else {
-          return `ReadonlyArray<${formattedHead}>`;
-        }
-      }
-    }
-  });
-};
-var formatTypeLiteral = (ast) => {
-  const formattedPropertySignatures = ast.propertySignatures.map((ps) => String(ps.name) + (ps.isOptional ? "?" : "") + ": " + formatAST(ps.type)).join("; ");
-  if (ast.indexSignatures.length > 0) {
-    const formattedIndexSignatures = ast.indexSignatures.map((is2) => `[x: ${formatAST(getParameterBase(is2.parameter))}]: ${formatAST(is2.type)}`).join("; ");
-    if (ast.propertySignatures.length > 0) {
-      return `{ ${formattedPropertySignatures}; ${formattedIndexSignatures} }`;
-    } else {
-      return `{ ${formattedIndexSignatures} }`;
-    }
-  } else {
-    if (ast.propertySignatures.length > 0) {
-      return `{ ${formattedPropertySignatures} }`;
-    } else {
-      return "{}";
-    }
-  }
-};
-var formatTemplateLiteralSpan = (span4) => {
-  switch (span4.type._tag) {
-    case "StringKeyword":
-      return "${string}";
-    case "NumberKeyword":
-      return "${number}";
-  }
-};
-
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/TreeFormatter.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/TreeFormatter.js
 var make57 = (value3, forest = []) => ({
   value: value3,
   forest
@@ -22507,7 +22479,7 @@ var formatRefinementKind = (kind) => {
 var getMessage = (ast, actual) => {
   return getMessageAnnotation(ast).pipe(map((annotation) => annotation(actual)));
 };
-var formatTypeMessage = (e) => getMessage(e.ast, e.actual).pipe(orElse(() => e.message), getOrElse(() => `Expected ${formatAST(e.ast, true)}, actual ${formatUnknown(e.actual)}`));
+var formatTypeMessage = (e) => getMessage(e.ast, e.actual).pipe(orElse(() => e.message), getOrElse(() => `Expected ${format4(e.ast, true)}, actual ${formatUnknown(e.actual)}`));
 var formatForbiddenMessage = (e) => getOrElse(e.message, () => "is forbidden");
 var getParseIsssueMessage = (issue, orElse10) => {
   switch (issue._tag) {
@@ -22537,14 +22509,14 @@ var go = (e) => {
     case "Type":
       return make57(formatTypeMessage(e));
     case "Forbidden":
-      return make57(formatAST(e.ast), [make57(formatForbiddenMessage(e))]);
+      return make57(format4(e.ast), [make57(formatForbiddenMessage(e))]);
     case "Unexpected":
-      return make57(`is unexpected, expected ${formatAST(e.ast, true)}`);
+      return make57(`is unexpected, expected ${format4(e.ast, true)}`);
     case "Missing":
       return make57("is missing");
     case "Union":
       return match(getMessage(e.ast, e.actual), {
-        onNone: () => make57(formatAST(e.ast), e.errors.map((e2) => {
+        onNone: () => make57(format4(e.ast), e.errors.map((e2) => {
           switch (e2._tag) {
             case "Member":
               return make57(`Union member`, [go(e2.error)]);
@@ -22556,22 +22528,22 @@ var go = (e) => {
       });
     case "Tuple":
       return match(getMessage(e.ast, e.actual), {
-        onNone: () => make57(formatAST(e.ast), e.errors.map((index2) => make57(`[${index2.index}]`, [go(index2.error)]))),
+        onNone: () => make57(format4(e.ast), e.errors.map((index2) => make57(`[${index2.index}]`, [go(index2.error)]))),
         onSome: make57
       });
     case "TypeLiteral":
       return match(getMessage(e.ast, e.actual), {
-        onNone: () => make57(formatAST(e.ast), e.errors.map((key2) => make57(`[${formatUnknown(key2.key)}]`, [go(key2.error)]))),
+        onNone: () => make57(format4(e.ast), e.errors.map((key2) => make57(`[${formatUnknown(key2.key)}]`, [go(key2.error)]))),
         onSome: make57
       });
     case "Transform":
       return match(getTransformMessage(e, e.actual), {
-        onNone: () => make57(formatAST(e.ast), [make57(formatTransformationKind(e.kind), [go(e.error)])]),
+        onNone: () => make57(format4(e.ast), [make57(formatTransformationKind(e.kind), [go(e.error)])]),
         onSome: make57
       });
     case "Refinement":
       return match(getRefinementMessage(e, e.actual), {
-        onNone: () => make57(formatAST(e.ast), [make57(formatRefinementKind(e.kind), [go(e.error)])]),
+        onNone: () => make57(format4(e.ast), [make57(formatRefinementKind(e.kind), [go(e.error)])]),
         onSome: make57
       });
     case "Declaration":
@@ -22579,14 +22551,14 @@ var go = (e) => {
         onNone: () => {
           const error = e.error;
           const shouldSkipDefaultMessage = error._tag === "Type" && error.ast === e.ast;
-          return shouldSkipDefaultMessage ? go(error) : make57(formatAST(e.ast), [go(e.error)]);
+          return shouldSkipDefaultMessage ? go(error) : make57(format4(e.ast), [go(e.error)]);
         },
         onSome: make57
       });
   }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/Parser.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Parser.js
 var mergeParseOptions = (a, b) => {
   if (a === void 0) {
     return b;
@@ -22922,10 +22894,10 @@ var go2 = (ast, isDecoding) => {
       const propertySignatures = [];
       const expectedKeys = {};
       for (const ps of ast.propertySignatures) {
-        propertySignatures.push(goMemo(ps.type, isDecoding));
+        propertySignatures.push([goMemo(ps.type, isDecoding), ps]);
         expectedKeys[ps.name] = null;
       }
-      const indexSignatures = ast.indexSignatures.map((is2) => [goMemo(is2.parameter, isDecoding), goMemo(is2.type, isDecoding)]);
+      const indexSignatures = ast.indexSignatures.map((is2) => [goMemo(is2.parameter, isDecoding), goMemo(is2.type, isDecoding), is2.parameter]);
       const expectedAST = createUnion(ast.indexSignatures.map((is2) => is2.parameter).concat(ownKeys(expectedKeys).map((key2) => isSymbol(key2) ? createUniqueSymbol(key2) : createLiteral(key2))));
       const expected = goMemo(expectedAST, isDecoding);
       return (input, options) => {
@@ -22936,25 +22908,30 @@ var go2 = (ast, isDecoding) => {
         const es = [];
         let stepKey = 0;
         const onExcessPropertyError = options?.onExcessProperty === "error";
-        if (onExcessPropertyError) {
+        const onExcessPropertyPreserve = options?.onExcessProperty === "preserve";
+        const output = {};
+        if (onExcessPropertyError || onExcessPropertyPreserve) {
           for (const key2 of ownKeys(input)) {
             const eu = eitherOrUndefined(expected(key2, options));
-            if (eu && isLeft2(eu)) {
-              const e = key(key2, unexpected(expectedAST));
-              if (allErrors) {
-                es.push([stepKey++, e]);
-                continue;
+            if (isLeft2(eu)) {
+              if (onExcessPropertyError) {
+                const e = key(key2, unexpected(expectedAST));
+                if (allErrors) {
+                  es.push([stepKey++, e]);
+                  continue;
+                } else {
+                  return left2(typeLiteral(ast, input, [e]));
+                }
               } else {
-                return left2(typeLiteral(ast, input, [e]));
+                output[key2] = input[key2];
               }
             }
           }
         }
-        const output = {};
         let queue = void 0;
         const isExact = options?.isExact === true;
         for (let i = 0; i < propertySignatures.length; i++) {
-          const ps = ast.propertySignatures[i];
+          const ps = propertySignatures[i][1];
           const name = ps.name;
           const hasKey = Object.prototype.hasOwnProperty.call(input, name);
           if (!hasKey) {
@@ -22970,7 +22947,7 @@ var go2 = (ast, isDecoding) => {
               }
             }
           }
-          const parser = propertySignatures[i];
+          const parser = propertySignatures[i][0];
           const te = parser(input[name], options);
           const eu = eitherOrUndefined(te);
           if (eu) {
@@ -23012,7 +22989,7 @@ var go2 = (ast, isDecoding) => {
           const indexSignature = indexSignatures[i];
           const parameter = indexSignature[0];
           const type3 = indexSignature[1];
-          const keys6 = getKeysForIndexSignature(input, ast.indexSignatures[i].parameter);
+          const keys6 = getKeysForIndexSignature(input, indexSignature[2]);
           for (const key2 of keys6) {
             const keu = eitherOrUndefined(parameter(key2, options));
             if (keu && isRight2(keu)) {
@@ -23291,7 +23268,7 @@ var getFinalTransformation = (transformation, isDecoding) => {
   }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/Arbitrary.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Arbitrary.js
 var ArbitraryHookId2 = ArbitraryHookId;
 var make58 = (schema) => go3(schema.ast, {});
 var depthSize = 1;
@@ -23331,7 +23308,7 @@ var go3 = (ast, options) => {
   }
   switch (ast._tag) {
     case "Declaration": {
-      throw new Error("cannot build an Arbitrary for a declaration without annotations");
+      throw new Error(`cannot build an Arbitrary for a declaration without annotations (${format4(ast)})`);
     }
     case "Literal":
       return (fc) => fc.constant(ast.literal);
@@ -23760,7 +23737,7 @@ function getMin(n1, n2) {
   return n1 === void 0 ? n2 : n2 === void 0 ? n1 : n1 <= n2 ? n1 : n2;
 }
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/ArrayFormatter.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/ArrayFormatter.js
 var go4 = (e, path = []) => {
   const _tag = e._tag;
   switch (_tag) {
@@ -23780,7 +23757,7 @@ var go4 = (e, path = []) => {
       return [{
         _tag,
         path,
-        message: `is unexpected, expected ${formatAST(e.ast, true)}`
+        message: `is unexpected, expected ${format4(e.ast, true)}`
       }];
     case "Missing":
       return [{
@@ -23855,184 +23832,7 @@ var formatIssues2 = (issues) => flatMap2(issues, (e) => go4(e));
 var formatIssue2 = (error) => formatIssues2([error]);
 var formatError = (error) => formatIssue2(error.error);
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/ParseResult.js
-var ParseError = class extends TaggedError("ParseError") {
-  get message() {
-    return this.toString();
-  }
-  /**
-   * @since 1.0.0
-   */
-  toString() {
-    return formatIssue(this.error);
-  }
-  /**
-   * @since 1.0.0
-   */
-  toJSON() {
-    return {
-      _id: "ParseError",
-      message: this.toString()
-    };
-  }
-  /**
-   * @since 1.0.0
-   */
-  [NodeInspectSymbol]() {
-    return this.toJSON();
-  }
-};
-var parseError = (issue) => new ParseError({
-  error: issue
-});
-var succeed15 = right2;
-var fail15 = left2;
-var _try = try_;
-var type2 = type;
-var map25 = map24;
-var mapError9 = mapError8;
-
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/Pretty.js
-var PrettyHookId2 = PrettyHookId;
-var make59 = (schema) => compile(schema.ast);
-var getHook2 = /* @__PURE__ */ getAnnotation(PrettyHookId2);
-var getMatcher = (defaultPretty) => (ast) => match(getHook2(ast), {
-  onNone: () => defaultPretty,
-  onSome: (handler) => handler()
-});
-var toString2 = /* @__PURE__ */ getMatcher((a) => String(a));
-var stringify = /* @__PURE__ */ getMatcher((a) => JSON.stringify(a));
-var formatUnknown2 = /* @__PURE__ */ getMatcher(formatUnknown);
-var match17 = {
-  "Declaration": (ast, go5) => {
-    const hook = getHook2(ast);
-    if (isSome2(hook)) {
-      return hook.value(...ast.typeParameters.map(go5));
-    }
-    throw new Error("cannot build an Pretty for a declaration without annotations");
-  },
-  "VoidKeyword": /* @__PURE__ */ getMatcher(() => "void(0)"),
-  "NeverKeyword": /* @__PURE__ */ getMatcher(() => {
-    throw new Error("cannot pretty print a `never` value");
-  }),
-  "Literal": /* @__PURE__ */ getMatcher((literal2) => typeof literal2 === "bigint" ? `${String(literal2)}n` : JSON.stringify(literal2)),
-  "SymbolKeyword": toString2,
-  "UniqueSymbol": toString2,
-  "TemplateLiteral": stringify,
-  "UndefinedKeyword": toString2,
-  "UnknownKeyword": formatUnknown2,
-  "AnyKeyword": formatUnknown2,
-  "ObjectKeyword": formatUnknown2,
-  "StringKeyword": stringify,
-  "NumberKeyword": toString2,
-  "BooleanKeyword": toString2,
-  "BigIntKeyword": /* @__PURE__ */ getMatcher((a) => `${String(a)}n`),
-  "Enums": stringify,
-  "Tuple": (ast, go5) => {
-    const hook = getHook2(ast);
-    if (isSome2(hook)) {
-      return hook.value();
-    }
-    const elements = ast.elements.map((e) => go5(e.type));
-    const rest2 = map(ast.rest, map3(go5));
-    return (input) => {
-      const output = [];
-      let i = 0;
-      for (; i < elements.length; i++) {
-        if (input.length < i + 1) {
-          if (ast.elements[i].isOptional) {
-            continue;
-          }
-        } else {
-          output.push(elements[i](input[i]));
-        }
-      }
-      if (isSome2(rest2)) {
-        const [head7, ...tail2] = rest2.value;
-        for (; i < input.length - tail2.length; i++) {
-          output.push(head7(input[i]));
-        }
-        for (let j = 0; j < tail2.length; j++) {
-          i += j;
-          output.push(tail2[j](input[i]));
-        }
-      }
-      return "[" + output.join(", ") + "]";
-    };
-  },
-  "TypeLiteral": (ast, go5) => {
-    const hook = getHook2(ast);
-    if (isSome2(hook)) {
-      return hook.value();
-    }
-    const propertySignaturesTypes = ast.propertySignatures.map((f) => go5(f.type));
-    const indexSignatureTypes = ast.indexSignatures.map((is2) => go5(is2.type));
-    const expectedKeys = {};
-    for (let i = 0; i < propertySignaturesTypes.length; i++) {
-      expectedKeys[ast.propertySignatures[i].name] = null;
-    }
-    return (input) => {
-      const output = [];
-      for (let i = 0; i < propertySignaturesTypes.length; i++) {
-        const ps = ast.propertySignatures[i];
-        const name = ps.name;
-        if (ps.isOptional && !Object.prototype.hasOwnProperty.call(input, name)) {
-          continue;
-        }
-        output.push(`${getPrettyPropertyKey(name)}: ${propertySignaturesTypes[i](input[name])}`);
-      }
-      if (indexSignatureTypes.length > 0) {
-        for (let i = 0; i < indexSignatureTypes.length; i++) {
-          const type3 = indexSignatureTypes[i];
-          const keys6 = getKeysForIndexSignature(input, ast.indexSignatures[i].parameter);
-          for (const key2 of keys6) {
-            if (Object.prototype.hasOwnProperty.call(expectedKeys, key2)) {
-              continue;
-            }
-            output.push(`${getPrettyPropertyKey(key2)}: ${type3(input[key2])}`);
-          }
-        }
-      }
-      return isNonEmptyReadonlyArray(output) ? "{ " + output.join(", ") + " }" : "{}";
-    };
-  },
-  "Union": (ast, go5) => {
-    const hook = getHook2(ast);
-    if (isSome2(hook)) {
-      return hook.value();
-    }
-    const types = ast.types.map((ast2) => [is(make56(ast2)), go5(ast2)]);
-    return (a) => {
-      const index2 = types.findIndex(([is2]) => is2(a));
-      return types[index2][1](a);
-    };
-  },
-  "Suspend": (ast, go5) => {
-    return match(getHook2(ast), {
-      onNone: () => {
-        const get17 = memoizeThunk(() => go5(ast.f()));
-        return (a) => get17()(a);
-      },
-      onSome: (handler) => handler()
-    });
-  },
-  "Refinement": (ast, go5) => {
-    return match(getHook2(ast), {
-      onNone: () => go5(ast.from),
-      onSome: (handler) => handler()
-    });
-  },
-  "Transform": (ast, go5) => {
-    return match(getHook2(ast), {
-      onNone: () => go5(ast.to),
-      onSome: (handler) => handler()
-    });
-  }
-};
-var compile = /* @__PURE__ */ getCompiler(match17);
-var getPrettyPropertyKey = (name) => typeof name === "string" ? JSON.stringify(name) : String(name);
-
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/Schema.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Schema.js
 var Schema_exports = {};
 __export(Schema_exports, {
   Base64: () => Base64,
@@ -24202,6 +24002,7 @@ __export(Schema_exports, {
   extend: () => extend4,
   filter: () => filter12,
   finite: () => finite,
+  format: () => format5,
   from: () => from2,
   fromBrand: () => fromBrand,
   getNumberIndexedAccess: () => getNumberIndexedAccess2,
@@ -24327,17 +24128,195 @@ __export(Schema_exports, {
   void: () => _void
 });
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/internal/bigint.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/bigint.js
 var maxSafeInteger = /* @__PURE__ */ BigInt(Number.MAX_SAFE_INTEGER);
 var minSafeInteger = /* @__PURE__ */ BigInt(Number.MIN_SAFE_INTEGER);
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/internal/serializable.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/serializable.js
 var symbol3 = /* @__PURE__ */ Symbol.for("@effect/schema/Serializable/symbol");
 var symbolResult = /* @__PURE__ */ Symbol.for("@effect/schema/Serializable/symbolResult");
 
-// ../../node_modules/.pnpm/@effect+schema@0.61.1_effect@2.2.2_fast-check@3.15.0/node_modules/@effect/schema/dist/esm/Schema.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/ParseResult.js
+var ParseError = class extends TaggedError("ParseError") {
+  get message() {
+    return this.toString();
+  }
+  /**
+   * @since 1.0.0
+   */
+  toString() {
+    return formatIssue(this.error);
+  }
+  /**
+   * @since 1.0.0
+   */
+  toJSON() {
+    return {
+      _id: "ParseError",
+      message: this.toString()
+    };
+  }
+  /**
+   * @since 1.0.0
+   */
+  [NodeInspectSymbol]() {
+    return this.toJSON();
+  }
+};
+var parseError = (issue) => new ParseError({
+  error: issue
+});
+var succeed15 = right2;
+var fail15 = left2;
+var _try = try_;
+var type2 = type;
+var map25 = map24;
+var mapError9 = mapError8;
+
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Pretty.js
+var PrettyHookId2 = PrettyHookId;
+var make59 = (schema) => compile(schema.ast);
+var getHook2 = /* @__PURE__ */ getAnnotation(PrettyHookId2);
+var getMatcher = (defaultPretty) => (ast) => match(getHook2(ast), {
+  onNone: () => defaultPretty,
+  onSome: (handler) => handler()
+});
+var toString2 = /* @__PURE__ */ getMatcher((a) => String(a));
+var stringify = /* @__PURE__ */ getMatcher((a) => JSON.stringify(a));
+var formatUnknown2 = /* @__PURE__ */ getMatcher(formatUnknown);
+var match17 = {
+  "Declaration": (ast, go5) => {
+    const hook = getHook2(ast);
+    if (isSome2(hook)) {
+      return hook.value(...ast.typeParameters.map(go5));
+    }
+    throw new Error(`cannot build a Pretty for a declaration without annotations (${format4(ast)})`);
+  },
+  "VoidKeyword": /* @__PURE__ */ getMatcher(() => "void(0)"),
+  "NeverKeyword": /* @__PURE__ */ getMatcher(() => {
+    throw new Error("cannot pretty print a `never` value");
+  }),
+  "Literal": /* @__PURE__ */ getMatcher((literal2) => typeof literal2 === "bigint" ? `${String(literal2)}n` : JSON.stringify(literal2)),
+  "SymbolKeyword": toString2,
+  "UniqueSymbol": toString2,
+  "TemplateLiteral": stringify,
+  "UndefinedKeyword": toString2,
+  "UnknownKeyword": formatUnknown2,
+  "AnyKeyword": formatUnknown2,
+  "ObjectKeyword": formatUnknown2,
+  "StringKeyword": stringify,
+  "NumberKeyword": toString2,
+  "BooleanKeyword": toString2,
+  "BigIntKeyword": /* @__PURE__ */ getMatcher((a) => `${String(a)}n`),
+  "Enums": stringify,
+  "Tuple": (ast, go5) => {
+    const hook = getHook2(ast);
+    if (isSome2(hook)) {
+      return hook.value();
+    }
+    const elements = ast.elements.map((e) => go5(e.type));
+    const rest2 = map(ast.rest, map3(go5));
+    return (input) => {
+      const output = [];
+      let i = 0;
+      for (; i < elements.length; i++) {
+        if (input.length < i + 1) {
+          if (ast.elements[i].isOptional) {
+            continue;
+          }
+        } else {
+          output.push(elements[i](input[i]));
+        }
+      }
+      if (isSome2(rest2)) {
+        const [head7, ...tail2] = rest2.value;
+        for (; i < input.length - tail2.length; i++) {
+          output.push(head7(input[i]));
+        }
+        for (let j = 0; j < tail2.length; j++) {
+          i += j;
+          output.push(tail2[j](input[i]));
+        }
+      }
+      return "[" + output.join(", ") + "]";
+    };
+  },
+  "TypeLiteral": (ast, go5) => {
+    const hook = getHook2(ast);
+    if (isSome2(hook)) {
+      return hook.value();
+    }
+    const propertySignaturesTypes = ast.propertySignatures.map((f) => go5(f.type));
+    const indexSignatureTypes = ast.indexSignatures.map((is2) => go5(is2.type));
+    const expectedKeys = {};
+    for (let i = 0; i < propertySignaturesTypes.length; i++) {
+      expectedKeys[ast.propertySignatures[i].name] = null;
+    }
+    return (input) => {
+      const output = [];
+      for (let i = 0; i < propertySignaturesTypes.length; i++) {
+        const ps = ast.propertySignatures[i];
+        const name = ps.name;
+        if (ps.isOptional && !Object.prototype.hasOwnProperty.call(input, name)) {
+          continue;
+        }
+        output.push(`${getPrettyPropertyKey(name)}: ${propertySignaturesTypes[i](input[name])}`);
+      }
+      if (indexSignatureTypes.length > 0) {
+        for (let i = 0; i < indexSignatureTypes.length; i++) {
+          const type3 = indexSignatureTypes[i];
+          const keys6 = getKeysForIndexSignature(input, ast.indexSignatures[i].parameter);
+          for (const key2 of keys6) {
+            if (Object.prototype.hasOwnProperty.call(expectedKeys, key2)) {
+              continue;
+            }
+            output.push(`${getPrettyPropertyKey(key2)}: ${type3(input[key2])}`);
+          }
+        }
+      }
+      return isNonEmptyReadonlyArray(output) ? "{ " + output.join(", ") + " }" : "{}";
+    };
+  },
+  "Union": (ast, go5) => {
+    const hook = getHook2(ast);
+    if (isSome2(hook)) {
+      return hook.value();
+    }
+    const types = ast.types.map((ast2) => [is(make56(ast2)), go5(ast2)]);
+    return (a) => {
+      const index2 = types.findIndex(([is2]) => is2(a));
+      return types[index2][1](a);
+    };
+  },
+  "Suspend": (ast, go5) => {
+    return match(getHook2(ast), {
+      onNone: () => {
+        const get17 = memoizeThunk(() => go5(ast.f()));
+        return (a) => get17()(a);
+      },
+      onSome: (handler) => handler()
+    });
+  },
+  "Refinement": (ast, go5) => {
+    return match(getHook2(ast), {
+      onNone: () => go5(ast.from),
+      onSome: (handler) => handler()
+    });
+  },
+  "Transform": (ast, go5) => {
+    return match(getHook2(ast), {
+      onNone: () => go5(ast.to),
+      onSome: (handler) => handler()
+    });
+  }
+};
+var compile = /* @__PURE__ */ getCompiler(match17);
+var getPrettyPropertyKey = (name) => typeof name === "string" ? JSON.stringify(name) : String(name);
+
+// ../../node_modules/.pnpm/@effect+schema@0.62.1_effect@2.3.1_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Schema.js
 var TypeId18 = TypeId17;
 var hash3 = (schema) => hash2(schema.ast);
+var format5 = (schema) => format4(schema.ast);
 var from2 = (schema) => make60(from(schema.ast));
 var to2 = (schema) => make60(to(schema.ast));
 var encodeUnknown2 = (schema, options) => {
@@ -24423,7 +24402,7 @@ var getTemplateLiterals = (ast) => {
     case "Union":
       return flatMap2(ast.types, getTemplateLiterals);
     default:
-      throw new Error(`templateLiteral: unsupported template literal span ${ast._tag}`);
+      throw new Error(`templateLiteral: unsupported template literal span (${format4(ast)})`);
   }
 };
 var declareConstructor = (typeParameters, decodeUnknown3, encodeUnknown3, annotations2) => make60(createDeclaration(typeParameters.map((tp) => tp.ast), (...typeParameters2) => decodeUnknown3(...typeParameters2.map((ast) => make60(ast))), (...typeParameters2) => encodeUnknown3(...typeParameters2.map((ast) => make60(ast))), toAnnotations(annotations2)));
@@ -24536,44 +24515,46 @@ var propertySignatureAnnotations = (annotations2) => (self) => {
     annotations: toAnnotations(annotations2)
   });
 };
-var optionalToRequired = (from3, to3, decode6, encode5, options) => new PropertySignatureImpl({
+var optionalToRequired = (from3, to3, decode6, encode5, annotations2) => new PropertySignatureImpl({
   _tag: "OptionalToRequired",
   from: from3.ast,
   to: to3.ast,
   decode: (o) => some2(decode6(o)),
   encode: flatMap(encode5),
-  annotations: toAnnotations(options)
+  annotations: toAnnotations(annotations2)
 });
 var optional = (schema, options) => {
   const isExact = options?.exact;
   const value3 = options?.default;
   const isNullable2 = options?.nullable;
   const asOption = options?.as == "Option";
+  const annotations2 = options?.annotations;
   if (isExact) {
     if (value3) {
       if (isNullable2) {
         return optionalToRequired(nullable(schema), to2(schema), match({
           onNone: value3,
           onSome: (a) => a === null ? value3() : a
-        }), some2);
+        }), some2, annotations2);
       } else {
         return optionalToRequired(schema, to2(schema), match({
           onNone: value3,
           onSome: identity
-        }), some2);
+        }), some2, annotations2);
       }
     } else {
       if (asOption) {
         if (isNullable2) {
-          return optionalToRequired(nullable(schema), optionFromSelf(to2(schema)), filter(isNotNull), identity);
+          return optionalToRequired(nullable(schema), optionFromSelf(to2(schema)), filter(isNotNull), identity, annotations2);
         } else {
-          return optionalToRequired(schema, optionFromSelf(to2(schema)), identity, identity);
+          return optionalToRequired(schema, optionFromSelf(to2(schema)), identity, identity, annotations2);
         }
       }
       return new PropertySignatureImpl({
         _tag: "Declaration",
         from: schema.ast,
-        isOptional: true
+        isOptional: true,
+        annotations: toAnnotations(annotations2)
       });
     }
   } else {
@@ -24582,25 +24563,26 @@ var optional = (schema, options) => {
         return optionalToRequired(nullish(schema), to2(schema), match({
           onNone: value3,
           onSome: (a) => a == null ? value3() : a
-        }), some2);
+        }), some2, annotations2);
       } else {
         return optionalToRequired(orUndefined(schema), to2(schema), match({
           onNone: value3,
           onSome: (a) => a === void 0 ? value3() : a
-        }), some2);
+        }), some2, annotations2);
       }
     } else {
       if (asOption) {
         if (isNullable2) {
-          return optionalToRequired(nullish(schema), optionFromSelf(to2(schema)), filter((a) => a != null), identity);
+          return optionalToRequired(nullish(schema), optionFromSelf(to2(schema)), filter((a) => a != null), identity, annotations2);
         } else {
-          return optionalToRequired(orUndefined(schema), optionFromSelf(to2(schema)), filter(isNotUndefined), identity);
+          return optionalToRequired(orUndefined(schema), optionFromSelf(to2(schema)), filter(isNotUndefined), identity, annotations2);
         }
       }
       return new PropertySignatureImpl({
         _tag: "Declaration",
         from: orUndefined(schema).ast,
-        isOptional: true
+        isOptional: true,
+        annotations: toAnnotations(annotations2)
       });
     }
   }
@@ -24741,7 +24723,7 @@ var intersectUnionMembers = (xs, ys) => {
   }));
 };
 var extend4 = /* @__PURE__ */ dual(2, (self, that) => make60(intersectUnionMembers(isUnion(self.ast) ? self.ast.types : [self.ast], isUnion(that.ast) ? that.ast.types : [that.ast])));
-var compose3 = /* @__PURE__ */ dual((args) => isSchema(args[1]), (ab, cd) => make60(compose2(ab.ast, cd.ast)));
+var compose3 = /* @__PURE__ */ dual((args) => isSchema(args[1]), (from3, to3) => make60(compose2(from3.ast, to3.ast)));
 var suspend9 = (f, annotations2) => make60(createSuspend(() => f().ast, annotations2));
 function filter12(predicate, options) {
   return (self) => make60(createRefinement(self.ast, (a, options2, ast) => {
@@ -24753,7 +24735,7 @@ function filter12(predicate, options) {
   }, toAnnotations(options)));
 }
 var transformOrFail = /* @__PURE__ */ dual((args) => isSchema(args[0]) && isSchema(args[1]), (from3, to3, decode6, encode5) => make60(createTransform(from3.ast, to3.ast, createFinalTransformation(decode6, encode5))));
-var transform3 = /* @__PURE__ */ dual((args) => isSchema(args[0]) && isSchema(args[1]), (from3, to3, decode6, encode5) => transformOrFail(from3, to3, (a) => succeed15(decode6(a)), (b) => succeed15(encode5(b))));
+var transform3 = /* @__PURE__ */ dual((args) => isSchema(args[0]) && isSchema(args[1]), (from3, to3, decode6, encode5) => transformOrFail(from3, to3, (fromA) => succeed15(decode6(fromA)), (toI) => succeed15(encode5(toI))));
 var transformLiteral = (from3, to3) => transform3(literal(from3), literal(to3), () => to3, () => from3);
 var transformLiterals = (...pairs) => union11(...pairs.map(([from3, to3]) => transformLiteral(from3, to3)));
 var attachPropertySignature = /* @__PURE__ */ dual((args) => isSchema(args[0]), (schema, key2, value3, options) => {
@@ -25428,7 +25410,7 @@ var optionPretty = (value3) => match({
 var optionParse = (decodeUnknown3) => (u, options, ast) => isOption2(u) ? isNone2(u) ? succeed15(none2()) : map25(decodeUnknown3(u.value, options), some2) : fail15(type2(ast, u));
 var optionFromSelf = (value3) => {
   return declare([value3], (value4) => optionParse(decodeUnknown(value4)), (value4) => optionParse(encodeUnknown(value4)), {
-    description: `Option<${format4(value3)}>`,
+    description: `Option<${format5(value3)}>`,
     pretty: optionPretty,
     arbitrary: optionArbitrary,
     equivalence: getEquivalence
@@ -25449,12 +25431,12 @@ var optionFromOrUndefined = (value3) => transform3(orUndefined(value3), optionFr
 var rightFrom = (right3) => struct4({
   _tag: literal("Right"),
   right: right3
-}).pipe(description(`RightFrom<${format4(right3)}>`));
+}).pipe(description(`RightFrom<${format5(right3)}>`));
 var leftFrom = (left3) => struct4({
   _tag: literal("Left"),
   left: left3
-}).pipe(description(`LeftFrom<${format4(left3)}>`));
-var eitherFrom = (left3, right3) => union11(rightFrom(right3), leftFrom(left3)).pipe(description(`EitherFrom<${format4(left3)}, ${format4(right3)}>`));
+}).pipe(description(`LeftFrom<${format5(left3)}>`));
+var eitherFrom = (left3, right3) => union11(rightFrom(right3), leftFrom(left3)).pipe(description(`EitherFrom<${format5(left3)}, ${format5(right3)}>`));
 var eitherDecode = (input) => input._tag === "Left" ? left2(input.left) : right2(input.right);
 var eitherArbitrary = (left3, right3) => {
   const arb = make58(eitherFrom(schemaFromArbitrary(left3), schemaFromArbitrary(right3)));
@@ -25468,9 +25450,12 @@ var eitherParse = (decodeUnknownLeft, parseright) => (u, options, ast) => isEith
   onLeft: (left3) => map25(decodeUnknownLeft(left3, options), left2),
   onRight: (right3) => map25(parseright(right3, options), right2)
 }) : fail15(type2(ast, u));
-var eitherFromSelf = (left3, right3) => {
+var eitherFromSelf = ({
+  left: left3,
+  right: right3
+}) => {
   return declare([left3, right3], (left4, right4) => eitherParse(decodeUnknown(left4), decodeUnknown(right4)), (left4, right4) => eitherParse(encodeUnknown(left4), encodeUnknown(right4)), {
-    description: `Either<${format4(left3)}, ${format4(right3)}>`,
+    description: `Either<${format5(left3)}, ${format5(right3)}>`,
     pretty: eitherPretty,
     arbitrary: eitherArbitrary,
     equivalence: getEquivalence2
@@ -25484,16 +25469,28 @@ var makeRightFrom = (right3) => ({
   _tag: "Right",
   right: right3
 });
-var either7 = (left3, right3) => transform3(eitherFrom(left3, right3), eitherFromSelf(to2(left3), to2(right3)), eitherDecode, match2({
+var either7 = ({
+  left: left3,
+  right: right3
+}) => transform3(eitherFrom(left3, right3), eitherFromSelf({
+  left: to2(left3),
+  right: to2(right3)
+}), eitherDecode, match2({
   onLeft: makeLeftFrom,
   onRight: makeRightFrom
 }));
-var eitherFromUnion = (left3, right3) => {
+var eitherFromUnion = ({
+  left: left3,
+  right: right3
+}) => {
   const toleft = to2(left3);
   const toright = to2(right3);
   const fromLeft = transform3(left3, leftFrom(toleft), makeLeftFrom, (l) => l.left);
   const fromRight = transform3(right3, rightFrom(toright), makeRightFrom, (r) => r.right);
-  return transform3(union11(fromRight, fromLeft), eitherFromSelf(toleft, toright), (from3) => from3._tag === "Left" ? left2(from3.left) : right2(from3.right), match2({
+  return transform3(union11(fromRight, fromLeft), eitherFromSelf({
+    left: toleft,
+    right: toright
+  }), (from3) => from3._tag === "Left" ? left2(from3.left) : right2(from3.right), match2({
     onLeft: makeLeftFrom,
     onRight: makeRightFrom
   }));
@@ -25506,18 +25503,27 @@ var readonlyMapEquivalence = (key2, value3) => {
   return make((a, b) => arrayEquivalence(Array.from(a.entries()), Array.from(b.entries())));
 };
 var readonlyMapParse = (decodeUnknown3) => (u, options, ast) => isMap(u) ? map25(decodeUnknown3(Array.from(u.entries()), options), (as9) => new Map(as9)) : fail15(type2(ast, u));
-var readonlyMapFromSelf = (key2, value3) => {
+var readonlyMapFromSelf = ({
+  key: key2,
+  value: value3
+}) => {
   return declare([key2, value3], (key3, value4) => readonlyMapParse(decodeUnknown(array5(tuple3(key3, value4)))), (key3, value4) => readonlyMapParse(encodeUnknown(array5(tuple3(key3, value4)))), {
-    description: `ReadonlyMap<${format4(key2)}, ${format4(value3)}>`,
+    description: `ReadonlyMap<${format5(key2)}, ${format5(value3)}>`,
     pretty: readonlyMapPretty,
     arbitrary: readonlyMapArbitrary,
     equivalence: readonlyMapEquivalence
   });
 };
-var readonlyMap = (key2, value3) => transform3(array5(tuple3(key2, value3)), readonlyMapFromSelf(to2(key2), to2(value3)), (as9) => new Map(as9), (map26) => Array.from(map26.entries()));
+var readonlyMap = ({
+  key: key2,
+  value: value3
+}) => transform3(array5(tuple3(key2, value3)), readonlyMapFromSelf({
+  key: to2(key2),
+  value: to2(value3)
+}), (as9) => new Map(as9), (map26) => Array.from(map26.entries()));
 var isSet = (u) => u instanceof Set;
 var readonlySetArbitrary = (item) => (fc) => fc.array(item(fc)).map((as9) => new Set(as9));
-var readonlySetPretty = (item) => (set10) => `new Set([${Array.from(set10.values()).map((a) => item(a)).join(", ")}])`;
+var readonlySetPretty = (item) => (set11) => `new Set([${Array.from(set11.values()).map((a) => item(a)).join(", ")}])`;
 var readonlySetEquivalence = (item) => {
   const arrayEquivalence = getEquivalence4(item);
   return make((a, b) => arrayEquivalence(Array.from(a.values()), Array.from(b.values())));
@@ -25525,13 +25531,13 @@ var readonlySetEquivalence = (item) => {
 var readonlySetParse = (decodeUnknown3) => (u, options, ast) => isSet(u) ? map25(decodeUnknown3(Array.from(u.values()), options), (as9) => new Set(as9)) : fail15(type2(ast, u));
 var readonlySetFromSelf = (item) => {
   return declare([item], (item2) => readonlySetParse(decodeUnknown(array5(item2))), (item2) => readonlySetParse(encodeUnknown(array5(item2))), {
-    description: `ReadonlySet<${format4(item)}>`,
+    description: `ReadonlySet<${format5(item)}>`,
     pretty: readonlySetPretty,
     arbitrary: readonlySetArbitrary,
     equivalence: readonlySetEquivalence
   });
 };
-var readonlySet = (item) => transform3(array5(item), readonlySetFromSelf(to2(item)), (as9) => new Set(as9), (set10) => Array.from(set10));
+var readonlySet = (item) => transform3(array5(item), readonlySetFromSelf(to2(item)), (as9) => new Set(as9), (set11) => Array.from(set11));
 var bigDecimalPretty = () => (val) => `BigDecimal(${format2(normalize(val))})`;
 var bigDecimalArbitrary = () => (fc) => fc.tuple(fc.bigInt(), fc.integer()).map(([value3, scale2]) => make3(value3, scale2));
 var BigDecimalFromSelf = /* @__PURE__ */ declare(isBigDecimal, {
@@ -25670,7 +25676,7 @@ var chunkPretty = (item) => (c) => `Chunk(${toReadonlyArray(c).map(item).join(",
 var chunkParse = (decodeUnknown3) => (u, options, ast) => isChunk(u) ? isEmpty(u) ? succeed15(empty6()) : map25(decodeUnknown3(toReadonlyArray(u), options), fromIterable4) : fail15(type2(ast, u));
 var chunkFromSelf = (item) => {
   return declare([item], (item2) => chunkParse(decodeUnknown(array5(item2))), (item2) => chunkParse(encodeUnknown(array5(item2))), {
-    description: `Chunk<${format4(item)}>`,
+    description: `Chunk<${format5(item)}>`,
     pretty: chunkPretty,
     arbitrary: chunkArbitrary,
     equivalence: getEquivalence5
@@ -25683,7 +25689,7 @@ var dataPretty = (item) => (d) => `Data(${item(d)})`;
 var dataParse = (decodeUnknown3) => (u, options, ast) => isEqual(u) ? map25(decodeUnknown3(u, options), toData) : fail15(type2(ast, u));
 var dataFromSelf = (item) => {
   return declare([item], (item2) => dataParse(decodeUnknown(item2)), (item2) => dataParse(encodeUnknown(item2)), {
-    description: `Data<${format4(item)}>`,
+    description: `Data<${format5(item)}>`,
     pretty: dataPretty,
     arbitrary: dataArbitrary,
     equivalence: () => equals
@@ -25736,10 +25742,10 @@ var makeClass = (selfSchema, selfFields, Base2, additionalProps) => {
   return class extends Base2 {
     constructor(props, disableValidation = false) {
       if (additionalProps !== void 0) {
-        props = additionalProps ? {
-          ...props,
-          ...additionalProps
-        } : props;
+        props = {
+          ...additionalProps,
+          ...props
+        };
       }
       if (disableValidation !== true) {
         props = validator(props);
@@ -25895,7 +25901,7 @@ var causeSequentialFrom = (causeFrom2) => struct4({
 });
 var causeFrom = (error, defect) => {
   const recur = suspend9(() => out);
-  const out = union11(causeDieFrom(defect), CauseEmptyFrom, causeFailFrom(error), CauseInterruptFrom, causeParallelFrom(recur), causeSequentialFrom(recur)).pipe(description(`CauseFrom<${format4(error)}>`));
+  const out = union11(causeDieFrom(defect), CauseEmptyFrom, causeFailFrom(error), CauseInterruptFrom, causeParallelFrom(recur), causeSequentialFrom(recur)).pipe(description(`CauseFrom<${format5(error)}>`));
   return out;
 };
 var causeArbitrary = (error, defect) => {
@@ -25922,9 +25928,12 @@ var causePretty = (error) => (cause4) => {
   return f(cause4);
 };
 var causeParse = (decodeUnknown3) => (u, options, ast) => isCause2(u) ? map25(decodeUnknown3(causeEncode(u), options), causeDecode) : fail15(type2(ast, u));
-var causeFromSelf = (error, defect = unknown) => {
+var causeFromSelf = ({
+  defect = unknown,
+  error
+}) => {
   return declare([error, defect], (error2, defect2) => causeParse(decodeUnknown(causeFrom(error2, defect2))), (error2, defect2) => causeParse(encodeUnknown(causeFrom(error2, defect2))), {
-    description: `Cause<${format4(error)}>`,
+    description: `Cause<${format5(error)}>`,
     pretty: causePretty,
     arbitrary: causeArbitrary,
     equivalence: () => equals
@@ -25987,7 +25996,13 @@ var causeDefectPretty = /* @__PURE__ */ transform3(unknown, unknown, identity, (
   }
   return String(defect);
 });
-var cause3 = (error, defect = causeDefectPretty) => transform3(causeFrom(error, defect), causeFromSelf(to2(error), to2(defect)), causeDecode, causeEncode);
+var cause3 = ({
+  defect = causeDefectPretty,
+  error
+}) => transform3(causeFrom(error, defect), causeFromSelf({
+  error: to2(error),
+  defect: to2(defect)
+}), causeDecode, causeEncode);
 var exitFailureFrom = (error, defect) => struct4({
   _tag: literal("Failure"),
   cause: causeFrom(error, defect)
@@ -26014,13 +26029,31 @@ var exitParse = (decodeUnknownCause, decodeUnknownValue) => (u, options, ast) =>
   onFailure: (cause4) => map25(decodeUnknownCause(cause4, options), failCause3),
   onSuccess: (value3) => map25(decodeUnknownValue(value3, options), succeed3)
 }) : fail15(type2(ast, u));
-var exitFromSelf = (error, value3, defect = unknown) => declare([error, value3, defect], (error2, value4, defect2) => exitParse(decodeUnknown(causeFromSelf(error2, defect2)), decodeUnknown(value4)), (error2, value4, defect2) => exitParse(encodeUnknown(causeFromSelf(error2, defect2)), encodeUnknown(value4)), {
-  description: `Exit<${format4(error)}, ${format4(value3)}>`,
+var exitFromSelf = ({
+  defect = unknown,
+  failure,
+  success
+}) => declare([failure, success, defect], (failure2, success2, defect2) => exitParse(decodeUnknown(causeFromSelf({
+  error: failure2,
+  defect: defect2
+})), decodeUnknown(success2)), (failure2, success2, defect2) => exitParse(encodeUnknown(causeFromSelf({
+  error: failure2,
+  defect: defect2
+})), encodeUnknown(success2)), {
+  description: `Exit<${format5(failure)}, ${format5(success)}>`,
   pretty: exitPretty,
   arbitrary: exitArbitrary,
   equivalence: () => equals
 });
-var exit3 = (error, value3, defect = causeDefectPretty) => transform3(exitFrom(error, value3, defect), exitFromSelf(to2(error), to2(value3), to2(defect)), exitDecode, (exit4) => exit4._tag === "Failure" ? {
+var exit3 = ({
+  defect = causeDefectPretty,
+  failure,
+  success
+}) => transform3(exitFrom(failure, success, defect), exitFromSelf({
+  failure: to2(failure),
+  success: to2(success),
+  defect: to2(defect)
+}), exitDecode, (exit4) => exit4._tag === "Failure" ? {
   _tag: "Failure",
   cause: exit4.cause
 } : {
@@ -26028,7 +26061,7 @@ var exit3 = (error, value3, defect = causeDefectPretty) => transform3(exitFrom(e
   value: exit4.value
 });
 var hashSetArbitrary = (item) => (fc) => fc.array(item(fc)).map((as9) => fromIterable7(as9));
-var hashSetPretty = (item) => (set10) => `HashSet(${Array.from(set10).map((a) => item(a)).join(", ")})`;
+var hashSetPretty = (item) => (set11) => `HashSet(${Array.from(set11).map((a) => item(a)).join(", ")})`;
 var hashSetEquivalence = (item) => {
   const arrayEquivalence = getEquivalence4(item);
   return make((a, b) => arrayEquivalence(Array.from(a), Array.from(b)));
@@ -26036,13 +26069,13 @@ var hashSetEquivalence = (item) => {
 var hashSetParse = (decodeUnknown3) => (u, options, ast) => isHashSet2(u) ? map25(decodeUnknown3(Array.from(u), options), (as9) => fromIterable7(as9)) : fail15(type2(ast, u));
 var hashSetFromSelf = (item) => {
   return declare([item], (item2) => hashSetParse(decodeUnknown(array5(item2))), (item2) => hashSetParse(encodeUnknown(array5(item2))), {
-    description: `HashSet<${format4(item)}>`,
+    description: `HashSet<${format5(item)}>`,
     pretty: hashSetPretty,
     arbitrary: hashSetArbitrary,
     equivalence: hashSetEquivalence
   });
 };
-var hashSet2 = (item) => transform3(array5(item), hashSetFromSelf(to2(item)), (as9) => fromIterable7(as9), (set10) => Array.from(set10));
+var hashSet2 = (item) => transform3(array5(item), hashSetFromSelf(to2(item)), (as9) => fromIterable7(as9), (set11) => Array.from(set11));
 var hashMapArbitrary = (key2, value3) => (fc) => fc.array(fc.tuple(key2(fc), value3(fc))).map((as9) => fromIterable8(as9));
 var hashMapPretty = (key2, value3) => (map26) => `HashMap([${Array.from(map26).map(([k, v]) => `[${key2(k)}, ${value3(v)}]`).join(", ")}])`;
 var hashMapEquivalence = (key2, value3) => {
@@ -26050,17 +26083,26 @@ var hashMapEquivalence = (key2, value3) => {
   return make((a, b) => arrayEquivalence(Array.from(a), Array.from(b)));
 };
 var hashMapParse = (decodeUnknown3) => (u, options, ast) => isHashMap2(u) ? map25(decodeUnknown3(Array.from(u), options), (as9) => fromIterable8(as9)) : fail15(type2(ast, u));
-var hashMapFromSelf = (key2, value3) => {
+var hashMapFromSelf = ({
+  key: key2,
+  value: value3
+}) => {
   return declare([key2, value3], (key3, value4) => hashMapParse(decodeUnknown(array5(tuple3(key3, value4)))), (key3, value4) => hashMapParse(encodeUnknown(array5(tuple3(key3, value4)))), {
-    description: `HashMap<${format4(key2)}, ${format4(value3)}>`,
+    description: `HashMap<${format5(key2)}, ${format5(value3)}>`,
     pretty: hashMapPretty,
     arbitrary: hashMapArbitrary,
     equivalence: hashMapEquivalence
   });
 };
-var hashMap2 = (key2, value3) => transform3(array5(tuple3(key2, value3)), hashMapFromSelf(to2(key2), to2(value3)), (as9) => fromIterable8(as9), (map26) => Array.from(map26));
+var hashMap2 = ({
+  key: key2,
+  value: value3
+}) => transform3(array5(tuple3(key2, value3)), hashMapFromSelf({
+  key: to2(key2),
+  value: to2(value3)
+}), (as9) => fromIterable8(as9), (map26) => Array.from(map26));
 var listArbitrary = (item) => (fc) => fc.array(item(fc)).map((as9) => fromIterable9(as9));
-var listPretty = (item) => (set10) => `List(${Array.from(set10).map((a) => item(a)).join(", ")})`;
+var listPretty = (item) => (set11) => `List(${Array.from(set11).map((a) => item(a)).join(", ")})`;
 var listEquivalence = (item) => {
   const arrayEquivalence = getEquivalence4(item);
   return make((a, b) => arrayEquivalence(Array.from(a), Array.from(b)));
@@ -26068,20 +26110,20 @@ var listEquivalence = (item) => {
 var listParse = (decodeUnknown3) => (u, options, ast) => isList(u) ? map25(decodeUnknown3(Array.from(u), options), (as9) => fromIterable9(as9)) : fail15(type2(ast, u));
 var listFromSelf = (item) => {
   return declare([item], (item2) => listParse(decodeUnknown(array5(item2))), (item2) => listParse(encodeUnknown(array5(item2))), {
-    description: `List<${format4(item)}>`,
+    description: `List<${format5(item)}>`,
     pretty: listPretty,
     arbitrary: listArbitrary,
     equivalence: listEquivalence
   });
 };
-var list = (item) => transform3(array5(item), listFromSelf(to2(item)), (as9) => fromIterable9(as9), (set10) => Array.from(set10));
+var list = (item) => transform3(array5(item), listFromSelf(to2(item)), (as9) => fromIterable9(as9), (set11) => Array.from(set11));
 var schemaFromArbitrary = (value3) => suspend9(() => any).pipe(annotations({
   [ArbitraryHookId]: () => value3
 }));
 
 // ../effect-obsidian/src/Settings.ts
 var layer = (schema, register) => {
-  const tag2 = Tag(
+  const tag2 = GenericTag(
     "effect-obsidian/Settings"
   );
   const layer3 = gen3(function* (_) {
@@ -26100,16 +26142,16 @@ var layer = (schema, register) => {
       runForEach2((data3) => promise2(() => plugin.saveData(data3))),
       forkScoped2
     );
-    const update6 = (_2) => runPromise(update5(ref, _2));
+    const update5 = (_2) => runPromise(update4(ref, _2));
     const Class6 = register(
       () => runSync(get15(ref)),
-      update6
+      update5
     );
     plugin.addSettingTab(new Class6(plugin.app, plugin));
     return tag2.of({
       ref,
       unsafeGet: () => runSync(get15(ref)),
-      unsafeUpdate: (f) => runSync(update5(ref, f))
+      unsafeUpdate: (f) => runSync(update4(ref, f))
     });
   }).pipe(
     scoped3(tag2)
@@ -26133,11 +26175,11 @@ var layer = (schema, register) => {
   const prop2 = (key2) => gen3(function* (_) {
     const settings = yield* _(tag2);
     const get17 = () => settings.unsafeGet()[key2];
-    const update6 = (f) => settings.unsafeUpdate((_2) => ({
+    const update5 = (f) => settings.unsafeUpdate((_2) => ({
       ..._2,
       [key2]: f(_2[key2])
     }));
-    return [get17, update6];
+    return [get17, update5];
   });
   return { tag: tag2, layer: layer3, runWhen: runWhen2, prop: prop2 };
 };
@@ -26156,13 +26198,13 @@ var {
       { default: () => ReadonlyRecord_exports.empty() }
     )
   }),
-  (get17, update6) => class SettingsTab extends Obsidian2.PluginSettingTab {
+  (get17, update5) => class SettingsTab extends Obsidian2.PluginSettingTab {
     display() {
       this.containerEl.empty();
       const current2 = get17();
       new Obsidian2.Setting(this.containerEl).setName("Auto layout by default").setDesc("Enable auto layout for Canvas by default").addToggle(
         (toggle2) => toggle2.setValue(current2.autoLayoutDefault).onChange(
-          (value3) => update6((_) => ({
+          (value3) => update5((_) => ({
             ..._,
             autoLayoutDefault: value3
           }))
@@ -26173,7 +26215,7 @@ var {
 );
 var autoLayout = Effect_exports.gen(function* (_) {
   const settings = yield* _(tag);
-  const [, update6] = yield* _(prop("autoLayoutEnabledFor"));
+  const [, update5] = yield* _(prop("autoLayoutEnabledFor"));
   return [
     (path) => {
       const current2 = settings.unsafeGet();
@@ -26183,9 +26225,9 @@ var autoLayout = Effect_exports.gen(function* (_) {
       );
     },
     (path, value3) => {
-      return update6(ReadonlyRecord_exports.upsert(path, value3));
+      return update5(ReadonlyRecord_exports.set(path, value3));
     },
-    update6
+    update5
   ];
 });
 
@@ -26254,7 +26296,7 @@ var run7 = Effect_exports.gen(function* (_) {
 });
 var PatchMenu = Effect_exports.gen(function* (_) {
   const scope5 = yield* _(Effect_exports.scope);
-  const [get17, set10] = yield* _(autoLayout);
+  const [get17, set11] = yield* _(autoLayout);
   yield* _(onActive(Canvas.pipe(
     Effect_exports.flatMap(
       (canvas) => prototype(
@@ -26267,7 +26309,7 @@ var PatchMenu = Effect_exports.gen(function* (_) {
           const enabled2 = get17(path);
           menu.addItem(
             (item) => item.setTitle("Auto layout").setChecked(enabled2).onClick(() => {
-              set10(path, !enabled2);
+              set11(path, !enabled2);
             })
           );
         }
@@ -26297,12 +26339,12 @@ var Command = addCommand2({
 }).pipe(Layer_exports.scopedDiscard);
 var UpdateSettings = Effect_exports.gen(function* (_) {
   const plugin = yield* _(Plugin2);
-  const [, , update6] = yield* _(autoLayout);
+  const [, , update5] = yield* _(autoLayout);
   plugin.registerEvent(
     plugin.app.vault.on("rename", (file, prev) => {
-      update6(
+      update5(
         (self) => Option_exports.match(ReadonlyRecord_exports.pop(self, prev), {
-          onSome: ([value3]) => ReadonlyRecord_exports.upsert(self, file.path, value3),
+          onSome: ([value3]) => ReadonlyRecord_exports.set(self, file.path, value3),
           onNone: () => self
         })
       );
@@ -26310,7 +26352,7 @@ var UpdateSettings = Effect_exports.gen(function* (_) {
   );
   plugin.registerEvent(
     plugin.app.vault.on("delete", (file) => {
-      update6(ReadonlyRecord_exports.remove(file.path));
+      update5(ReadonlyRecord_exports.remove(file.path));
     })
   );
 }).pipe(Layer_exports.effectDiscard);
@@ -26397,8 +26439,7 @@ var NewNodeLive = Effect_exports.all([
 var NodeNavigationLive = Effect_exports.all([
   addCommand2({
     id: "focus-down",
-    name: "Focus Down",
-    hotkeys: [{ modifiers: ["Alt"], key: "ArrowDown" }],
+    name: "Focus down",
     run: Effect_exports.gen(function* (_) {
       const canvas = yield* _(Canvas);
       const node = yield* _(selectedNode, Effect_exports.flatten);
@@ -26412,8 +26453,7 @@ var NodeNavigationLive = Effect_exports.all([
   }),
   addCommand2({
     id: "focus-up",
-    name: "Focus Up",
-    hotkeys: [{ modifiers: ["Alt"], key: "ArrowUp" }],
+    name: "Focus up",
     run: Effect_exports.gen(function* (_) {
       const canvas = yield* _(Canvas);
       const node = yield* _(selectedNode, Effect_exports.flatten);
@@ -26427,8 +26467,7 @@ var NodeNavigationLive = Effect_exports.all([
   }),
   addCommand2({
     id: "focus-left",
-    name: "Focus Left",
-    hotkeys: [{ modifiers: ["Alt"], key: "ArrowLeft" }],
+    name: "Focus left",
     run: Effect_exports.gen(function* (_) {
       const canvas = yield* _(Canvas);
       const node = yield* _(selectedNode, Effect_exports.flatten);
@@ -26439,8 +26478,7 @@ var NodeNavigationLive = Effect_exports.all([
   }),
   addCommand2({
     id: "focus-right",
-    name: "Focus Right",
-    hotkeys: [{ modifiers: ["Alt"], key: "ArrowRight" }],
+    name: "Focus right",
     run: Effect_exports.gen(function* (_) {
       const canvas = yield* _(Canvas);
       const node = yield* _(selectedNode, Effect_exports.flatten);
