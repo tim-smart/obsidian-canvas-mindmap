@@ -1,5 +1,11 @@
 # obsidian-canvas-mindmap
 
+## 0.1.12
+
+### Patch Changes
+
+- [`a586ad8`](https://github.com/tim-smart/effect-obsidian/commit/a586ad8d5d254ded24064dc2afa4d8636f02ddec) Thanks [@tim-smart](https://github.com/tim-smart)! - update deps
+
 ## 0.1.11
 
 ### Patch Changes

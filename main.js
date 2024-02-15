@@ -28,7 +28,7 @@ var __export = (target, all6) => {
     __defProp(target, name, { get: all6[name], enumerable: true });
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Function.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Function.js
 var isFunction = (input) => typeof input === "function";
 var dual = function(arity, body) {
   if (typeof arity === "function") {
@@ -128,10 +128,10 @@ function pipe(a, ab, bc, cd, de, ef, fg, gh, hi) {
   }
 }
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/version.js
-var moduleVersion = "2.3.2";
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/version.js
+var moduleVersion = "2.3.6";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/GlobalValue.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/GlobalValue.js
 var globalStoreId = /* @__PURE__ */ Symbol.for(`effect/GlobalValue/globalStoreId/${moduleVersion}`);
 if (!(globalStoreId in globalThis)) {
   globalThis[globalStoreId] = /* @__PURE__ */ new Map();
@@ -144,7 +144,7 @@ var globalValue = (id2, compute) => {
   return globalStore.get(id2);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Predicate.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Predicate.js
 var isString = (input) => typeof input === "string";
 var isNumber = (input) => typeof input === "number";
 var isBoolean = (input) => typeof input === "boolean";
@@ -167,7 +167,7 @@ var isIterable = (input) => hasProperty(input, Symbol.iterator);
 var isRecord = (input) => isRecordOrArray(input) && !Array.isArray(input);
 var isPromise = (input) => hasProperty(input, "then") && "catch" in input && isFunction2(input.then) && isFunction2(input.catch);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Utils.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Utils.js
 var GenKindTypeId = /* @__PURE__ */ Symbol.for("effect/Gen/GenKind");
 var GenKindImpl = class {
   value;
@@ -387,7 +387,7 @@ function add64(out, aHi, aLo, bHi, bLo) {
   out[1] = lo;
 }
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Hash.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Hash.js
 var randomHashCache = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/Hash/randomHashCache"), () => /* @__PURE__ */ new WeakMap());
 var pcgr = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/Hash/pcgr"), () => new PCGRandom());
 var symbol = /* @__PURE__ */ Symbol.for("effect/Hash");
@@ -465,7 +465,7 @@ var array = (arr) => {
   return optimize(h);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Equal.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Equal.js
 var symbol2 = /* @__PURE__ */ Symbol.for("effect/Equal");
 function equals() {
   if (arguments.length === 1) {
@@ -491,7 +491,7 @@ function compareBoth(self, that) {
 var isEqual = (u) => hasProperty(u, symbol2);
 var equivalence = () => (self, that) => equals(self, that);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Equivalence.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Equivalence.js
 var make = (isEquivalent) => (self, that) => self === that || isEquivalent(self, that);
 var isStrictEquivalent = (x, y) => x === y;
 var strict = () => isStrictEquivalent;
@@ -511,7 +511,7 @@ var array2 = (item) => make((self, that) => {
   return true;
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Inspectable.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Inspectable.js
 var NodeInspectSymbol = /* @__PURE__ */ Symbol.for("nodejs.util.inspect.custom");
 var toJSON = (x) => {
   if (hasProperty(x, "toJSON") && isFunction2(x["toJSON"]) && x["toJSON"].length === 0) {
@@ -523,7 +523,7 @@ var toJSON = (x) => {
 };
 var format = (x) => JSON.stringify(x, null, 2);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Option.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Option.js
 var Option_exports = {};
 __export(Option_exports, {
   Do: () => Do,
@@ -585,7 +585,7 @@ __export(Option_exports, {
   zipWith: () => zipWith
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Pipeable.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Pipeable.js
 var pipeArguments = (self, args) => {
   switch (args.length) {
     case 1:
@@ -616,7 +616,7 @@ var pipeArguments = (self, args) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/effect.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/effect.js
 var OP_ASYNC = "Async";
 var OP_COMMIT = "Commit";
 var OP_FAILURE = "Failure";
@@ -632,7 +632,7 @@ var OP_WITH_RUNTIME = "WithRuntime";
 var OP_YIELD = "Yield";
 var OP_REVERT_FLAGS = "RevertFlags";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/effectable.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/effectable.js
 var EffectTypeId = /* @__PURE__ */ Symbol.for("effect/Effect");
 var StreamTypeId = /* @__PURE__ */ Symbol.for("effect/Stream");
 var SinkTypeId = /* @__PURE__ */ Symbol.for("effect/Sink");
@@ -716,7 +716,7 @@ var StructuralCommitPrototype = {
   ...StructuralPrototype
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/option.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/option.js
 var TypeId = /* @__PURE__ */ Symbol.for("effect/Option");
 var CommonProto = {
   ...EffectPrototype,
@@ -773,7 +773,7 @@ var some = (value3) => {
   return a;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/either.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/either.js
 var TypeId2 = /* @__PURE__ */ Symbol.for("effect/Either");
 var CommonProto2 = {
   ...EffectPrototype,
@@ -837,7 +837,7 @@ var right = (right3) => {
 var getLeft = (self) => isRight(self) ? none : some(self.left);
 var getRight = (self) => isLeft(self) ? none : some(self.right);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Order.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Order.js
 var make2 = (compare) => (self, that) => self === that ? 0 : compare(self, that);
 var number3 = /* @__PURE__ */ make2((self, that) => self < that ? -1 : 1);
 var bigint = /* @__PURE__ */ make2((self, that) => self < that ? -1 : 1);
@@ -909,7 +909,7 @@ var max = (O) => dual(2, (self, that) => self === that || O(self, that) > -1 ? s
 var clamp = (O) => dual(2, (self, options) => min(O)(options.maximum, max(O)(options.minimum, self)));
 var between = (O) => dual(2, (self, options) => !lessThan(O)(self, options.minimum) && !greaterThan(O)(self, options.maximum));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Option.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Option.js
 var TypeId3 = /* @__PURE__ */ Symbol.for("effect/Option");
 var none2 = () => none;
 var some2 = some;
@@ -1073,7 +1073,7 @@ var gen = (f) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/BigDecimal.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/BigDecimal.js
 var TypeId4 = /* @__PURE__ */ Symbol.for("effect/BigDecimal");
 var BigDecimalProto = {
   [TypeId4]: TypeId4,
@@ -1234,14 +1234,14 @@ var unsafeToNumber = (n) => Number(format2(n));
 var isNegative = (n) => n.value < bigint0;
 var isPositive = (n) => n.value > bigint0;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/BigInt.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/BigInt.js
 var Order2 = bigint;
 var clamp3 = /* @__PURE__ */ clamp(Order2);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Boolean.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Boolean.js
 var not = (self) => !self;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Either.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Either.js
 var right2 = right;
 var left2 = left;
 var try_ = (evaluate2) => {
@@ -1279,7 +1279,7 @@ var getOrThrowWith2 = /* @__PURE__ */ dual(2, (self, onLeft) => {
   throw onLeft(self.left);
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/ReadonlyArray.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/ReadonlyArray.js
 var ReadonlyArray_exports = {};
 __export(ReadonlyArray_exports, {
   append: () => append,
@@ -1404,10 +1404,10 @@ __export(ReadonlyArray_exports, {
   zipWith: () => zipWith2
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/readonlyArray.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/readonlyArray.js
 var isNonEmptyArray = (self) => self.length > 0;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/ReadonlyRecord.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/ReadonlyRecord.js
 var ReadonlyRecord_exports = {};
 __export(ReadonlyRecord_exports, {
   collect: () => collect,
@@ -1724,10 +1724,10 @@ var singleton = (key2, value3) => ({
   [key2]: value3
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Tuple.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Tuple.js
 var make4 = (...elements) => elements;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/ReadonlyArray.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/ReadonlyArray.js
 var make5 = (...elements) => elements;
 var makeBy = (n, f) => {
   const max6 = Math.max(1, Math.floor(n));
@@ -2287,10 +2287,10 @@ var mapAccum = /* @__PURE__ */ dual(3, (self, s, f) => {
 var cartesianWith = /* @__PURE__ */ dual(3, (self, that, f) => flatMap2(self, (a) => map3(that, (b) => f(a, b))));
 var cartesian = /* @__PURE__ */ dual(2, (self, that) => cartesianWith(self, that, (a, b) => [a, b]));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Brand.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Brand.js
 var RefinedConstructorsTypeId = /* @__PURE__ */ Symbol.for("effect/Brand/Refined");
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/context.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/context.js
 var TagTypeId = /* @__PURE__ */ Symbol.for("effect/Context/Tag");
 var STMSymbolKey = "effect/STM";
 var STMTypeId = /* @__PURE__ */ Symbol.for(STMSymbolKey);
@@ -2428,7 +2428,7 @@ var merge2 = /* @__PURE__ */ dual(2, (self, that) => {
   return makeContext(map26);
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Context.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Context.js
 var GenericTag = makeGenericTag;
 var isContext2 = isContext;
 var isTag2 = isTag;
@@ -2440,7 +2440,7 @@ var unsafeGet3 = unsafeGet2;
 var getOption2 = getOption;
 var merge3 = merge2;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Chunk.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Chunk.js
 var TypeId6 = /* @__PURE__ */ Symbol.for("effect/Chunk");
 function copy2(src, srcPos, dest, destPos, len) {
   for (let i = srcPos; i < Math.min(src.length, srcPos + len); i++) {
@@ -2874,14 +2874,14 @@ var findFirst2 = findFirst;
 var reduce3 = reduce2;
 var reduceRight2 = reduceRight;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/hashMap/config.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/hashMap/config.js
 var SIZE = 5;
 var BUCKET_SIZE = /* @__PURE__ */ Math.pow(2, SIZE);
 var MASK = BUCKET_SIZE - 1;
 var MAX_INDEX_NODE = BUCKET_SIZE / 2;
 var MIN_ARRAY_NODE = BUCKET_SIZE / 4;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/hashMap/bitwise.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/hashMap/bitwise.js
 function popcount(x) {
   x -= x >> 1 & 1431655765;
   x = (x & 858993459) + (x >> 2 & 858993459);
@@ -2900,13 +2900,13 @@ function fromBitmap(bitmap, bit) {
   return popcount(bitmap & bit - 1);
 }
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stack.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stack.js
 var make9 = (value3, previous2) => ({
   value: value3,
   previous: previous2
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/hashMap/array.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/hashMap/array.js
 function arrayUpdate(mutate3, at, v, arr) {
   let out = arr;
   if (!mutate3) {
@@ -2957,7 +2957,7 @@ function arraySpliceIn(mutate3, at, v, arr) {
   return out;
 }
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/hashMap/node.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/hashMap/node.js
 var EmptyNode = class _EmptyNode {
   _tag = "EmptyNode";
   modify(edit, _shift, f, hash4, key2, size16) {
@@ -3205,7 +3205,7 @@ function mergeLeaves(edit, shift2, h1, n1, h2, n2) {
   }
 }
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/hashMap.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/hashMap.js
 var HashMapSymbolKey = "effect/HashMap";
 var HashMapTypeId = /* @__PURE__ */ Symbol.for(HashMapSymbolKey);
 var HashMapProto = {
@@ -3433,7 +3433,7 @@ var reduce4 = /* @__PURE__ */ dual(3, (self, zero3, f) => {
   return zero3;
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/hashSet.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/hashSet.js
 var HashSetSymbolKey = "effect/HashSet";
 var HashSetTypeId = /* @__PURE__ */ Symbol.for(HashSetSymbolKey);
 var HashSetProto = {
@@ -3516,7 +3516,7 @@ var union3 = /* @__PURE__ */ dual(2, (self, that) => mutate(empty8(), (set10) =>
 var forEach3 = /* @__PURE__ */ dual(2, (self, f) => forEach2(self._keyMap, (_, k) => f(k)));
 var reduce5 = /* @__PURE__ */ dual(3, (self, zero3, f) => reduce4(self._keyMap, zero3, (z, _, a) => f(z, a)));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/HashSet.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/HashSet.js
 var isHashSet2 = isHashSet;
 var empty9 = empty8;
 var fromIterable7 = fromIterable6;
@@ -3529,7 +3529,7 @@ var difference4 = difference3;
 var union4 = union3;
 var reduce6 = reduce5;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/MutableRef.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/MutableRef.js
 var TypeId7 = /* @__PURE__ */ Symbol.for("effect/MutableRef");
 var MutableRefProto = {
   [TypeId7]: TypeId7,
@@ -3562,18 +3562,12 @@ var compareAndSet = /* @__PURE__ */ dual(3, (self, oldValue, newValue) => {
   return false;
 });
 var get7 = (self) => self.current;
-var incrementAndGet = (self) => updateAndGet(self, (n) => n + 1);
 var set3 = /* @__PURE__ */ dual(2, (self, value3) => {
   self.current = value3;
   return self;
 });
-var setAndGet = /* @__PURE__ */ dual(2, (self, value3) => {
-  self.current = value3;
-  return self.current;
-});
-var updateAndGet = /* @__PURE__ */ dual(2, (self, f) => setAndGet(self, f(get7(self))));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiberId.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiberId.js
 var FiberIdSymbolKey = "effect/FiberId";
 var FiberIdTypeId = /* @__PURE__ */ Symbol.for(FiberIdSymbolKey);
 var OP_NONE = "None";
@@ -3583,6 +3577,8 @@ var emptyHash = /* @__PURE__ */ string(`${FiberIdSymbolKey}-${OP_NONE}`);
 var None = class {
   [FiberIdTypeId] = FiberIdTypeId;
   _tag = OP_NONE;
+  id = -1;
+  startTimeMillis = -1;
   [symbol]() {
     return emptyHash;
   }
@@ -3711,7 +3707,7 @@ var unsafeMake = () => {
   return new Runtime(id2, Date.now());
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/FiberId.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/FiberId.js
 var none4 = none3;
 var runtime2 = runtime;
 var composite2 = composite;
@@ -3721,7 +3717,7 @@ var ids2 = ids;
 var threadName2 = threadName;
 var unsafeMake2 = unsafeMake;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/HashMap.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/HashMap.js
 var isHashMap2 = isHashMap;
 var empty10 = empty7;
 var make15 = make10;
@@ -3735,7 +3731,7 @@ var map7 = map5;
 var forEach4 = forEach2;
 var reduce7 = reduce4;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/List.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/List.js
 var TypeId8 = /* @__PURE__ */ Symbol.for("effect/List");
 var toArray2 = (self) => Array.from(self);
 var getEquivalence6 = (isEquivalent) => mapInput(getEquivalence4(isEquivalent), toArray2);
@@ -3900,7 +3896,7 @@ var reverse4 = (self) => {
   return result;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/data.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/data.js
 var ArrayProto = /* @__PURE__ */ Object.assign(/* @__PURE__ */ Object.create(Array.prototype), {
   [symbol]() {
     return array(this);
@@ -3924,7 +3920,7 @@ var Structural = /* @__PURE__ */ function() {
 }();
 var struct2 = (as9) => Object.assign(Object.create(StructuralPrototype), as9);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/differ/contextPatch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/differ/contextPatch.js
 var ContextPatchTypeId = /* @__PURE__ */ Symbol.for("effect/DifferContextPatch");
 function variance(a) {
   return a;
@@ -4050,7 +4046,7 @@ var patch = /* @__PURE__ */ dual(2, (self, context7) => {
   return makeContext(map26);
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/differ/hashSetPatch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/differ/hashSetPatch.js
 var HashSetPatchTypeId = /* @__PURE__ */ Symbol.for("effect/DifferHashSetPatch");
 function variance2(a) {
   return a;
@@ -4135,7 +4131,7 @@ var patch2 = /* @__PURE__ */ dual(2, (self, oldValue) => {
   return set10;
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/differ/readonlyArrayPatch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/differ/readonlyArrayPatch.js
 var ReadonlyArrayPatchTypeId = /* @__PURE__ */ Symbol.for("effect/DifferReadonlyArrayPatch");
 function variance3(a) {
   return a;
@@ -4249,7 +4245,7 @@ var patch3 = /* @__PURE__ */ dual(3, (self, oldValue, differ3) => {
   return readonlyArray2;
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/differ.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/differ.js
 var DifferTypeId = /* @__PURE__ */ Symbol.for("effect/Differ");
 var DifferProto = {
   [DifferTypeId]: {
@@ -4308,7 +4304,7 @@ var updateWith = (f) => make16({
   patch: (patch9, oldValue) => f(oldValue, patch9(oldValue))
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/runtimeFlagsPatch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/runtimeFlagsPatch.js
 var BIT_MASK = 255;
 var BIT_SHIFT = 8;
 var active = (patch9) => patch9 & BIT_MASK;
@@ -4321,7 +4317,7 @@ var exclude = /* @__PURE__ */ dual(2, (self, flag) => make17(active(self) & ~fla
 var andThen2 = /* @__PURE__ */ dual(2, (self, that) => self | that);
 var invert = (n) => ~n >>> 0 & BIT_MASK;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/runtimeFlags.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/runtimeFlags.js
 var None2 = 0;
 var Interruption = 1 << 0;
 var OpSupervision = 1 << 1;
@@ -4346,13 +4342,13 @@ var differ = /* @__PURE__ */ make16({
   patch: (_patch, oldValue) => patch4(oldValue, _patch)
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/RuntimeFlagsPatch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/RuntimeFlagsPatch.js
 var empty16 = empty15;
 var enable3 = enable;
 var disable2 = disable;
 var exclude2 = exclude;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/blockedRequests.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/blockedRequests.js
 var empty17 = {
   _tag: "Empty"
 };
@@ -4499,7 +4495,7 @@ var parallelCollectionEmpty = () => new ParallelImpl(empty10());
 var parallelCollectionMake = (dataSource, blockedRequest) => new ParallelImpl(make15([dataSource, Array.of(blockedRequest)]));
 var parallelCollectionCombine = (self, that) => new ParallelImpl(reduce7(self.map, that.map, (map26, value3, key2) => set4(map26, key2, match(get8(map26, key2), {
   onNone: () => value3,
-  onSome: (a) => [...a, ...value3]
+  onSome: (other) => [...value3, ...other]
 }))));
 var parallelCollectionIsEmpty = (self) => isEmpty3(self.map);
 var parallelCollectionKeys = (self) => Array.from(keys3(self.map));
@@ -4524,7 +4520,7 @@ var sequentialCollectionCombine = (self, that) => new SequentialImpl(reduce7(tha
 var sequentialCollectionKeys = (self) => Array.from(keys3(self.map));
 var sequentialCollectionToChunk = (self) => Array.from(self.map);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/cause.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/cause.js
 var OP_DIE = "Die";
 var OP_EMPTY = "Empty";
 var OP_FAIL = "Fail";
@@ -4532,7 +4528,7 @@ var OP_INTERRUPT = "Interrupt";
 var OP_PARALLEL = "Parallel";
 var OP_SEQUENTIAL = "Sequential";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/cause.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/cause.js
 var CauseSymbolKey = "effect/Cause";
 var CauseTypeId = /* @__PURE__ */ Symbol.for(CauseSymbolKey);
 var variance4 = {
@@ -5107,8 +5103,11 @@ var prettyErrorMessage = (u) => {
   if (typeof u === "string") {
     return `Error: ${u}`;
   }
-  if (hasProperty(u, "toString") && isFunction2(u["toString"]) && u["toString"] !== Object.prototype.toString) {
-    return u["toString"]();
+  try {
+    if (hasProperty(u, "toString") && isFunction2(u["toString"]) && u["toString"] !== Object.prototype.toString && u["toString"] !== Array.prototype.toString) {
+      return u["toString"]();
+    }
+  } catch {
   }
   return `Error: ${JSON.stringify(u)}`;
 };
@@ -5133,11 +5132,11 @@ var prettyErrors = (cause4) => reduceWithContext(cause4, void 0, {
   sequentialCase: (_, l, r) => [...l, ...r]
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/deferred.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/deferred.js
 var OP_STATE_PENDING = "Pending";
 var OP_STATE_DONE = "Done";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/deferred.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/deferred.js
 var DeferredSymbolKey = "effect/Deferred";
 var DeferredTypeId = /* @__PURE__ */ Symbol.for(DeferredSymbolKey);
 var deferredVariance = {
@@ -5159,7 +5158,7 @@ var done = (effect3) => {
   };
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/internalize.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/internalize.js
 var internalize = (f) => {
   Object.defineProperty(f, "name", {
     value: "effect_cutpoint"
@@ -5167,7 +5166,7 @@ var internalize = (f) => {
   return f;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/tracer.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/tracer.js
 var TracerTypeId = /* @__PURE__ */ Symbol.for("effect/Tracer");
 var make19 = (options) => ({
   [TracerTypeId]: TracerTypeId,
@@ -5175,7 +5174,17 @@ var make19 = (options) => ({
 });
 var tracerTag = /* @__PURE__ */ GenericTag("effect/Tracer");
 var spanTag = /* @__PURE__ */ GenericTag("effect/ParentSpan");
-var ids3 = /* @__PURE__ */ globalValue("effect/Tracer/SpanId.ids", () => make13(0));
+var randomString = /* @__PURE__ */ function() {
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const charactersLength = characters.length;
+  return function(length5) {
+    let result = "";
+    for (let i = 0; i < length5; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+  };
+}();
 var NativeSpan = class {
   name;
   parent;
@@ -5200,7 +5209,7 @@ var NativeSpan = class {
       startTime
     };
     this.attributes = /* @__PURE__ */ new Map();
-    this.spanId = `span${incrementAndGet(ids3)}`;
+    this.spanId = `span${randomString(16)}`;
   }
   end = (endTime, exit4) => {
     this.status = {
@@ -5222,7 +5231,7 @@ var nativeTracer = /* @__PURE__ */ make19({
   context: (f) => f()
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/core.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/core.js
 var EffectErrorSymbolKey = "effect/EffectError";
 var EffectErrorTypeId = /* @__PURE__ */ Symbol.for(EffectErrorSymbolKey);
 var isEffectError = (u) => hasProperty(u, EffectErrorTypeId);
@@ -6253,7 +6262,7 @@ var currentSpanFromFiber = (fiber) => {
   return span4 !== void 0 && span4._tag === "Span" ? some2(span4) : none2();
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Deferred.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Deferred.js
 var make20 = deferredMake;
 var _await = deferredAwait;
 var done2 = deferredDone;
@@ -6265,7 +6274,7 @@ var poll = deferredPoll;
 var succeed2 = deferredSucceed;
 var unsafeMake3 = deferredUnsafeMake;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Duration.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Duration.js
 var TypeId9 = /* @__PURE__ */ Symbol.for("effect/Duration");
 var bigint1e3 = /* @__PURE__ */ BigInt(1e3);
 var bigint1e9 = /* @__PURE__ */ BigInt(1e9);
@@ -6518,7 +6527,7 @@ var format3 = (self) => {
   return parts.reverse().join(" ");
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Exit.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Exit.js
 var isExit = exitIsExit;
 var isFailure = exitIsFailure;
 var isSuccess = exitIsSuccess;
@@ -6535,7 +6544,7 @@ var unit3 = exitUnit;
 var zip3 = exitZip;
 var zipRight3 = exitZipRight;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/MutableHashMap.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/MutableHashMap.js
 var TypeId10 = /* @__PURE__ */ Symbol.for("effect/MutableHashMap");
 var MutableHashMapProto = {
   [TypeId10]: TypeId10,
@@ -6687,7 +6696,7 @@ var size6 = (self) => {
   return self.referential.size + self.bucketsSize;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/MutableList.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/MutableList.js
 var TypeId11 = /* @__PURE__ */ Symbol.for("effect/MutableList");
 var MutableListProto = {
   [TypeId11]: TypeId11,
@@ -6798,7 +6807,7 @@ var remove7 = (self, node) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/MutableQueue.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/MutableQueue.js
 var TypeId12 = /* @__PURE__ */ Symbol.for("effect/MutableQueue");
 var EmptyMutableQueue = /* @__PURE__ */ Symbol.for("effect/mutable/MutableQueue/Empty");
 var MutableQueueProto = {
@@ -6875,7 +6884,7 @@ var pollUpTo = /* @__PURE__ */ dual(2, (self, n) => {
   return reverse3(result);
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/clock.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/clock.js
 var ClockSymbolKey = "effect/Clock";
 var ClockTypeId = /* @__PURE__ */ Symbol.for(ClockSymbolKey);
 var clockTag = /* @__PURE__ */ GenericTag("effect/Clock");
@@ -6935,7 +6944,7 @@ var ClockImpl = class {
 };
 var make23 = () => new ClockImpl();
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Number.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Number.js
 var Order4 = number3;
 var clamp6 = /* @__PURE__ */ clamp(Order4);
 var remainder = /* @__PURE__ */ dual(2, (self, divisor) => {
@@ -6951,7 +6960,7 @@ var nextPow2 = (n) => {
   return Math.max(Math.pow(2, nextPow), 2);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/configError.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/configError.js
 var OP_AND = "And";
 var OP_OR = "Or";
 var OP_INVALID_DATA = "InvalidData";
@@ -6959,7 +6968,7 @@ var OP_MISSING_DATA = "MissingData";
 var OP_SOURCE_UNAVAILABLE = "SourceUnavailable";
 var OP_UNSUPPORTED = "Unsupported";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/configError.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/configError.js
 var ConfigErrorSymbolKey = "effect/ConfigError";
 var ConfigErrorTypeId = /* @__PURE__ */ Symbol.for(ConfigErrorSymbolKey);
 var proto2 = {
@@ -7079,7 +7088,7 @@ var prefixed = /* @__PURE__ */ dual(2, (self, prefix) => {
   }
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/configProvider/pathPatch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/configProvider/pathPatch.js
 var empty21 = {
   _tag: "Empty"
 };
@@ -7122,7 +7131,7 @@ var patch5 = /* @__PURE__ */ dual(2, (path, patch9) => {
   return right2(output);
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/config.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/config.js
 var OP_CONSTANT = "Constant";
 var OP_FAIL2 = "Fail";
 var OP_FALLBACK = "Fallback";
@@ -7135,7 +7144,7 @@ var OP_SEQUENCE = "Sequence";
 var OP_HASHMAP = "HashMap";
 var OP_ZIP_WITH = "ZipWith";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/configProvider.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/configProvider.js
 var concat = (l, r) => [...l, ...r];
 var ConfigProviderSymbolKey = "effect/ConfigProvider";
 var ConfigProviderTypeId = /* @__PURE__ */ Symbol.for(ConfigProviderSymbolKey);
@@ -7341,7 +7350,7 @@ var parseInteger = (str) => {
   return Number.isNaN(parsedIndex) ? none2() : some2(parsedIndex);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/defaultServices/console.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/defaultServices/console.js
 var TypeId13 = /* @__PURE__ */ Symbol.for("effect/Console");
 var consoleTag = /* @__PURE__ */ GenericTag("effect/Console");
 var defaultConsole = {
@@ -7429,7 +7438,7 @@ var defaultConsole = {
   unsafe: console
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/random.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/random.js
 var RandomSymbolKey = "effect/Random";
 var RandomTypeId = /* @__PURE__ */ Symbol.for(RandomSymbolKey);
 var randomTag = /* @__PURE__ */ GenericTag("effect/Random");
@@ -7477,7 +7486,7 @@ var swap = (buffer3, index1, index2) => {
 };
 var make25 = (seed) => new RandomImpl(seed);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/defaultServices.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/defaultServices.js
 var liveServices = /* @__PURE__ */ pipe(/* @__PURE__ */ empty5(), /* @__PURE__ */ add2(clockTag, /* @__PURE__ */ make23()), /* @__PURE__ */ add2(consoleTag, defaultConsole), /* @__PURE__ */ add2(randomTag, /* @__PURE__ */ make25(/* @__PURE__ */ Math.random() * 4294967296 >>> 0)), /* @__PURE__ */ add2(configProviderTag, /* @__PURE__ */ fromEnv()), /* @__PURE__ */ add2(tracerTag, nativeTracer));
 var currentServices = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/DefaultServices/currentServices"), () => fiberRefUnsafeMakeContext(liveServices));
 var sleep = (duration2) => {
@@ -7491,17 +7500,18 @@ var withClock = /* @__PURE__ */ dual(2, (effect3, value3) => fiberRefLocallyWith
 var withConfigProvider = /* @__PURE__ */ dual(2, (effect3, value3) => fiberRefLocallyWith(currentServices, add2(configProviderTag, value3))(effect3));
 var configProviderWith = (f) => fiberRefGetWith(currentServices, (services) => f(get4(services, configProviderTag)));
 var randomWith = (f) => fiberRefGetWith(currentServices, (services) => f(get4(services, randomTag)));
+var withRandom = /* @__PURE__ */ dual(2, (effect3, value3) => fiberRefLocallyWith(currentServices, add2(randomTag, value3))(effect3));
 var tracerWith = (f) => fiberRefGetWith(currentServices, (services) => f(get4(services, tracerTag)));
 var withTracer = /* @__PURE__ */ dual(2, (effect3, value3) => fiberRefLocallyWith(currentServices, add2(tracerTag, value3))(effect3));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Clock.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Clock.js
 var sleep2 = sleep;
 var currentTimeMillis2 = currentTimeMillis;
 var currentTimeNanos2 = currentTimeNanos;
 var clockWith2 = clockWith;
 var Clock = clockTag;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiberRefs.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiberRefs.js
 function unsafeMake4(fiberRefLocals) {
   return new FiberRefsImpl(fiberRefLocals);
 }
@@ -7670,7 +7680,7 @@ var updateManyAs = /* @__PURE__ */ dual(2, (self, {
   return new FiberRefsImpl(locals);
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/FiberRefs.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/FiberRefs.js
 var get11 = get10;
 var getOrDefault2 = getOrDefault;
 var joinAs2 = joinAs;
@@ -7678,7 +7688,7 @@ var setAll2 = setAll;
 var updateManyAs2 = updateManyAs;
 var empty23 = empty22;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/LogLevel.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/LogLevel.js
 var LogLevel_exports = {};
 __export(LogLevel_exports, {
   All: () => All,
@@ -7734,7 +7744,7 @@ var fromLiteral = (literal2) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/logSpan.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/logSpan.js
 var make26 = (label, startTime) => ({
   label,
   startTime
@@ -7744,11 +7754,11 @@ var render = (now) => (self) => {
   return `${label}=${now - self.startTime}ms`;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/LogSpan.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/LogSpan.js
 var make27 = make26;
 var render2 = render;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/ref.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/ref.js
 var RefTypeId = /* @__PURE__ */ Symbol.for("effect/Ref");
 var refVariance = {
   /* c8 ignore next */
@@ -7782,7 +7792,7 @@ var getAndSet = /* @__PURE__ */ dual(2, (self, value3) => self.modify((a) => [a,
 var modify4 = /* @__PURE__ */ dual(2, (self, f) => self.modify(f));
 var update2 = /* @__PURE__ */ dual(2, (self, f) => self.modify((a) => [void 0, f(a)]));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Ref.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Ref.js
 var RefTypeId2 = RefTypeId;
 var make29 = make28;
 var get13 = get12;
@@ -7791,10 +7801,10 @@ var modify5 = modify4;
 var set7 = set6;
 var update3 = update2;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Tracer.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Tracer.js
 var tracerWith2 = tracerWith;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiberRefs/patch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiberRefs/patch.js
 var OP_EMPTY2 = "Empty";
 var OP_ADD = "Add";
 var OP_REMOVE = "Remove";
@@ -7884,7 +7894,7 @@ var patch6 = /* @__PURE__ */ dual(3, (self, fiberId3, oldValue) => {
   return fiberRefs3;
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/label.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/label.js
 var MetricLabelSymbolKey = "effect/MetricLabel";
 var MetricLabelTypeId = /* @__PURE__ */ Symbol.for(MetricLabelSymbolKey);
 var MetricLabelImpl = class {
@@ -7912,7 +7922,7 @@ var make30 = (key2, value3) => {
 };
 var isMetricLabel = (u) => hasProperty(u, MetricLabelTypeId);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/singleShotGen.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/singleShotGen.js
 var SingleShotGen2 = class _SingleShotGen {
   self;
   called = false;
@@ -7942,7 +7952,7 @@ var SingleShotGen2 = class _SingleShotGen {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/core-effect.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/core-effect.js
 var annotateLogs = /* @__PURE__ */ dual((args) => isEffect(args[0]), function() {
   const args = arguments;
   return fiberRefLocallyWith(args[0], currentLogAnnotations, typeof args[1] === "string" ? set4(args[1], args[2]) : (annotations2) => Object.entries(args[1]).reduce((acc, [key2, value3]) => set4(acc, key2, value3), annotations2));
@@ -8517,10 +8527,10 @@ var withSpan = /* @__PURE__ */ dual((args) => typeof args[0] !== "string", (self
 var fromNullable3 = (value3) => value3 == null ? fail2(new NoSuchElementException()) : succeed(value3);
 var optionFromOptional = (self) => catchAll(map10(self, some2), (error) => isNoSuchElementException(error) ? succeedNone : fail2(error));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Effectable.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Effectable.js
 var EffectTypeId3 = EffectTypeId;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/executionStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/executionStrategy.js
 var OP_SEQUENTIAL2 = "Sequential";
 var OP_PARALLEL2 = "Parallel";
 var OP_PARALLEL_N = "ParallelN";
@@ -8537,16 +8547,16 @@ var parallelN = (parallelism) => ({
 var isSequential = (self) => self._tag === OP_SEQUENTIAL2;
 var isParallel = (self) => self._tag === OP_PARALLEL2;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/ExecutionStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/ExecutionStrategy.js
 var sequential3 = sequential2;
 var parallel3 = parallel2;
 var parallelN2 = parallelN;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/FiberRefsPatch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/FiberRefsPatch.js
 var diff6 = diff5;
 var patch7 = patch6;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiberStatus.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiberStatus.js
 var FiberStatusSymbolKey = "effect/FiberStatus";
 var FiberStatusTypeId = /* @__PURE__ */ Symbol.for(FiberStatusSymbolKey);
 var OP_DONE = "Done";
@@ -8598,13 +8608,13 @@ var suspended = (runtimeFlags2, blockingOn) => new Suspended(runtimeFlags2, bloc
 var isFiberStatus = (u) => hasProperty(u, FiberStatusTypeId);
 var isDone2 = (self) => self._tag === OP_DONE;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/FiberStatus.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/FiberStatus.js
 var done4 = done3;
 var running2 = running;
 var suspended2 = suspended;
 var isDone3 = isDone2;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Scheduler.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Scheduler.js
 var PriorityBuckets = class {
   /**
    * @since 2.0.0
@@ -8740,10 +8750,10 @@ var SyncScheduler = class {
 var currentScheduler = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberRef/currentScheduler"), () => fiberRefUnsafeMake(defaultScheduler));
 var withScheduler = /* @__PURE__ */ dual(2, (self, scheduler) => fiberRefLocally(self, currentScheduler, scheduler));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/completedRequestMap.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/completedRequestMap.js
 var currentRequestMap = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberRef/currentRequestMap"), () => fiberRefUnsafeMake(/* @__PURE__ */ new Map()));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/concurrency.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/concurrency.js
 var match8 = (concurrency, sequential5, unbounded6, bounded6) => {
   switch (concurrency) {
     case void 0:
@@ -8769,7 +8779,7 @@ var matchSimple = (concurrency, sequential5, concurrent) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiberMessage.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiberMessage.js
 var OP_INTERRUPT_SIGNAL = "InterruptSignal";
 var OP_STATEFUL = "Stateful";
 var OP_RESUME = "Resume";
@@ -8790,7 +8800,7 @@ var yieldNow2 = () => ({
   _tag: OP_YIELD_NOW
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiberScope.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiberScope.js
 var FiberScopeSymbolKey = "effect/FiberScope";
 var FiberScopeTypeId = /* @__PURE__ */ Symbol.for(FiberScopeSymbolKey);
 var Global = class {
@@ -8826,7 +8836,7 @@ var unsafeMake6 = (fiber) => {
 };
 var globalScope = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberScope/Global"), () => new Global());
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiber.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiber.js
 var FiberSymbolKey = "effect/Fiber";
 var FiberTypeId = /* @__PURE__ */ Symbol.for(FiberSymbolKey);
 var fiberVariance = {
@@ -8844,7 +8854,7 @@ var join2 = (self) => zipLeft2(flatten6(self.await), self.inheritAll);
 var poll3 = (self) => self.poll;
 var currentFiberURI = "effect/FiberCurrent";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/logger.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/logger.js
 var LoggerSymbolKey = "effect/Logger";
 var LoggerTypeId = /* @__PURE__ */ Symbol.for(LoggerSymbolKey);
 var loggerVariance = {
@@ -9008,7 +9018,7 @@ var renderLogSpanLogfmt = (now) => (self) => {
   return `${label}=${now - self.startTime}ms`;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/boundaries.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/boundaries.js
 var MetricBoundariesSymbolKey = "effect/MetricBoundaries";
 var MetricBoundariesTypeId = /* @__PURE__ */ Symbol.for(MetricBoundariesSymbolKey);
 var MetricBoundariesImpl = class {
@@ -9036,7 +9046,7 @@ var fromIterable10 = (iterable) => {
 };
 var exponential = (options) => pipe(makeBy(options.count - 1, (i) => options.start * Math.pow(options.factor, i)), unsafeFromArray, fromIterable10);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/keyType.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/keyType.js
 var MetricKeyTypeSymbolKey = "effect/MetricKeyType";
 var MetricKeyTypeTypeId = /* @__PURE__ */ Symbol.for(MetricKeyTypeSymbolKey);
 var CounterKeyTypeSymbolKey = "effect/MetricKeyType/Counter";
@@ -9105,7 +9115,7 @@ var isGaugeKey = (u) => hasProperty(u, GaugeKeyTypeTypeId);
 var isHistogramKey = (u) => hasProperty(u, HistogramKeyTypeTypeId);
 var isSummaryKey = (u) => hasProperty(u, SummaryKeyTypeTypeId);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/key.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/key.js
 var MetricKeySymbolKey = "effect/MetricKey";
 var MetricKeyTypeId = /* @__PURE__ */ Symbol.for(MetricKeySymbolKey);
 var metricKeyVariance = {
@@ -9142,7 +9152,7 @@ var counter2 = (name, options) => new MetricKeyImpl(name, counter(options), from
 var histogram2 = (name, boundaries, description2) => new MetricKeyImpl(name, histogram(boundaries), fromNullable(description2));
 var taggedWithLabels = /* @__PURE__ */ dual(2, (self, extraTags) => extraTags.length === 0 ? self : new MetricKeyImpl(self.name, self.keyType, self.description, union2(self.tags, extraTags)));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/state.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/state.js
 var MetricStateSymbolKey = "effect/MetricState";
 var MetricStateTypeId = /* @__PURE__ */ Symbol.for(MetricStateSymbolKey);
 var CounterStateSymbolKey = "effect/MetricState/Counter";
@@ -9281,7 +9291,7 @@ var isGaugeState = (u) => hasProperty(u, GaugeStateTypeId);
 var isHistogramState = (u) => hasProperty(u, HistogramStateTypeId);
 var isSummaryState = (u) => hasProperty(u, SummaryStateTypeId);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/hook.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/hook.js
 var MetricHookSymbolKey = "effect/MetricHook";
 var MetricHookTypeId = /* @__PURE__ */ Symbol.for(MetricHookSymbolKey);
 var metricHookVariance = {
@@ -9567,7 +9577,7 @@ var resolveQuantile = (error, sampleCount, current2, consumed, quantile, rest2) 
   throw new Error("BUG: MetricHook.resolveQuantiles - please report an issue at https://github.com/Effect-TS/effect/issues");
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/pair.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/pair.js
 var MetricPairSymbolKey = "effect/MetricPair";
 var MetricPairTypeId = /* @__PURE__ */ Symbol.for(MetricPairSymbolKey);
 var metricPairVariance = {
@@ -9585,7 +9595,7 @@ var unsafeMake7 = (metricKey, metricState) => {
   };
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric/registry.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric/registry.js
 var MetricRegistrySymbolKey = "effect/MetricRegistry";
 var MetricRegistryTypeId = /* @__PURE__ */ Symbol.for(MetricRegistrySymbolKey);
 var MetricRegistryImpl = class {
@@ -9681,7 +9691,7 @@ var make32 = () => {
   return new MetricRegistryImpl();
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/metric.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/metric.js
 var MetricSymbolKey = "effect/Metric";
 var MetricTypeId = /* @__PURE__ */ Symbol.for(MetricSymbolKey);
 var metricVariance = {
@@ -9737,7 +9747,7 @@ var taggedWithLabels2 = /* @__PURE__ */ dual(2, (self, extraTags) => {
   return make33(self.keyType, (input, extraTags1) => self.unsafeUpdate(input, union2(extraTags, extraTags1)), (extraTags1) => self.unsafeValue(union2(extraTags, extraTags1)));
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/request.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/request.js
 var RequestSymbolKey = "effect/Request";
 var RequestTypeId = /* @__PURE__ */ Symbol.for(RequestSymbolKey);
 var requestVariance = {
@@ -9787,7 +9797,7 @@ var Listeners = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/supervisor.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/supervisor.js
 var SupervisorSymbolKey = "effect/Supervisor";
 var SupervisorTypeId = /* @__PURE__ */ Symbol.for(SupervisorSymbolKey);
 var supervisorVariance = {
@@ -9933,10 +9943,10 @@ var fromEffect = (effect3) => {
 };
 var none8 = /* @__PURE__ */ globalValue("effect/Supervisor/none", () => fromEffect(unit2));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Differ.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Differ.js
 var make35 = make16;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/supervisor/patch.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/supervisor/patch.js
 var OP_EMPTY3 = "Empty";
 var OP_ADD_SUPERVISOR = "AddSupervisor";
 var OP_REMOVE_SUPERVISOR = "RemoveSupervisor";
@@ -10027,7 +10037,7 @@ var differ2 = /* @__PURE__ */ make35({
   diff: diff7
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/fiberRuntime.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/fiberRuntime.js
 var fiberStarted = /* @__PURE__ */ counter5("effect_fiber_started");
 var fiberActive = /* @__PURE__ */ counter5("effect_fiber_active");
 var fiberSuccesses = /* @__PURE__ */ counter5("effect_fiber_successes");
@@ -11446,6 +11456,7 @@ var validateWith = /* @__PURE__ */ dual((args) => isEffect(args[1]), (self, that
 }), options)));
 var validateFirst = /* @__PURE__ */ dual((args) => isIterable(args[0]), (elements, f, options) => flip(forEach7(elements, (a, i) => flip(f(a, i)), options)));
 var withClockScoped = (value3) => fiberRefLocallyScopedWith(currentServices, add2(clockTag, value3));
+var withRandomScoped = (value3) => fiberRefLocallyScopedWith(currentServices, add2(randomTag, value3));
 var withConfigProviderScoped = (value3) => fiberRefLocallyScopedWith(currentServices, add2(configProviderTag, value3));
 var withEarlyRelease = (self) => scopeWith((parent2) => flatMap8(scopeFork(parent2, sequential2), (child) => pipe(self, scopeExtend(child), map10((value3) => [fiberIdWith((fiberId3) => scopeClose(child, exitInterrupt(fiberId3))), value3]))));
 var zipOptions = /* @__PURE__ */ dual((args) => isEffect(args[1]), (self, that, options) => zipWithOptions(self, that, (a, b) => [a, b], options));
@@ -11651,7 +11662,7 @@ var makeSpanScoped = (name, options) => acquireRelease(makeSpan(name, options), 
 var withTracerScoped = (value3) => fiberRefLocallyScopedWith(currentServices, add2(tracerTag, value3));
 var withSpanScoped = /* @__PURE__ */ dual((args) => typeof args[0] !== "string", (self, name, options) => flatMap8(makeSpanScoped(name, options), (span4) => provideService(self, spanTag, span4)));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/cache.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/cache.js
 var complete2 = (key2, exit4, entryStats, timeToLiveMillis) => struct2({
   _tag: "Complete",
   key: key2,
@@ -12058,7 +12069,7 @@ var CacheImpl = class {
 };
 var unsafeMakeWith = (capacity5, lookup, timeToLive) => new CacheImpl(capacity5, empty5(), none3, lookup, (exit4) => decode(timeToLive(exit4)));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Cause.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Cause.js
 var empty28 = empty18;
 var fail5 = fail;
 var die4 = die;
@@ -12078,7 +12089,7 @@ var RuntimeException2 = RuntimeException;
 var isRuntimeException2 = isRuntimeException;
 var pretty2 = pretty;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Effect.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Effect.js
 var Effect_exports = {};
 __export(Effect_exports, {
   Do: () => Do3,
@@ -12366,6 +12377,8 @@ __export(Effect_exports, {
   withMaxOpsBeforeYield: () => withMaxOpsBeforeYield2,
   withMetric: () => withMetric2,
   withParentSpan: () => withParentSpan3,
+  withRandom: () => withRandom2,
+  withRandomScoped: () => withRandomScoped2,
   withRequestBatching: () => withRequestBatching2,
   withRequestCache: () => withRequestCache2,
   withRequestCaching: () => withRequestCaching2,
@@ -12386,7 +12399,7 @@ __export(Effect_exports, {
   zipWith: () => zipWith6
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/schedule/interval.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/schedule/interval.js
 var IntervalSymbolKey = "effect/ScheduleInterval";
 var IntervalTypeId = /* @__PURE__ */ Symbol.for(IntervalSymbolKey);
 var empty29 = {
@@ -12433,7 +12446,7 @@ var after = (startMilliseconds) => {
   return make36(startMilliseconds, Number.POSITIVE_INFINITY);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/ScheduleInterval.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/ScheduleInterval.js
 var make37 = make36;
 var empty30 = empty29;
 var lessThan6 = lessThan5;
@@ -12442,7 +12455,7 @@ var intersect2 = intersect;
 var size11 = size10;
 var after2 = after;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/schedule/intervals.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/schedule/intervals.js
 var IntervalsSymbolKey = "effect/ScheduleIntervals";
 var IntervalsTypeId = /* @__PURE__ */ Symbol.for(IntervalsSymbolKey);
 var make38 = (intervals) => {
@@ -12479,7 +12492,7 @@ var isNonEmpty3 = (self) => {
   return isNonEmpty(self.intervals);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/ScheduleIntervals.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/ScheduleIntervals.js
 var make39 = make38;
 var intersect4 = intersect3;
 var start2 = start;
@@ -12487,7 +12500,7 @@ var end2 = end;
 var lessThan8 = lessThan7;
 var isNonEmpty4 = isNonEmpty3;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/schedule/decision.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/schedule/decision.js
 var OP_CONTINUE = "Continue";
 var OP_DONE2 = "Done";
 var _continue = (intervals) => {
@@ -12512,14 +12525,14 @@ var isDone4 = (self) => {
   return self._tag === OP_DONE2;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/ScheduleDecision.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/ScheduleDecision.js
 var _continue2 = _continue;
 var continueWith2 = continueWith;
 var done6 = done5;
 var isContinue2 = isContinue;
 var isDone5 = isDone4;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Scope.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Scope.js
 var Scope_exports = {};
 __export(Scope_exports, {
   CloseableScopeTypeId: () => CloseableScopeTypeId2,
@@ -12544,13 +12557,13 @@ var fork2 = scopeFork;
 var use = scopeUse;
 var make40 = scopeMake;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/String.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/String.js
 var split2 = /* @__PURE__ */ dual(2, (self, separator) => {
   const out = self.split(separator);
   return isNonEmptyArray(out) ? out : [self];
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/schedule.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/schedule.js
 var ScheduleSymbolKey = "effect/Schedule";
 var ScheduleTypeId = /* @__PURE__ */ Symbol.for(ScheduleSymbolKey);
 var isSchedule = (u) => hasProperty(u, ScheduleTypeId);
@@ -12774,7 +12787,7 @@ var scheduleFrom_EffectLoop = (self, initial, driver3) => matchEffect(driver3.ne
 });
 var forever2 = /* @__PURE__ */ unfold2(0, (n) => n + 1);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/effect/circular.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/effect/circular.js
 var Semaphore = class {
   permits;
   waiters = /* @__PURE__ */ new Set();
@@ -12789,12 +12802,11 @@ var Semaphore = class {
     if (this.free < n) {
       const observer = () => {
         if (this.free < n) {
-          return false;
+          return;
         }
         this.waiters.delete(observer);
         this.taken += n;
         resume2(succeed(n));
-        return true;
       };
       this.waiters.add(observer);
       return left2(sync(() => {
@@ -12806,14 +12818,17 @@ var Semaphore = class {
   });
   updateTaken = (f) => withFiberRuntime((fiber) => {
     this.taken = f(this.taken);
-    fiber.getFiberRef(currentScheduler).scheduleTask(() => {
-      const iter = this.waiters.values();
-      let item = iter.next();
-      while (item.done === false && item.value() === true) {
-        item = iter.next();
-      }
-    }, fiber.getFiberRef(currentSchedulingPriority));
-    return unit2;
+    if (this.waiters.size > 0) {
+      fiber.getFiberRef(currentScheduler).scheduleTask(() => {
+        const iter = this.waiters.values();
+        let item = iter.next();
+        while (item.done === false && this.free > 0) {
+          item.value();
+          item = iter.next();
+        }
+      }, fiber.getFiberRef(currentSchedulingPriority));
+    }
+    return succeed(this.free);
   });
   release = (n) => this.updateTaken((taken) => taken - n);
   releaseAll = this.updateTaken((_) => 0);
@@ -12972,7 +12987,7 @@ var updateSomeAndGetEffectSynchronized = /* @__PURE__ */ dual(2, (self, pf) => s
   }
 }));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/layer.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/layer.js
 var OP_EXTEND_SCOPE = "ExtendScope";
 var OP_FOLD = "Fold";
 var OP_FRESH = "Fresh";
@@ -12983,7 +12998,7 @@ var OP_PROVIDE = "Provide";
 var OP_PROVIDE_MERGE = "ProvideMerge";
 var OP_ZIP_WITH2 = "ZipWith";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Fiber.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Fiber.js
 var _await3 = _await2;
 var inheritAll2 = inheritAll;
 var interrupt5 = interruptFiber;
@@ -12991,7 +13006,7 @@ var interruptAs = interruptAsFiber;
 var join3 = join2;
 var poll4 = poll3;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/runtime.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/runtime.js
 var unsafeFork2 = (runtime6) => (self, options) => {
   const fiberId3 = unsafeMake2();
   const fiberRefUpdates = [[currentContext, [[fiberId3, runtime6.context]]]];
@@ -13191,10 +13206,10 @@ var unsafeRunSyncEffect = /* @__PURE__ */ unsafeRunSync(defaultRuntime);
 var unsafeRunSyncExitEffect = /* @__PURE__ */ unsafeRunSyncExit(defaultRuntime);
 var asyncEffect = (register) => flatMap8(deferredMake(), (deferred) => flatMap8(runtime3(), (runtime6) => uninterruptibleMask((restore) => zipRight2(fork(restore(catchAllCause(register((cb) => unsafeRunCallback(runtime6)(intoDeferred(cb, deferred))), (cause4) => deferredFailCause(deferred, cause4)))), restore(deferredAwait(deferred))))));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/synchronizedRef.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/synchronizedRef.js
 var modifyEffect = /* @__PURE__ */ dual(2, (self, f) => self.modifyEffect(f));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/layer.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/layer.js
 var LayerSymbolKey = "effect/Layer";
 var LayerTypeId = /* @__PURE__ */ Symbol.for(LayerSymbolKey);
 var layerVariance = {
@@ -13538,13 +13553,13 @@ var provideSomeRuntime = /* @__PURE__ */ dual(2, (self, rt) => {
 });
 var effect_provide = /* @__PURE__ */ dual(2, (self, source) => isLayer(source) ? provideSomeLayer(self, source) : isContext2(source) ? provideSomeContext(self, source) : provideSomeRuntime(self, source));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/console.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/console.js
 var console2 = /* @__PURE__ */ map10(/* @__PURE__ */ fiberRefGet(currentServices), /* @__PURE__ */ get4(consoleTag));
 var consoleWith = (f) => fiberRefGetWith(currentServices, (services) => f(get4(services, consoleTag)));
 var withConsole = /* @__PURE__ */ dual(2, (effect3, value3) => fiberRefLocallyWith(effect3, currentServices, add2(consoleTag, value3)));
 var withConsoleScoped = (console4) => fiberRefLocallyScopedWith(currentServices, add2(consoleTag, console4));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/query.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/query.js
 var currentCache = /* @__PURE__ */ globalValue(/* @__PURE__ */ Symbol.for("effect/FiberRef/currentCache"), () => fiberRefUnsafeMake(unsafeMakeWith(65536, () => map10(deferredMake(), (handle) => ({
   listeners: new Listeners(),
   handle
@@ -13621,7 +13636,7 @@ var withRequestCache = /* @__PURE__ */ dual(
   (self, cache) => fiberRefLocally(self, currentCache, cache)
 );
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Effect.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Effect.js
 var EffectTypeId4 = EffectTypeId2;
 var isEffect2 = isEffect;
 var cachedWithTTL = cached;
@@ -13869,6 +13884,8 @@ var orElseFail2 = orElseFail;
 var orElseSucceed2 = orElseSucceed;
 var random3 = random2;
 var randomWith2 = randomWith;
+var withRandom2 = withRandom;
+var withRandomScoped2 = withRandomScoped;
 var runtime4 = runtime3;
 var getRuntimeFlags = runtimeFlags;
 var patchRuntimeFlags = updateRuntimeFlags;
@@ -13926,7 +13943,7 @@ var withParentSpan3 = withParentSpan;
 var fromNullable4 = fromNullable3;
 var optionFromOptional2 = optionFromOptional;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Layer.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Layer.js
 var Layer_exports = {};
 __export(Layer_exports, {
   LayerTypeId: () => LayerTypeId2,
@@ -14008,7 +14025,7 @@ __export(Layer_exports, {
   zipWith: () => zipWith7
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/layer/circular.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/layer/circular.js
 var minimumLogLevel = (level) => scopedDiscard(fiberRefLocallyScoped(currentMinimumLogLevel, level));
 var withMinimumLogLevel = /* @__PURE__ */ dual(2, (self, level) => fiberRefLocally(currentMinimumLogLevel, level)(self));
 var addLogger = (logger) => scopedDiscard(fiberRefLocallyScopedWith(currentLoggers, add4(logger)));
@@ -14023,7 +14040,7 @@ var parentSpan = (span4) => succeedContext(make7(spanTag, span4));
 var span2 = (name, options) => scoped(spanTag, options?.onEnd ? tap2(makeSpanScoped(name, options), (span4) => addFinalizer((exit4) => options.onEnd(span4, exit4))) : makeSpanScoped(name, options));
 var setTracer = (tracer3) => scopedDiscard(withTracerScoped(tracer3));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Layer.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Layer.js
 var LayerTypeId2 = LayerTypeId;
 var MemoMapTypeId2 = MemoMapTypeId;
 var isLayer2 = isLayer;
@@ -14102,7 +14119,7 @@ var withParentSpan4 = withParentSpan2;
 var makeMemoMap2 = makeMemoMap;
 var buildWithMemoMap2 = buildWithMemoMap;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/queue.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/queue.js
 var EnqueueSymbolKey = "effect/QueueEnqueue";
 var EnqueueTypeId = /* @__PURE__ */ Symbol.for(EnqueueSymbolKey);
 var DequeueSymbolKey = "effect/QueueDequeue";
@@ -14502,7 +14519,7 @@ var unsafeCompleteTakers = (strategy, queue, takers) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/pubsub.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/pubsub.js
 var AbsentValue = /* @__PURE__ */ Symbol.for("effect/PubSub/AbsentValue");
 var addSubscribers = (subscription, pollers) => (subscribers) => {
   if (!subscribers.has(subscription)) {
@@ -15442,14 +15459,14 @@ var unsafeStrategyCompleteSubscribers = (strategy, pubsub, subscribers) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/PubSub.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/PubSub.js
 var bounded4 = bounded3;
 var unbounded4 = unbounded3;
 var shutdown3 = shutdown2;
 var publish2 = publish;
 var subscribe2 = subscribe;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Queue.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Queue.js
 var DequeueTypeId2 = DequeueTypeId;
 var bounded5 = bounded2;
 var dropping3 = dropping;
@@ -15471,12 +15488,12 @@ var takeUpTo2 = takeUpTo;
 var takeBetween2 = takeBetween;
 var takeN2 = takeN;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channelChildExecutorDecision.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channelChildExecutorDecision.js
 var OP_CONTINUE2 = "Continue";
 var OP_CLOSE = "Close";
 var OP_YIELD2 = "Yield";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/childExecutorDecision.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/childExecutorDecision.js
 var ChildExecutorDecisionSymbolKey = "effect/ChannelChildExecutorDecision";
 var ChildExecutorDecisionTypeId = /* @__PURE__ */ Symbol.for(ChildExecutorDecisionSymbolKey);
 var proto4 = {
@@ -15488,11 +15505,11 @@ var Continue = (_) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/continuation.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/continuation.js
 var OP_CONTINUATION_K = "ContinuationK";
 var OP_CONTINUATION_FINALIZER = "ContinuationFinalizer";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/continuation.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/continuation.js
 var ContinuationTypeId = /* @__PURE__ */ Symbol.for("effect/ChannelContinuation");
 var continuationVariance = {
   /* c8 ignore next */
@@ -15536,11 +15553,11 @@ var ContinuationFinalizerImpl = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullStrategy.js
 var OP_PULL_AFTER_NEXT = "PullAfterNext";
 var OP_PULL_AFTER_ALL_ENQUEUED = "PullAfterAllEnqueued";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/upstreamPullStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/upstreamPullStrategy.js
 var UpstreamPullStrategySymbolKey = "effect/ChannelUpstreamPullStrategy";
 var UpstreamPullStrategyTypeId = /* @__PURE__ */ Symbol.for(UpstreamPullStrategySymbolKey);
 var upstreamPullStrategyVariance = {
@@ -15557,7 +15574,7 @@ var PullAfterNext = (emitSeparator) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channel.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channel.js
 var OP_BRACKET_OUT = "BracketOut";
 var OP_BRIDGE = "Bridge";
 var OP_CONCAT_ALL = "ConcatAll";
@@ -15573,7 +15590,7 @@ var OP_SUCCEED = "Succeed";
 var OP_SUCCEED_NOW = "SucceedNow";
 var OP_SUSPEND2 = "Suspend";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/core-stream.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/core-stream.js
 var ChannelSymbolKey = "effect/Channel";
 var ChannelTypeId2 = /* @__PURE__ */ Symbol.for(ChannelSymbolKey);
 var channelVariance2 = {
@@ -15746,13 +15763,13 @@ var write = (out) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channelState.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channelState.js
 var OP_DONE3 = "Done";
 var OP_EMIT2 = "Emit";
 var OP_FROM_EFFECT3 = "FromEffect";
 var OP_READ2 = "Read";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/channelState.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/channelState.js
 var ChannelStateTypeId = /* @__PURE__ */ Symbol.for("effect/ChannelState");
 var channelStateVariance = {
   /* c8 ignore next */
@@ -15792,7 +15809,7 @@ var isFromEffect = (self) => self._tag === OP_FROM_EFFECT3;
 var effect2 = (self) => isFromEffect(self) ? self.effect : unit5;
 var effectOrUndefinedIgnored = (self) => isFromEffect(self) ? ignore2(self.effect) : void 0;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/subexecutor.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/subexecutor.js
 var OP_PULL_FROM_CHILD = "PullFromChild";
 var OP_PULL_FROM_UPSTREAM = "PullFromUpstream";
 var OP_DRAIN_CHILD_EXECUTORS = "DrainChildExecutors";
@@ -15919,11 +15936,11 @@ var Emit2 = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullRequest.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channelUpstreamPullRequest.js
 var OP_PULLED = "Pulled";
 var OP_NO_UPSTREAM = "NoUpstream";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/upstreamPullRequest.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/upstreamPullRequest.js
 var UpstreamPullRequestSymbolKey = "effect/ChannelUpstreamPullRequest";
 var UpstreamPullRequestTypeId = /* @__PURE__ */ Symbol.for(UpstreamPullRequestSymbolKey);
 var upstreamPullRequestVariance = {
@@ -15946,7 +15963,7 @@ var NoUpstream = (activeDownstreamCount) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/channelExecutor.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/channelExecutor.js
 var ChannelExecutor = class _ChannelExecutor {
   _activeSubexecutor = void 0;
   _cancelled = void 0;
@@ -16565,11 +16582,11 @@ var runScopedInterpret = (channelState, exec) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channelMergeDecision.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channelMergeDecision.js
 var OP_DONE4 = "Done";
 var OP_AWAIT = "Await";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/mergeDecision.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/mergeDecision.js
 var MergeDecisionSymbolKey = "effect/ChannelMergeDecision";
 var MergeDecisionTypeId = /* @__PURE__ */ Symbol.for(MergeDecisionSymbolKey);
 var proto9 = {
@@ -16594,12 +16611,12 @@ var Await = (f) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channelMergeState.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channelMergeState.js
 var OP_BOTH_RUNNING = "BothRunning";
 var OP_LEFT_DONE = "LeftDone";
 var OP_RIGHT_DONE = "RightDone";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/mergeState.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/mergeState.js
 var MergeStateSymbolKey = "effect/ChannelMergeState";
 var MergeStateTypeId = /* @__PURE__ */ Symbol.for(MergeStateSymbolKey);
 var proto10 = {
@@ -16625,11 +16642,11 @@ var RightDone = (f) => {
   return op;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/channelMergeStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/channelMergeStrategy.js
 var OP_BACK_PRESSURE = "BackPressure";
 var OP_BUFFER_SLIDING = "BufferSliding";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/mergeStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/mergeStrategy.js
 var MergeStrategySymbolKey = "effect/ChannelMergeStrategy";
 var MergeStrategyTypeId = /* @__PURE__ */ Symbol.for(MergeStrategySymbolKey);
 var proto11 = {
@@ -16659,7 +16676,7 @@ var match13 = /* @__PURE__ */ dual(2, (self, {
   }
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel/singleProducerAsyncInput.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel/singleProducerAsyncInput.js
 var OP_STATE_EMPTY = "Empty";
 var OP_STATE_EMIT = "Emit";
 var OP_STATE_ERROR = "Error";
@@ -16790,7 +16807,7 @@ var SingleProducerAsyncInputImpl = class {
 };
 var make43 = () => pipe(make20(), flatMap10((deferred) => make29(stateEmpty(deferred))), map16((ref) => new SingleProducerAsyncInputImpl(ref)));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/channel.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/channel.js
 var as5 = /* @__PURE__ */ dual(2, (self, value3) => map18(self, () => value3));
 var catchAll5 = /* @__PURE__ */ dual(2, (self, f) => catchAllCause5(self, (cause4) => match2(failureOrCause2(cause4), {
   onLeft: f,
@@ -17111,7 +17128,7 @@ var ChannelException = (error) => ({
 });
 var isChannelException = (u) => hasProperty(u, ChannelExceptionTypeId);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/sink.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/sink.js
 var SinkTypeId2 = /* @__PURE__ */ Symbol.for("effect/Sink");
 var sinkVariance2 = {
   /* c8 ignore next */
@@ -17342,27 +17359,27 @@ var mkString = /* @__PURE__ */ suspend6(() => {
   })), map19(() => strings.join("")));
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/MergeDecision.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/MergeDecision.js
 var Done4 = Done3;
 var Await2 = Await;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Runtime.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Runtime.js
 var runFork2 = unsafeFork2;
 var runSync2 = unsafeRunSync;
 var runPromiseExit2 = unsafeRunPromiseExit;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Schedule.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Schedule.js
 var driver2 = driver;
 var forever4 = forever2;
 var spaced2 = spaced;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/opCodes/streamHaltStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/opCodes/streamHaltStrategy.js
 var OP_LEFT = "Left";
 var OP_RIGHT = "Right";
 var OP_BOTH = "Both";
 var OP_EITHER = "Either";
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/haltStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/haltStrategy.js
 var Left = {
   _tag: OP_LEFT
 };
@@ -17390,10 +17407,10 @@ var fromInput2 = (input) => {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/StreamHaltStrategy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/StreamHaltStrategy.js
 var Both2 = Both;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/ringBuffer.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/ringBuffer.js
 var RingBuffer = class {
   capacity;
   array;
@@ -17446,7 +17463,7 @@ var RingBuffer = class {
   }
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/debounceState.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/debounceState.js
 var OP_NOT_STARTED = "NotStarted";
 var OP_PREVIOUS = "Previous";
 var OP_CURRENT = "Current";
@@ -17462,7 +17479,7 @@ var current = (fiber) => ({
   fiber
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/emit.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/emit.js
 var make44 = (emit2) => {
   const ops = {
     chunk(as9) {
@@ -17505,7 +17522,7 @@ var make44 = (emit2) => {
   return Object.assign(emit2, ops);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/handoff.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/handoff.js
 var HandoffTypeId = /* @__PURE__ */ Symbol.for("effect/Stream/Handoff");
 var OP_HANDOFF_STATE_EMPTY = "Empty";
 var OP_HANDOFF_STATE_FULL = "Full";
@@ -17543,7 +17560,7 @@ var offer4 = /* @__PURE__ */ dual(2, (self, value3) => {
 });
 var take5 = (self) => flatMap10(make20(), (deferred) => flatten9(modify5(self.ref, (state) => pipe(state, handoffStateMatch((notifyConsumer) => [flatMap10(_await(notifyConsumer), () => take5(self)), state], (value3, notifyProducer) => [as4(succeed2(notifyProducer, void 0), value3), handoffStateEmpty(deferred)])))));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/handoffSignal.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/handoffSignal.js
 var OP_EMIT4 = "Emit";
 var OP_HALT = "Halt";
 var OP_END = "End";
@@ -17560,7 +17577,7 @@ var end3 = (reason) => ({
   reason
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/take.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/take.js
 var TakeSymbolKey = "effect/Take";
 var TakeTypeId = /* @__PURE__ */ Symbol.for(TakeSymbolKey);
 var takeVariance = {
@@ -17603,11 +17620,11 @@ var match16 = /* @__PURE__ */ dual(2, (self, {
 }));
 var of4 = (value3) => new TakeImpl(succeed3(of2(value3)));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/pull.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/pull.js
 var end5 = () => fail8(none2());
 var failCause10 = (cause4) => mapError3(failCause6(cause4), some2);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/sinkEndReason.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/sinkEndReason.js
 var OP_SCHEDULE_END = "ScheduleEnd";
 var OP_UPSTREAM_END = "UpstreamEnd";
 var ScheduleEnd = {
@@ -17617,7 +17634,7 @@ var UpstreamEnd = {
   _tag: OP_UPSTREAM_END
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/zipAllState.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/zipAllState.js
 var OP_DRAIN_LEFT = "DrainLeft";
 var OP_DRAIN_RIGHT = "DrainRight";
 var OP_PULL_BOTH = "PullBoth";
@@ -17641,7 +17658,7 @@ var PullRight = (leftChunk) => ({
   leftChunk
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream/zipChunksState.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream/zipChunksState.js
 var OP_PULL_BOTH2 = "PullBoth";
 var OP_PULL_LEFT2 = "PullLet";
 var OP_PULL_RIGHT2 = "PullRight";
@@ -17657,7 +17674,7 @@ var PullRight2 = (leftChunk) => ({
   leftChunk
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/stream.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/stream.js
 var StreamSymbolKey = "effect/Stream";
 var StreamTypeId2 = /* @__PURE__ */ Symbol.for(StreamSymbolKey);
 var streamVariance = {
@@ -18121,10 +18138,10 @@ var distributedWithDynamicCallback = /* @__PURE__ */ dual(4, (self, maximumLag, 
       }));
     }
     return succeed7(acc);
-  }), flatMap10((ids4) => {
-    if (isNonEmpty(ids4)) {
+  }), flatMap10((ids3) => {
+    if (isNonEmpty(ids3)) {
       return pipe(update3(queuesRef, (map26) => {
-        for (const id2 of ids4) {
+        for (const id2 of ids3) {
           map26.delete(id2);
         }
         return map26;
@@ -19975,7 +19992,7 @@ var encodeText = (self) => suspend7(() => {
   return map21(self, (s) => encoder2.encode(s));
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/secret.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/secret.js
 var SecretSymbolKey = "effect/Secret";
 var SecretTypeId = /* @__PURE__ */ Symbol.for(SecretSymbolKey);
 var proto12 = {
@@ -20015,7 +20032,7 @@ var value = (self) => {
   return self.raw.map((byte) => String.fromCharCode(byte)).join("");
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Data.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Data.js
 var struct3 = struct2;
 var array4 = (as9) => unsafeArray(as9.slice(0));
 var unsafeArray = (as9) => Object.setPrototypeOf(as9, ArrayProto);
@@ -20038,7 +20055,7 @@ var TaggedError = (tag2) => {
   return Base2;
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/encoding/common.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/encoding/common.js
 var DecodeExceptionTypeId = /* @__PURE__ */ Symbol.for("effect/Encoding/errors/Decode");
 var DecodeException = (input, message2) => {
   const out = {
@@ -20053,7 +20070,7 @@ var DecodeException = (input, message2) => {
 };
 var encoder = /* @__PURE__ */ new TextEncoder();
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/encoding/base64.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/encoding/base64.js
 var encode = (bytes) => {
   const length5 = bytes.length;
   let result = "";
@@ -20113,7 +20130,7 @@ function getBase64Code(charCode) {
 var base64abc = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+", "/"];
 var base64codes = [255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 62, 255, 255, 255, 63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 255, 255, 255, 0, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255, 255, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51];
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/encoding/base64Url.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/encoding/base64Url.js
 var encode2 = (data2) => encode(data2).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
 var decode3 = (str) => {
   const length5 = str.length;
@@ -20128,7 +20145,7 @@ var decode3 = (str) => {
   return decode2(sanitized);
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/encoding/hex.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/encoding/hex.js
 var encode3 = (bytes) => {
   let result = "";
   for (let i = 0; i < bytes.length; ++i) {
@@ -20168,7 +20185,7 @@ var fromHexChar = (byte) => {
   throw new TypeError("Invalid input");
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Encoding.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Encoding.js
 var encodeBase64 = (input) => typeof input === "string" ? encode(encoder.encode(input)) : encode(input);
 var decodeBase64 = (str) => decode2(str);
 var encodeBase64Url = (input) => typeof input === "string" ? encode2(encoder.encode(input)) : encode2(input);
@@ -20176,7 +20193,7 @@ var decodeBase64Url = (str) => decode3(str);
 var encodeHex = (input) => typeof input === "string" ? encode3(encoder.encode(input)) : encode3(input);
 var decodeHex = (str) => decode4(str);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/FiberMap.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/FiberMap.js
 var TypeId15 = /* @__PURE__ */ Symbol.for("effect/FiberMap");
 var isFiberMap = (u) => hasProperty(u, TypeId15);
 var Proto = {
@@ -20238,7 +20255,7 @@ var run4 = function() {
   return tap4(forkDaemon2(effect3), (fiber) => set8(self, key2, fiber));
 };
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/FiberSet.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/FiberSet.js
 var TypeId16 = /* @__PURE__ */ Symbol.for("effect/FiberSet");
 var Proto2 = {
   [TypeId16]: TypeId16,
@@ -20299,7 +20316,7 @@ var runtime5 = (self) => () => map16(runtime4(), (runtime6) => {
 });
 var size15 = (self) => sync4(() => self.backing.size);
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/groupBy.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/groupBy.js
 var GroupBySymbolKey = "effect/GroupBy";
 var GroupByTypeId = /* @__PURE__ */ Symbol.for(GroupBySymbolKey);
 var groupByVariance = {
@@ -20455,7 +20472,7 @@ var groupByIterable = /* @__PURE__ */ dual(2, (iterable, f) => {
   return unsafeFromArray(builder.map((tuple4) => [tuple4[0], unsafeFromArray(tuple4[1])]));
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Logger.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Logger.js
 var Logger_exports = {};
 __export(Logger_exports, {
   LoggerTypeId: () => LoggerTypeId2,
@@ -20489,7 +20506,7 @@ __export(Logger_exports, {
   zipRight: () => zipRight10
 });
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/logger-circular.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/logger-circular.js
 var test = /* @__PURE__ */ dual(2, (self, input) => self.log({
   fiberId: none3,
   logLevel: logLevelInfo,
@@ -20501,7 +20518,7 @@ var test = /* @__PURE__ */ dual(2, (self, input) => self.log({
   date: /* @__PURE__ */ new Date()
 }));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Logger.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Logger.js
 var LoggerTypeId2 = LoggerTypeId;
 var make51 = makeLogger;
 var add7 = addLogger;
@@ -20532,13 +20549,10 @@ var tracerLogger2 = tracerLogger;
 var logFmt = /* @__PURE__ */ replace3(defaultLogger, logFmtLogger);
 var minimumLogLevel2 = minimumLogLevel;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/SynchronizedRef.js
-var SynchronizedRefTypeId = SynchronizedTypeId;
-
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Request.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Request.js
 var Class3 = Class;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Stream.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Stream.js
 var Stream_exports = {};
 __export(Stream_exports, {
   DefaultChunkSize: () => DefaultChunkSize2,
@@ -21131,12 +21145,15 @@ var let_5 = let_4;
 var decodeText2 = decodeText;
 var encodeText2 = encodeText;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/Secret.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/Secret.js
 var isSecret2 = isSecret;
 var fromString3 = fromString2;
 var value2 = value;
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/internal/subscriptionRef.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/SynchronizedRef.js
+var SynchronizedRefTypeId = SynchronizedTypeId;
+
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/internal/subscriptionRef.js
 var SubscriptionRefSymbolKey = "effect/SubscriptionRef";
 var SubscriptionRefTypeId = /* @__PURE__ */ Symbol.for(SubscriptionRefSymbolKey);
 var subscriptionRefVariance = {
@@ -21173,7 +21190,7 @@ var SubscriptionRefImpl = class {
 var get14 = (self) => get13(self.ref);
 var make53 = (value3) => pipe(all5([unbounded4(), make29(value3), makeSemaphore2(1)]), map16(([pubsub, ref, semaphore]) => new SubscriptionRefImpl(ref, pubsub, semaphore)));
 
-// ../../node_modules/.pnpm/effect@2.3.2/node_modules/effect/dist/esm/SubscriptionRef.js
+// ../../node_modules/.pnpm/effect@2.3.6/node_modules/effect/dist/esm/SubscriptionRef.js
 var get15 = get14;
 var make54 = make53;
 var update4 = update3;
@@ -21384,7 +21401,7 @@ var prototype = (name, self, method, patch9) => suspend3(() => {
   );
 });
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/ast.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/ast.js
 var getKeysForIndexSignature = (input, parameter) => {
   switch (parameter._tag) {
     case "StringKeyword":
@@ -21410,7 +21427,7 @@ var memoizeThunk = (f) => {
   };
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/AST.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/AST.js
 var BrandAnnotationId = /* @__PURE__ */ Symbol.for("@effect/schema/annotation/Brand");
 var TypeAnnotationId = /* @__PURE__ */ Symbol.for("@effect/schema/annotation/Type");
 var MessageAnnotationId = /* @__PURE__ */ Symbol.for("@effect/schema/annotation/Message");
@@ -21533,12 +21550,14 @@ var createEnums = (enums2, annotations2 = {}) => ({
   enums: enums2,
   annotations: annotations2
 });
+var isEnums = (ast) => ast._tag === "Enums";
 var createTemplateLiteral = (head7, spans, annotations2 = {}) => isNonEmptyReadonlyArray(spans) ? {
   _tag: "TemplateLiteral",
   head: head7,
   spans,
   annotations: annotations2
 } : createLiteral(head7);
+var isTemplateLiteral = (ast) => ast._tag === "TemplateLiteral";
 var createElement = (type3, isOptional) => ({
   type: type3,
   isOptional
@@ -21654,18 +21673,18 @@ var createTransform = (from3, to3, transformation, annotations2 = {}) => ({
   annotations: annotations2
 });
 var isTransform = (ast) => ast._tag === "Transform";
-var createFinalTransformation = (decode6, encode5) => ({
+var createFinalTransformation = (decode7, encode6) => ({
   _tag: "FinalTransformation",
-  decode: decode6,
-  encode: encode5
+  decode: decode7,
+  encode: encode6
 });
 var composeTransformation = {
   _tag: "ComposeTransformation"
 };
-var createFinalPropertySignatureTransformation = (decode6, encode5) => ({
+var createFinalPropertySignatureTransformation = (decode7, encode6) => ({
   _tag: "FinalPropertySignatureTransformation",
-  decode: decode6,
-  encode: encode5
+  decode: decode7,
+  encode: encode6
 });
 var createPropertySignatureTransform = (from3, to3, propertySignatureTransformation) => ({
   from: from3,
@@ -21855,25 +21874,26 @@ var createRecord = (key2, value3, isReadonly) => {
 };
 var pick2 = (ast, keys6) => createTypeLiteral(keys6.map((key2) => getPropertyKeyIndexedAccess(ast, key2)), []);
 var omit2 = (ast, keys6) => pick2(ast, getPropertyKeys(ast).filter((name) => !keys6.includes(name)));
-var partial = (ast) => {
+var orUndefined = (ast) => createUnion([ast, undefinedKeyword]);
+var partial = (ast, options) => {
+  const exact = options?.exact === true;
   switch (ast._tag) {
     case "Tuple":
-      return createTuple(ast.elements.map((e) => createElement(e.type, true)), pipe(ast.rest, map((rest2) => [createUnion([...rest2, undefinedKeyword])])), ast.isReadonly);
+      return createTuple(ast.elements.map((e) => createElement(exact ? e.type : orUndefined(e.type), true)), pipe(ast.rest, map((rest2) => [createUnion([...rest2, undefinedKeyword])])), ast.isReadonly);
     case "TypeLiteral":
-      return createTypeLiteral(ast.propertySignatures.map((f) => createPropertySignature(f.name, f.type, true, f.isReadonly, f.annotations)), ast.indexSignatures);
+      return createTypeLiteral(ast.propertySignatures.map((ps) => createPropertySignature(ps.name, exact ? ps.type : orUndefined(ps.type), true, ps.isReadonly, ps.annotations)), ast.indexSignatures.map((is2) => createIndexSignature(is2.parameter, orUndefined(is2.type), is2.isReadonly)));
     case "Union":
-      return createUnion(ast.types.map((member2) => partial(member2)));
+      return createUnion(ast.types.map((member2) => partial(member2, options)));
     case "Suspend":
-      return createSuspend(() => partial(ast.f()));
+      return createSuspend(() => partial(ast.f(), options));
     case "Declaration":
       throw new Error("`partial` cannot handle declarations");
     case "Refinement":
       throw new Error("`partial` cannot handle refinements");
     case "Transform":
       throw new Error("`partial` cannot handle transformations");
-    default:
-      return ast;
   }
+  return ast;
 };
 var required = (ast) => {
   switch (ast._tag) {
@@ -21894,9 +21914,8 @@ var required = (ast) => {
       throw new Error("`required` cannot handle refinements");
     case "Transform":
       throw new Error("`required` cannot handle transformations");
-    default:
-      return ast;
   }
+  return ast;
 };
 var mutable = (ast) => {
   switch (ast._tag) {
@@ -22126,15 +22145,53 @@ var getParameterBase = (ast) => {
       return getParameterBase(ast.from);
   }
 };
+var equalsTemplateLiteralSpan = /* @__PURE__ */ getEquivalence4((self, that) => self.type._tag === that.type._tag && self.literal === that.literal);
+var equalsEnums = /* @__PURE__ */ getEquivalence4((self, that) => that[0] === self[0] && that[1] === self[1]);
+var equals4 = (self, that) => {
+  switch (self._tag) {
+    case "Literal":
+      return isLiteral(that) && that.literal === self.literal;
+    case "UniqueSymbol":
+      return isUniqueSymbol(that) && that.symbol === self.symbol;
+    case "UndefinedKeyword":
+    case "VoidKeyword":
+    case "NeverKeyword":
+    case "UnknownKeyword":
+    case "AnyKeyword":
+    case "StringKeyword":
+    case "NumberKeyword":
+    case "BooleanKeyword":
+    case "BigIntKeyword":
+    case "SymbolKeyword":
+    case "ObjectKeyword":
+      return that._tag === self._tag;
+    case "TemplateLiteral":
+      return isTemplateLiteral(that) && that.head === self.head && equalsTemplateLiteralSpan(that.spans, self.spans);
+    case "Enums":
+      return isEnums(that) && equalsEnums(that.enums, self.enums);
+    case "Refinement":
+    case "Tuple":
+    case "TypeLiteral":
+    case "Union":
+    case "Suspend":
+    case "Transform":
+    case "Declaration":
+      return self === that;
+  }
+};
+var intersection4 = /* @__PURE__ */ intersectionWith(equals4);
 var _keyof = (ast) => {
   switch (ast._tag) {
     case "TypeLiteral":
       return ast.propertySignatures.map((p) => isSymbol(p.name) ? createUniqueSymbol(p.name) : createLiteral(p.name)).concat(ast.indexSignatures.map((is2) => getParameterBase(is2.parameter)));
     case "Suspend":
       return _keyof(ast.f());
-    default:
-      throw new Error(`keyof: unsupported schema (${format4(ast)})`);
+    case "Union":
+      return ast.types.slice(1).reduce((out, ast2) => intersection4(out, _keyof(ast2)), _keyof(ast.types[0]));
+    case "Transform":
+      return _keyof(ast.to);
   }
+  throw new Error(`keyof: unsupported schema (${format4(ast)})`);
 };
 var compose2 = (ab, cd) => createTransform(ab, cd, composeTransformation);
 var rename = (ast, mapping) => {
@@ -22281,7 +22338,7 @@ var formatTemplateLiteralSpan = (span4) => {
   }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/filters.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/filters.js
 var GreaterThanTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/GreaterThan");
 var GreaterThanOrEqualToTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/GreaterThanOrEqualTo");
 var LessThanTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/LessThan");
@@ -22300,12 +22357,12 @@ var MinItemsTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/MinItems"
 var MaxItemsTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/MaxItems");
 var ItemsCountTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/ItemsCount");
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/hooks.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/hooks.js
 var ArbitraryHookId = /* @__PURE__ */ Symbol.for("@effect/schema/ArbitraryHookId");
 var PrettyHookId = /* @__PURE__ */ Symbol.for("@effect/schema/PrettyHookId");
 var EquivalenceHookId = /* @__PURE__ */ Symbol.for("@effect/schema/EquivalenceHookId");
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/schema.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/schema.js
 var TypeId17 = /* @__PURE__ */ Symbol.for("@effect/schema/Schema");
 var make56 = (ast) => new SchemaImpl(ast);
 var variance5 = {
@@ -22327,7 +22384,7 @@ var SchemaImpl = class {
   }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/parser.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/parser.js
 var flatMap16 = /* @__PURE__ */ dual(2, (self, f) => {
   const s = self;
   if (s["_tag"] === "Left") {
@@ -22437,7 +22494,7 @@ var union10 = (ast, actual, errors) => ({
   errors
 });
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/TreeFormatter.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/TreeFormatter.js
 var make57 = (value3, forest = []) => ({
   value: value3,
   forest
@@ -22560,7 +22617,7 @@ var go = (e) => {
   }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Parser.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Parser.js
 var mergeParseOptions = (a, b) => {
   if (a === void 0) {
     return b;
@@ -23270,7 +23327,7 @@ var getFinalTransformation = (transformation, isDecoding) => {
   }
 };
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Arbitrary.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Arbitrary.js
 var ArbitraryHookId2 = ArbitraryHookId;
 var make58 = (schema) => go3(schema.ast, {});
 var depthSize = 1;
@@ -23739,7 +23796,7 @@ function getMin(n1, n2) {
   return n1 === void 0 ? n2 : n2 === void 0 ? n1 : n1 <= n2 ? n1 : n2;
 }
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/ArrayFormatter.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/ArrayFormatter.js
 var go4 = (e, path = []) => {
   const _tag = e._tag;
   switch (_tag) {
@@ -23834,7 +23891,7 @@ var formatIssues2 = (issues) => flatMap2(issues, (e) => go4(e));
 var formatIssue2 = (error) => formatIssues2([error]);
 var formatError = (error) => formatIssue2(error.error);
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Schema.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Schema.js
 var Schema_exports = {};
 __export(Schema_exports, {
   Base64: () => Base64,
@@ -23968,7 +24025,7 @@ __export(Schema_exports, {
   data: () => data,
   dataFromSelf: () => dataFromSelf,
   declare: () => declare,
-  decode: () => decode5,
+  decode: () => decode6,
   decodeEither: () => decodeEither,
   decodeOption: () => decodeOption,
   decodePromise: () => decodePromise,
@@ -23985,7 +24042,7 @@ __export(Schema_exports, {
   eitherFromSelf: () => eitherFromSelf,
   eitherFromUnion: () => eitherFromUnion,
   element: () => element,
-  encode: () => encode4,
+  encode: () => encode5,
   encodeEither: () => encodeEither,
   encodeOption: () => encodeOption,
   encodePromise: () => encodePromise,
@@ -24082,7 +24139,7 @@ __export(Schema_exports, {
   optional: () => optional,
   optionalElement: () => optionalElement,
   optionalToRequired: () => optionalToRequired,
-  orUndefined: () => orUndefined,
+  orUndefined: () => orUndefined2,
   parseJson: () => parseJson,
   partial: () => partial2,
   pattern: () => pattern,
@@ -24130,15 +24187,15 @@ __export(Schema_exports, {
   void: () => _void
 });
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/bigint.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/bigint.js
 var maxSafeInteger = /* @__PURE__ */ BigInt(Number.MAX_SAFE_INTEGER);
 var minSafeInteger = /* @__PURE__ */ BigInt(Number.MIN_SAFE_INTEGER);
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/serializable.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/internal/serializable.js
 var symbol3 = /* @__PURE__ */ Symbol.for("@effect/schema/Serializable/symbol");
 var symbolResult = /* @__PURE__ */ Symbol.for("@effect/schema/Serializable/symbolResult");
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/ParseResult.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/ParseResult.js
 var ParseError = class extends TaggedError("ParseError") {
   get message() {
     return this.toString();
@@ -24175,7 +24232,7 @@ var type2 = type;
 var map25 = map24;
 var mapError9 = mapError8;
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Pretty.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Pretty.js
 var PrettyHookId2 = PrettyHookId;
 var make59 = (schema) => compile(schema.ast);
 var getHook2 = /* @__PURE__ */ getAnnotation(PrettyHookId2);
@@ -24315,7 +24372,7 @@ var match17 = {
 var compile = /* @__PURE__ */ getCompiler(match17);
 var getPrettyPropertyKey = (name) => typeof name === "string" ? JSON.stringify(name) : String(name);
 
-// ../../node_modules/.pnpm/@effect+schema@0.62.2_effect@2.3.2_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Schema.js
+// ../../node_modules/.pnpm/@effect+schema@0.62.7_effect@2.3.6_fast-check@3.15.1/node_modules/@effect/schema/dist/esm/Schema.js
 var TypeId18 = TypeId17;
 var hash3 = (schema) => hash2(schema.ast);
 var format5 = (schema) => format4(schema.ast);
@@ -24333,7 +24390,7 @@ var encodeUnknownPromise2 = (schema, options) => {
   const parser = encodeUnknown2(schema, options);
   return (u, overrideOptions) => runPromise(parser(u, overrideOptions));
 };
-var encode4 = encodeUnknown2;
+var encode5 = encodeUnknown2;
 var encodeEither = encodeUnknownEither2;
 var encodePromise = encodeUnknownPromise2;
 var decodeUnknown2 = (schema, options) => {
@@ -24348,7 +24405,7 @@ var decodeUnknownPromise2 = (schema, options) => {
   const parser = decodeUnknown2(schema, options);
   return (u, overrideOptions) => runPromise(parser(u, overrideOptions));
 };
-var decode5 = decodeUnknown2;
+var decode6 = decodeUnknown2;
 var decodeEither = decodeUnknownEither2;
 var decodePromise = decodeUnknownPromise2;
 var validate4 = (schema, options) => {
@@ -24467,7 +24524,7 @@ var symbolFromSelf = /* @__PURE__ */ make60(symbolKeyword);
 var object = /* @__PURE__ */ make60(objectKeyword);
 var union11 = (...members) => make60(createUnion(members.map((m) => m.ast)));
 var nullable = (self) => union11(_null2, self);
-var orUndefined = (self) => union11(_undefined, self);
+var orUndefined2 = (self) => make60(orUndefined(self.ast));
 var nullish = (self) => union11(_null2, _undefined, self);
 var keyof2 = (schema) => make60(keyof(schema.ast));
 var tuple3 = (...elements) => make60(createTuple(elements.map((schema) => createElement(schema.ast, false)), none2(), true));
@@ -24517,12 +24574,12 @@ var propertySignatureAnnotations = (annotations2) => (self) => {
     annotations: toAnnotations(annotations2)
   });
 };
-var optionalToRequired = (from3, to3, decode6, encode5, annotations2) => new PropertySignatureImpl({
+var optionalToRequired = (from3, to3, decode7, encode6, annotations2) => new PropertySignatureImpl({
   _tag: "OptionalToRequired",
   from: from3.ast,
   to: to3.ast,
-  decode: (o) => some2(decode6(o)),
-  encode: flatMap(encode5),
+  decode: (o) => some2(decode7(o)),
+  encode: flatMap(encode6),
   annotations: toAnnotations(annotations2)
 });
 var optional = (schema, options) => {
@@ -24567,7 +24624,7 @@ var optional = (schema, options) => {
           onSome: (a) => a == null ? value3() : a
         }), some2, annotations2);
       } else {
-        return optionalToRequired(orUndefined(schema), to2(schema), match({
+        return optionalToRequired(orUndefined2(schema), to2(schema), match({
           onNone: value3,
           onSome: (a) => a === void 0 ? value3() : a
         }), some2, annotations2);
@@ -24577,12 +24634,12 @@ var optional = (schema, options) => {
         if (isNullable2) {
           return optionalToRequired(nullish(schema), optionFromSelf(to2(schema)), filter((a) => a != null), identity, annotations2);
         } else {
-          return optionalToRequired(orUndefined(schema), optionFromSelf(to2(schema)), filter(isNotUndefined), identity, annotations2);
+          return optionalToRequired(orUndefined2(schema), optionFromSelf(to2(schema)), filter(isNotUndefined), identity, annotations2);
         }
       }
       return new PropertySignatureImpl({
         _tag: "Declaration",
-        from: orUndefined(schema).ast,
+        from: orUndefined2(schema).ast,
         isOptional: true,
         annotations: toAnnotations(annotations2)
       });
@@ -24655,12 +24712,17 @@ var omit3 = (...keys6) => (self) => {
   }
   return make60(omit2(ast, keys6));
 };
-var pluck = /* @__PURE__ */ dual(2, (schema, key2) => {
-  const ps = getPropertyKeyIndexedAccess(to2(schema).ast, key2);
-  const value3 = make60(ps.isOptional ? createUnion([undefinedKeyword, ps.type]) : ps.type);
-  return transform3(schema, value3, (a) => a[key2], (ak) => ps.isOptional && ak === void 0 ? {} : {
-    [key2]: ak
-  });
+var pluck = /* @__PURE__ */ dual((args) => isSchema(args[0]), (schema, key2, options) => {
+  if (options && options.transformation == false) {
+    const ps = getPropertyKeyIndexedAccess(schema.ast, key2);
+    return make60(ps.isOptional ? orUndefined(ps.type) : ps.type);
+  } else {
+    const ps = getPropertyKeyIndexedAccess(to2(schema).ast, key2);
+    const value3 = make60(ps.isOptional ? orUndefined(ps.type) : ps.type);
+    return transform3(schema, value3, (a) => a[key2], (ak) => ps.isOptional && ak === void 0 ? {} : {
+      [key2]: ak
+    });
+  }
 });
 var appendBrandAnnotation = (ast, brand2, options) => {
   const annotations2 = toAnnotations(options);
@@ -24691,7 +24753,7 @@ var brand = (brand2, options) => (self) => {
   });
   return out;
 };
-var partial2 = (self) => make60(partial(self.ast));
+var partial2 = (self, options) => make60(partial(self.ast, options));
 var required2 = (self) => make60(required(self.ast));
 var mutable2 = (schema) => {
   const ast = mutable(schema.ast);
@@ -24736,8 +24798,8 @@ function filter12(predicate, options) {
     return out;
   }, toAnnotations(options)));
 }
-var transformOrFail = /* @__PURE__ */ dual((args) => isSchema(args[0]) && isSchema(args[1]), (from3, to3, decode6, encode5) => make60(createTransform(from3.ast, to3.ast, createFinalTransformation(decode6, encode5))));
-var transform3 = /* @__PURE__ */ dual((args) => isSchema(args[0]) && isSchema(args[1]), (from3, to3, decode6, encode5) => transformOrFail(from3, to3, (fromA) => succeed15(decode6(fromA)), (toI) => succeed15(encode5(toI))));
+var transformOrFail = /* @__PURE__ */ dual((args) => isSchema(args[0]) && isSchema(args[1]), (from3, to3, decode7, encode6) => make60(createTransform(from3.ast, to3.ast, createFinalTransformation(decode7, encode6))));
+var transform3 = /* @__PURE__ */ dual((args) => isSchema(args[0]) && isSchema(args[1]), (from3, to3, decode7, encode6) => transformOrFail(from3, to3, (fromA) => succeed15(decode7(fromA)), (toI) => succeed15(encode6(toI))));
 var transformLiteral = (from3, to3) => transform3(literal(from3), literal(to3), () => to3, () => from3);
 var transformLiterals = (...pairs) => union11(...pairs.map(([from3, to3]) => transformLiteral(from3, to3)));
 var attachPropertySignature = /* @__PURE__ */ dual((args) => isSchema(args[0]), (schema, key2, value3, options) => {
@@ -25329,7 +25391,7 @@ var _Uint8Array = /* @__PURE__ */ transform3(array5(number4.pipe(between4(0, 255
   title: "8-bit unsigned integer",
   description: "a 8-bit unsigned integer"
 }))).pipe(description("an array of 8-bit unsigned integers")), Uint8ArrayFromSelf, (a) => Uint8Array.from(a), (arr) => Array.from(arr)).pipe(/* @__PURE__ */ identifier("Uint8Array"));
-var makeEncodingTransformation = (id2, decode6, encode5) => transformOrFail(string2, Uint8ArrayFromSelf, (s, _, ast) => mapLeft(decode6(s), (decodeException) => type2(ast, s, decodeException.message)), (u) => succeed15(encode5(u)), {
+var makeEncodingTransformation = (id2, decode7, encode6) => transformOrFail(string2, Uint8ArrayFromSelf, (s, _, ast) => mapLeft(decode7(s), (decodeException) => type2(ast, s, decodeException.message)), (u) => succeed15(encode6(u)), {
   strict: false
 }).pipe(identifier(id2));
 var Base64 = /* @__PURE__ */ makeEncodingTransformation("Base64", decodeBase64, encodeBase64);
@@ -25368,7 +25430,7 @@ var head6 = (self) => transform3(self, optionFromSelf(getNumberIndexedAccess2(to
   onNone: () => [],
   onSome: of
 }));
-var headOr = (self, fallback) => transformOrFail(self, getNumberIndexedAccess2(to2(self)), (as9, _, ast) => as9.length > 0 ? succeed15(as9[0]) : fallback ? succeed15(fallback()) : fail15(type2(ast, as9)), (a) => succeed15(of(a)));
+var headOr = /* @__PURE__ */ dual((args) => isSchema(args[0]), (self, fallback) => transformOrFail(self, getNumberIndexedAccess2(to2(self)), (as9, _, ast) => as9.length > 0 ? succeed15(as9[0]) : fallback ? succeed15(fallback()) : fail15(type2(ast, as9)), (a) => succeed15(of(a))));
 var ValidDateTypeId = /* @__PURE__ */ Symbol.for("@effect/schema/TypeId/ValidDate");
 var validDate = (options) => (self) => self.pipe(filter12((a) => !Number.isNaN(a.getTime()), {
   typeId: ValidDateTypeId,
@@ -25429,7 +25491,7 @@ var option3 = (value3) => transform3(optionFrom(value3), optionFromSelf(to2(valu
 }));
 var optionFromNullable = (value3) => transform3(nullable(value3), optionFromSelf(to2(value3)), fromNullable, getOrNull);
 var optionFromNullish = (value3, onNoneEncoding) => transform3(nullish(value3), optionFromSelf(to2(value3)), fromNullable, onNoneEncoding === null ? getOrNull : getOrUndefined);
-var optionFromOrUndefined = (value3) => transform3(orUndefined(value3), optionFromSelf(to2(value3)), fromNullable, getOrUndefined);
+var optionFromOrUndefined = (value3) => transform3(orUndefined2(value3), optionFromSelf(to2(value3)), fromNullable, getOrUndefined);
 var rightFrom = (right3) => struct4({
   _tag: literal("Right"),
   right: right3
@@ -25740,7 +25802,7 @@ var TaggedRequest = () => (tag2, Failure, Success, fields) => {
   });
 };
 var makeClass = (selfSchema, selfFields, Base2, additionalProps) => {
-  const validator = validateSync(selfSchema);
+  const validate5 = validateSync(selfSchema);
   return class extends Base2 {
     constructor(props, disableValidation = false) {
       if (additionalProps !== void 0) {
@@ -25750,7 +25812,7 @@ var makeClass = (selfSchema, selfFields, Base2, additionalProps) => {
         };
       }
       if (disableValidation !== true) {
-        props = validator(props);
+        props = validate5(props);
       }
       super(props, true);
     }
@@ -25763,18 +25825,17 @@ var makeClass = (selfSchema, selfFields, Base2, additionalProps) => {
     }
     static get ast() {
       const toSchema = to2(selfSchema);
+      const encode6 = encodeUnknown(toSchema);
       const pretty4 = make59(toSchema);
       const arb = make58(toSchema);
-      const declaration2 = declare((input) => input instanceof this, {
+      const declaration2 = declare([], () => (input, _, ast) => input instanceof this ? succeed15(input) : fail15(type2(ast, input)), () => (input, _, ast) => input instanceof this ? succeed15(input) : mapError9(map25(encode6(input), (props) => new this(props, true)), () => type2(ast, input)), {
         identifier: this.name,
         title: this.name,
         description: `an instance of ${this.name}`,
         pretty: () => (self) => `${self.constructor.name}(${pretty4(self)})`,
         arbitrary: () => (fc) => arb(fc).map((props) => new this(props))
       });
-      const transformation = transform3(selfSchema, declaration2, (input) => new this(input, true), (input) => ({
-        ...input
-      }));
+      const transformation = transform3(selfSchema, declaration2, (input) => new this(input, true), identity);
       return transformation.ast;
     }
     static struct = selfSchema;
@@ -25788,21 +25849,21 @@ var makeClass = (selfSchema, selfFields, Base2, additionalProps) => {
       };
     }
     static transformOrFail() {
-      return (fields, decode6, encode5) => {
+      return (fields, decode7, encode6) => {
         const newFields = {
           ...selfFields,
           ...fields
         };
-        return makeClass(transformOrFail(selfSchema, to2(struct4(newFields)), decode6, encode5), newFields, this, additionalProps);
+        return makeClass(transformOrFail(selfSchema, to2(struct4(newFields)), decode7, encode6), newFields, this, additionalProps);
       };
     }
     static transformOrFailFrom() {
-      return (fields, decode6, encode5) => {
+      return (fields, decode7, encode6) => {
         const newFields = {
           ...selfFields,
           ...fields
         };
-        return makeClass(transformOrFail(from2(selfSchema), struct4(newFields), decode6, encode5), newFields, this, additionalProps);
+        return makeClass(transformOrFail(from2(selfSchema), struct4(newFields), decode7, encode6), newFields, this, additionalProps);
       };
     }
   };
@@ -26140,7 +26201,7 @@ var layer = (schema, register) => {
       ref.changes,
       drop4(1),
       debounce2(1e3),
-      flatMap15(encode4(schema)),
+      flatMap15(encode5(schema)),
       runForEach2((data3) => promise2(() => plugin.saveData(data3))),
       forkScoped2
     );
