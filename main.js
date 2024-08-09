@@ -8701,13 +8701,13 @@ var withMetric = /* @__PURE__ */ dual(2, (self2, metric) => metric(self2));
 var serviceFunctionEffect = (getService, f) => (...args) => flatMap8(getService, (a) => f(a)(...args));
 var serviceFunction = (getService, f) => (...args) => map11(getService, (a) => f(a)(...args));
 var serviceFunctions = (getService) => new Proxy({}, {
-  get(_target, prop2, _receiver) {
-    return (...args) => flatMap8(getService, (s) => s[prop2](...args));
+  get(_target, prop3, _receiver) {
+    return (...args) => flatMap8(getService, (s) => s[prop3](...args));
   }
 });
 var serviceConstants = (getService) => new Proxy({}, {
-  get(_target, prop2, _receiver) {
-    return flatMap8(getService, (s) => isEffect(s[prop2]) ? s[prop2] : succeed(s[prop2]));
+  get(_target, prop3, _receiver) {
+    return flatMap8(getService, (s) => isEffect(s[prop3]) ? s[prop3] : succeed(s[prop3]));
   }
 });
 var serviceMembers = (getService) => ({
@@ -15374,31 +15374,31 @@ var Tag2 = (id2) => () => {
   });
   const cache = /* @__PURE__ */ new Map();
   const done9 = new Proxy(TagClass, {
-    get(_target, prop2, _receiver) {
-      if (prop2 === "use") {
+    get(_target, prop3, _receiver) {
+      if (prop3 === "use") {
         return (body) => andThen3(TagClass, body);
       }
-      if (prop2 in TagClass) {
-        return TagClass[prop2];
+      if (prop3 in TagClass) {
+        return TagClass[prop3];
       }
-      if (cache.has(prop2)) {
-        return cache.get(prop2);
+      if (cache.has(prop3)) {
+        return cache.get(prop3);
       }
       const fn = (...args) => (
         // @ts-expect-error
         andThen3(TagClass, (s) => {
-          if (typeof s[prop2] === "function") {
-            cache.set(prop2, (...args2) => andThen3(TagClass, (s2) => s2[prop2](...args2)));
-            return s[prop2](...args);
+          if (typeof s[prop3] === "function") {
+            cache.set(prop3, (...args2) => andThen3(TagClass, (s2) => s2[prop3](...args2)));
+            return s[prop3](...args);
           }
-          cache.set(prop2, andThen3(TagClass, (s2) => s2[prop2]));
-          return s[prop2];
+          cache.set(prop3, andThen3(TagClass, (s2) => s2[prop3]));
+          return s[prop3];
         })
       );
-      const cn = andThen3(TagClass, (s) => s[prop2]);
+      const cn = andThen3(TagClass, (s) => s[prop3]);
       Object.assign(fn, cn);
       Object.setPrototypeOf(fn, Object.getPrototypeOf(cn));
-      cache.set(prop2, fn);
+      cache.set(prop3, fn);
       return fn;
     }
   });
@@ -23644,6 +23644,7 @@ var get17 = map19(
     map2((_2) => _2.canvas)
   )
 );
+var prop = (key) => map19(Canvas, (_) => _[key]);
 var addCommand2 = (command) => addCommand({
   ...command,
   check: flatMap11(Plugin2, (plugin) => {
@@ -23659,7 +23660,6 @@ var addCommand2 = (command) => addCommand({
   ))
 });
 var createEdge = (options) => andThen6(Canvas, (canvas) => {
-  if (canvas.readonly) return;
   const data = canvas.getData();
   canvas.importData({
     edges: [
@@ -31815,7 +31815,7 @@ var layer = (schema, register) => {
       forkScoped2
     );
   });
-  const prop2 = (key) => gen3(function* () {
+  const prop3 = (key) => gen3(function* () {
     const settings = yield* tag3;
     const get18 = () => settings.unsafeGet()[key];
     const update6 = (f) => settings.unsafeUpdate((_) => ({
@@ -31824,11 +31824,11 @@ var layer = (schema, register) => {
     }));
     return [get18, update6];
   });
-  return { tag: tag3, layer: layer3, runWhen: runWhen2, prop: prop2 };
+  return { tag: tag3, layer: layer3, runWhen: runWhen2, prop: prop3 };
 };
 var {
   layer: layer2,
-  prop,
+  prop: prop2,
   runWhen,
   tag: tag2
 } = layer(
@@ -31858,7 +31858,7 @@ var {
 );
 var autoLayout = Effect_exports.gen(function* () {
   const settings = yield* tag2;
-  const [, update6] = yield* prop("autoLayoutEnabledFor");
+  const [, update6] = yield* prop2("autoLayoutEnabledFor");
   return [
     (path) => {
       const current2 = settings.unsafeGet();
@@ -32007,11 +32007,13 @@ var AutoLayoutLive = Layer_exports.mergeAll(
 );
 
 // src/NewNode.ts
+var writable = Effect_exports.negate(prop("readonly"));
 var NewNodeLive = Effect_exports.all([
   addCommand2({
     id: "new-node",
     name: "New Node",
     hotkeys: [{ modifiers: ["Alt"], key: "Enter" }],
+    check: writable,
     run: Effect_exports.gen(function* () {
       const canvas = yield* Canvas;
       const node = yield* Effect_exports.flatten(selectedNode);
@@ -32039,6 +32041,7 @@ var NewNodeLive = Effect_exports.all([
     id: "new-child-node",
     name: "New Child Node",
     hotkeys: [{ modifiers: ["Alt"], key: "Tab" }],
+    check: writable,
     run: Effect_exports.gen(function* () {
       const canvas = yield* Canvas;
       const node = yield* Effect_exports.flatten(selectedNode);
