@@ -23681,15 +23681,20 @@ var selectedNode = gen3(function* () {
 });
 var onActive = (effect3) => gen3(function* () {
   const handle = yield* make49();
-  const scoped7 = scoped2(effect3);
+  const scoped7 = effect3.pipe(
+    zipRight5(never3),
+    scoped2
+  );
   yield* get17.pipe(
-    flatMap11(match2({
-      onNone: () => clear(handle),
-      onSome: (canvas) => scoped7.pipe(
-        provideService2(Canvas, canvas),
-        run4(handle, { onlyIfMissing: true })
-      )
-    })),
+    flatMap11(
+      match2({
+        onNone: () => clear(handle),
+        onSome: (canvas) => scoped7.pipe(
+          provideService2(Canvas, canvas),
+          run4(handle, { onlyIfMissing: true })
+        )
+      })
+    ),
     schedule(spaced2(2e3)),
     forkScoped2
   );
@@ -31797,14 +31802,14 @@ var layer = (schema, register) => {
   );
   const runWhen2 = (f, effect3) => gen3(function* () {
     const settings = yield* tag3;
-    const map29 = yield* make49();
+    const handle = yield* make49();
     yield* settings.ref.changes.pipe(
       mapEffect4(
         (_) => f(_) ? effect3.pipe(
           zipRight5(never3),
           scoped2,
-          run4(map29)
-        ) : clear(map29)
+          run4(handle, { onlyIfMissing: true })
+        ) : clear(handle)
       ),
       runDrain3,
       forkScoped2
